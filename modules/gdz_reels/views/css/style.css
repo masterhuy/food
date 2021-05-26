@@ -1,0 +1,193 @@
+.gdz_reel .video {
+    text-align: center;
+    margin: 20px;
+    position: relative;
+}
+.gdz_reel .thumb {
+    max-width: 100%;
+    height: auto;
+}
+.gdz_reel .groups {
+    display: flex;
+}
+.gdz_reel .groups .form-group {
+    flex: 1;
+}
+.gdz_reel .groups .attribute {
+    display: inline-block;
+    margin: 0 5px;
+}
+.gdz_reel .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gdz_reel hr {
+    border: 1px solid #e6dfdf;
+    width: 50%;
+}
+.gdz_reel video {
+    outline: none;
+    width: auto;
+    max-width: 100%;
+    cursor: pointer;
+}
+.gdz_reel .video .play {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+}
+.gdz_reel .play .fa {
+    color: #ffffffab;
+    font-size: 85px;
+}
+@keyframes fadeOut {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+.gdz_reel .hide_play {
+    opacity: 0;
+    animation-name: fadeOut;
+    animation-duration: 0.5s;
+}
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(200px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.gdz_reel .lookbook-product, .gdz_reel .lookbook {
+    opacity: 0;
+}
+.gdz_reel .lookbook-product {
+    pointer-events: none;
+}
+/*.gdz_reel .lookbook-product.animated {
+    opacity: 1!important;
+}*/
+.gdz_reel .slideIn {
+    opacity: 1!important;
+    animation-name: slideInRight;
+    animation-duration: 0.5s;
+}
+.gdz_reel .lookbook.show{
+    opacity: 1;
+    animation-name: fadeIn;
+    animation-duration: 0.5s;
+}
+.gdz_reel .show_play {
+    opacity: 1;
+    animation-name: fadeIn;
+    animation-duration: 0.5s;
+}
+.gdz_reel .container{
+    display: flex;
+}
+.gdz_reel .repeat {
+    display: none;
+    flex: 1;
+}
+.gdz_reel .fadeOutUp {
+    pointer-events: none;
+}
+
+.gdz_reel .image, .gdz_reel .desc, .gdz_reel .price, .gdz_reel .action {
+    padding: 5px;
+}
+.gdz_reel .image {
+    width: 11%;
+}
+.gdz_reel .price {
+    width: 14%;
+}
+.gdz_reel .action {
+    width: 27%;
+}
+.gdz_reel .desc {
+    flex-direction: column;
+    width: 47%;
+    justify-content: center;
+}
+.gdz_reel .action-m {
+    display: none;
+}
+@media (max-width: 632px) {
+    .gdz_reel .action {
+        display: none;
+    }
+    .gdz_reel .action-m {
+        display: flex;
+    }
+}
+@media (max-width: 767px) {
+    .gdz_reel .groups{
+        display: none;
+    }
+    .gdz_reel .image {
+        width: 18%;
+    }
+    .gdz_reel .desc {
+        width: 35%;
+        display: flex;
+    }
+    .gdz_reel .action, .gdz_reel .action-m {
+        width: 33%;
+    }
+}
+@media (max-width: 991px) {
+    .gdz_reel {
+        padding: 0 15px;
+    }
+    .gdz_reel .container{
+        display: block;
+    }
+    .gdz_reel .lookbook-product {
+        position: absolute;
+        background-color: #fffffff0;
+        left: 5px;
+        right: 5px;
+        bottom: 0;
+        z-index: 10;
+    }
+    .gdz_reel .lookbook-product hr{
+        display: none;
+    }
+    .gdz_reel .lb-title {
+        display: none;
+    }
+    .gdz_reel .video {
+        width: 100%;
+        margin: 0;
+    }
+    .gdz_reel .lookbook {
+        opacity: 1;
+    }
+}
+.videoWrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+    width: 100%;
+}
+.videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.gdz_reel .lookbooks {
+    overflow: hidden;
+}

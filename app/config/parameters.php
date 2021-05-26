@@ -1,0 +1,25 @@
+<?php return array (
+  'parameters' => 
+  array (
+    'database_host' => '127.0.0.1',
+    'database_port' => '',
+    'database_name' => 'food',
+    'database_user' => 'root',
+    'database_password' => '',
+    'database_prefix' => 'ps_',
+    'database_engine' => 'InnoDB',
+    'mailer_transport' => 'smtp',
+    'mailer_host' => '127.0.0.1',
+    'mailer_user' => NULL,
+    'mailer_password' => NULL,
+    'secret' => '1p381cOVfd8tPbmjzzLFnvpazeJT4scNpkqVR93JdaT7Wk24BrSUbxJwLxzBDGY0',
+    'ps_caching' => 'CacheMemcache',
+    'ps_cache_enable' => false,
+    'ps_creation_date' => '2021-05-25',
+    'locale' => 'en-US',
+    'use_debug_toolbar' => true,
+    'cookie_key' => 'djJpNNK85cMgsFMuHvdWW0Z27jO6GZQKreiCxXX0t3rRyRwGuthBdB9Pgdxynz55',
+    'cookie_iv' => 'RsaYBTcXoXSyw3KKX8CQVPrLPowecTo4',
+    'new_cookie_key' => 'def00000b751d51511656e5341dea2d1ba123fe254494d15ed4eb351ad90ea9f22db876f199669a33187ee25cf7d486d34955c86176974e97e3614c4e5285764ecd18434',
+  ),
+);

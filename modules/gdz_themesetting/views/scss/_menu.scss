@@ -1,0 +1,502 @@
+/***** Horizonal Menu *****/
+#hor-menu {
+  @if $hormenu_bg != '' {
+  background: $hormenu_bg;
+  }
+  @if $hormenu_margin_top != '' {
+  margin-top:$hormenu_margin_top;
+  }
+  @if $hormenu_padding_right != '' {
+  margin-right:$hormenu_margin_right;
+  }
+  @if $hormenu_margin_bottom != '' {
+  margin-bottom:$hormenu_margin_bottom;
+  }
+  @if $hormenu_margin_left != '' {
+  margin-left:$hormenu_margin_left;
+  }
+  @if $hormenu_padding_top != '' {
+  padding-top:$hormenu_padding_top;
+  }
+  @if $hormenu_padding_right != '' {
+  padding-right:$hormenu_padding_right;
+  }
+  @if $hormenu_padding_bottom != '' {
+  padding-bottom:$hormenu_padding_bottom;
+  }
+  @if $hormenu_padding_left != '' {
+  padding-left:$hormenu_padding_left;
+  }
+  .nav > li {
+    @if $hormenu_item_bg != '' {
+    background: $hormenu_item_bg;
+    }
+    @if $hormenu_item_margin_top != '' {
+    margin-top:$hormenu_item_margin_top;
+    }
+    @if $hormenu_item_margin_right != '' {
+    margin-right:$hormenu_item_margin_right;
+    }
+    @if $hormenu_item_margin_bottom != '' {
+    margin-bottom:$hormenu_item_margin_bottom;
+    }
+    @if $hormenu_item_margin_left != '' {
+    margin-left:$hormenu_item_margin_left;
+    }
+    @if $hormenu_item_padding_top != '' {
+    padding-top:$hormenu_item_padding_top;
+    }
+    @if $hormenu_item_padding_right != '' {
+    padding-right:$hormenu_item_padding_right;
+    }
+    @if $hormenu_item_padding_bottom != '' {
+    padding-bottom:$hormenu_item_padding_bottom;
+    }
+    @if $hormenu_item_padding_left != '' {
+    padding-left:$hormenu_item_padding_left;
+    }
+  }
+  .nav > li:hover {
+    @if $hormenu_item_hover_bg != '' {
+    background: $hormenu_item_hover_bg;
+    }
+  }
+  .nav > li > a {
+    @if $hormenu_link_color != '' {
+    color: $hormenu_link_color;
+    }
+    @if $hormenu_item_font_size != 'null' {
+    font-size: $hormenu_item_font_size;
+    }
+    @if $hormenu_item_font_weight != '' {
+    font-weight: $hormenu_item_font_weight;
+    }
+    @if $hormenu_item_font_style != '' {
+    font-style: $hormenu_item_font_style;
+    }
+    @if $hormenu_item_font_transform != '' {
+    text-transform: $hormenu_item_font_transform;
+    }
+  }
+  a:hover {
+    @if $hormenu_link_hover_color != '' {
+    color: $hormenu_link_hover_color;
+    }
+  }
+  .dropdown-menu {
+      @if $hormenu_submenu_bg != '' {
+      background: $hormenu_submenu_bg;
+      }
+      @if $hormenu_submenu_margin_top != '' {
+      margin-top:$hormenu_submenu_margin_top;
+      }
+      @if $hormenu_submenu_padding_right != '' {
+      margin-right:$hormenu_submenu_margin_right;
+      }
+      @if $hormenu_submenu_margin_bottom != '' {
+      margin-bottom:$hormenu_submenu_margin_bottom;
+      }
+      @if $hormenu_submenu_margin_left != '' {
+      margin-left:$hormenu_submenu_margin_left;
+      }
+      @if $hormenu_submenu_padding_top != '' {
+      padding-top:$hormenu_submenu_padding_top;
+      }
+      @if $hormenu_submenu_padding_right != '' {
+      padding-right:$hormenu_submenu_padding_right;
+      }
+      @if $hormenu_submenu_padding_bottom != '' {
+      padding-bottom:$hormenu_submenu_padding_bottom;
+      }
+      @if $hormenu_submenu_padding_left != '' {
+      padding-left:$hormenu_submenu_padding_left;
+      }
+      li {
+        @if $hormenu_submenu_item_bg != '' {
+        background: $hormenu_submenu_item_bg;
+        }
+        @if $hormenu_submenu_item_margin_top != '' {
+        margin-top:$hormenu_submenu_item_margin_top;
+        }
+        @if $hormenu_submenu_item_margin_right != '' {
+        margin-right:$hormenu_submenu_item_margin_right;
+        }
+        @if $hormenu_submenu_item_margin_bottom != '' {
+        margin-bottom:$hormenu_submenu_item_margin_bottom;
+        }
+        @if $hormenu_submenu_item_margin_left != '' {
+        margin-left:$hormenu_submenu_item_margin_left;
+        }
+        @if $hormenu_submenu_item_padding_top != '' {
+        padding-top:$hormenu_submenu_item_padding_top;
+        }
+        @if $hormenu_submenu_item_padding_right != '' {
+        padding-right:$hormenu_submenu_item_padding_right;
+        }
+        @if $hormenu_submenu_item_padding_bottom != '' {
+        padding-bottom:$hormenu_submenu_item_padding_bottom;
+        }
+        @if $hormenu_submenu_item_padding_left != '' {
+        padding-left:$hormenu_submenu_item_padding_left;
+        }
+      }
+      li:hover {
+        @if $hormenu_submenu_item_hover_bg != '' {
+        background: $hormenu_submenu_item_hover_bg;
+        }
+      }
+      a {
+        @if $hormenu_submenu_fontsize != 'null' {
+        font-size: $hormenu_submenu_fontsize + 'px';
+        }
+        @if $hormenu_submenu_link_color != '' {
+        color: $hormenu_submenu_link_color;
+        }
+      }
+      a:hover {
+        @if $hormenu_submenu_link_hover_color != '' {
+        color: $hormenu_submenu_link_hover_color;
+        }
+      }
+  }
+}
+
+/***** Vertical Menu *****/
+#ver-menu {
+  @if $vermenu_bg != '' {
+  background: $vermenu_bg;
+  }
+  @if $vermenu_margin_top != '' {
+  margin-top:$vermenu_margin_top;
+  }
+  @if $vermenu_margin_right != '' {
+  margin-right:$vermenu_margin_right;
+  }
+  @if $vermenu_margin_bottom != '' {
+  margin-bottom:$vermenu_margin_bottom;
+  }
+  @if $vermenu_margin_left != '' {
+  margin-left:$vermenu_margin_left;
+  }
+  @if $vermenu_padding_top != '' {
+  padding-top:$vermenu_padding_top;
+  }
+  @if $vermenu_padding_right != '' {
+  padding-right:$vermenu_padding_right;
+  }
+  @if $vermenu_padding_bottom != '' {
+  padding-bottom:$vermenu_padding_bottom;
+  }
+  @if $vermenu_padding_left != '' {
+  padding-left:$vermenu_padding_left;
+  }
+  .nav > li {
+    @if $vermenu_item_bg != '' {
+    background: $vermenu_item_bg;
+    }
+    @if $vermenu_item_margin_top != '' {
+    margin-top:$vermenu_item_margin_top;
+    }
+    @if $vermenu_item_margin_right != '' {
+    margin-right:$vermenu_item_margin_right;
+    }
+    @if $vermenu_item_margin_bottom != '' {
+    margin-bottom:$vermenu_item_margin_bottom;
+    }
+    @if $vermenu_item_margin_left != '' {
+    margin-left:$vermenu_item_margin_left;
+    }
+    @if $vermenu_item_padding_top != '' {
+    padding-top:$vermenu_item_padding_top;
+    }
+    @if $vermenu_item_padding_right != '' {
+    padding-right:$vermenu_item_padding_right;
+    }
+    @if $vermenu_item_padding_bottom != '' {
+    padding-bottom:$vermenu_item_padding_bottom;
+    }
+    @if $vermenu_item_padding_left != '' {
+    padding-left:$vermenu_item_padding_left;
+    }
+  }
+  .nav > li:hover {
+    @if $vermenu_item_hover_bg != '' {
+    background: $vermenu_item_hover_bg;
+    }
+  }
+  a {
+    @if $vermenu_item_font_size != 'null' {
+    font-size: $vermenu_item_font_size;
+    }
+    @if $vermenu_item_font_weight != '' {
+    font-weight: $vermenu_item_font_weight;
+    }
+    @if $vermenu_item_font_style != '' {
+    font-style: $vermenu_item_font_style;
+    }
+    @if $vermenu_item_font_transform != '' {
+    text-transform: $vermenu_item_font_size;
+    }
+    @if $vermenu_link_color != '' {
+    color: $vermenu_link_color;
+    }
+
+  }
+  a:hover {
+    @if $vermenu_link_hover_color != '' {
+    color: $vermenu_link_hover_color;
+    }
+  }
+  .dropdown-menu {
+      @if $vermenu_submenu_bg != '' {
+      background: $vermenu_submenu_bg;
+      }
+      @if $vermenu_submenu_margin_top != '' {
+      margin-top:$vermenu_submenu_margin_top;
+      }
+      @if $vermenu_submenu_margin_right != '' {
+      margin-right:$vermenu_submenu_margin_right;
+      }
+      @if $vermenu_submenu_margin_bottom != '' {
+      margin-bottom:$vermenu_submenu_margin_bottom;
+      }
+      @if $vermenu_submenu_margin_left != '' {
+      margin-left:$vermenu_submenu_margin_left;
+      }
+      @if $vermenu_submenu_padding_top != '' {
+      padding-top:$vermenu_submenu_padding_top;
+      }
+      @if $vermenu_submenu_padding_right != '' {
+      padding-right:$vermenu_submenu_padding_right;
+      }
+      @if $vermenu_submenu_padding_bottom != '' {
+      padding-bottom:$vermenu_submenu_padding_bottom;
+      }
+      @if $vermenu_submenu_padding_left != '' {
+      padding-left:$vermenu_submenu_padding_left;
+      }
+      li {
+        @if $vermenu_submenu_item_bg != '' {
+        background: $vermenu_submenu_item_bg;
+        }
+        @if $vermenu_submenu_item_margin_top != '' {
+        margin-top:$vermenu_submenu_item_margin_top;
+        }
+        @if $vermenu_submenu_item_margin_right != '' {
+        margin-right:$vermenu_submenu_item_margin_right;
+        }
+        @if $vermenu_submenu_item_margin_bottom != '' {
+        margin-bottom:$vermenu_submenu_item_margin_bottom;
+        }
+        @if $vermenu_submenu_item_margin_left != '' {
+        margin-left:$vermenu_submenu_item_margin_left;
+        }
+        @if $vermenu_submenu_item_padding_top != '' {
+        padding-top:$vermenu_submenu_item_padding_top;
+        }
+        @if $vermenu_submenu_item_padding_right != '' {
+        padding-right:$vermenu_submenu_item_padding_right;
+        }
+        @if $vermenu_submenu_item_padding_bottom != '' {
+        padding-bottom:$vermenu_submenu_item_padding_bottom;
+        }
+        @if $vermenu_submenu_item_padding_left != '' {
+        padding-left:$vermenu_submenu_item_padding_left;
+        }
+      }
+      li:hover {
+        @if $vermenu_submenu_item_hover_bg != '' {
+        background: $vermenu_submenu_item_hover_bg;
+        }
+      }
+      a {
+        @if $vermenu_submenu_fontsize != 'null' {
+        font-size: $vermenu_submenu_fontsize + 'px';
+        }
+        @if $vermenu_submenu_link_color != '' {
+        color: $vermenu_submenu_link_color;
+        }
+      }
+      a:hover {
+        @if $vermenu_submenu_link_hover_color != '' {
+        color: $vermenu_submenu_link_hover_color;
+        }
+      }
+  }
+}
+.vermenu-btn {
+    @if $vermenu_button_width != '' {
+    width: $vermenu_button_width;
+    }
+    @if $vermenu_button_bg != '' {
+    background: $vermenu_button_bg;
+    }
+    @if $vermenu_button_color != '' {
+    color: $vermenu_button_color;
+    }
+    @if $vermenu_button_text_font_size != 'null' {
+    font-size: $vermenu_button_text_font_size;
+    }
+    @if $vermenu_button_text_font_weight != '' {
+    font-weight: $vermenu_button_text_font_weight;
+    }
+    @if $vermenu_button_text_font_style != '' {
+    font-style: $vermenu_button_text_font_style;
+    }
+    @if $vermenu_button_text_font_transform != '' {
+    text-transform: $vermenu_button_text_font_transform;
+    }
+    @if $vermenu_button_text_color != '' {
+    color: $vermenu_button_text_color!important;
+    }
+    @if $vermenu_button_margin_top != '' {
+    margin-top:$vermenu_button_margin_top;
+    }
+    @if $vermenu_button_margin_right != '' {
+    margin-right:$vermenu_button_margin_right;
+    }
+    @if $vermenu_button_margin_bottom != '' {
+    margin-bottom:$vermenu_button_margin_bottom;
+    }
+    @if $vermenu_button_margin_left != '' {
+    margin-left:$vermenu_button_margin_left;
+    }
+    @if $vermenu_button_padding_top != '' {
+    padding-top:$vermenu_button_padding_top;
+    }
+    @if $vermenu_button_padding_right != '' {
+    padding-right:$vermenu_button_padding_right;
+    }
+    @if $vermenu_button_padding_bottom != '' {
+    padding-bottom:$vermenu_button_padding_bottom;
+    }
+    @if $vermenu_button_padding_left != '' {
+    padding-left:$vermenu_button_padding_left;
+    }
+    @if $vermenu_button_border_radius_top != '' {
+    border-top-left-radius:$vermenu_button_border_radius_top;
+    }
+    @if $vermenu_button_border_radius_right != '' {
+    border-top-right-radius:$vermenu_button_border_radius_right;
+    }
+    @if $vermenu_button_border_radius_bottom != '' {
+    border-bottom-right-radius:$vermenu_button_border_radius_bottom;
+    }
+    @if $vermenu_button_border_radius_left != '' {
+    border-bottom-left-radius:$vermenu_button_border_radius_left;
+    }
+    border:$vermenu_button_border_width + ' ' + $vermenu_button_border_style + ' ' + $vermenu_button_border_color;
+    i {
+      @if $vermenu_button_text_color != '' {
+      color: $vermenu_button_text_color!important;
+      }
+    }
+}
+/***** Mobile Menu *****/
+.mobile-menu-wrap {
+    @if $mobimenu_bg != '' {
+    background: $mobimenu_bg;
+    }
+}
+#off-canvas-menu {
+  @if $mobimenu_padding_top != '' {
+  padding-top:$mobimenu_padding_top;
+  }
+  @if $mobimenu_padding_right != '' {
+  padding-right:$mobimenu_padding_right;
+  }
+  @if $mobimenu_padding_bottom != '' {
+  padding-bottom:$mobimenu_padding_bottom;
+  }
+  @if $mobimenu_padding_left != '' {
+  padding-left:$mobimenu_padding_left;
+  }
+}
+#off-canvas-menu .nav > li {
+    @if $mobimenu_item_bg != '' {
+      background: $mobimenu_item_bg;
+    }
+}
+#off-canvas-menu .nav > li:hover,
+#off-canvas-menu .nav > li.open {
+  @if $mobimenu_item_hover_bg != '' {
+  background: $mobimenu_item_hover_bg;
+  }
+}
+#off-canvas-menu .nav > li > a {
+  @if $mobimenu_item_fontsize != 'null' {
+  font-size: $mobimenu_item_fontsize + 'px';
+  }
+  @if $mobimenu_link_color != '' {
+  color: $mobimenu_link_color;
+  }
+  @if $mobimenu_item_padding_top != '' {
+  padding-top:$mobimenu_item_padding_top;
+  }
+  @if $mobimenu_item_padding_right != '' {
+  padding-right:$mobimenu_item_padding_right;
+  }
+  @if $mobimenu_item_padding_bottom != '' {
+  padding-bottom:$mobimenu_item_padding_bottom;
+  }
+  @if $mobimenu_item_padding_left != '' {
+  padding-left:$mobimenu_item_padding_left;
+  }
+  &:hover {
+    @if $mobimenu_link_hover_color != '' {
+    color: $mobimenu_link_hover_color;
+    }
+  }
+}
+#off-canvas-menu .open > .dropdown-menu {
+    @if $mobimenu_submenu_bg != '' {
+    background: $mobimenu_submenu_bg;
+    }
+    @if $mobimenu_submenu_padding_top != '' {
+    padding-top:$mobimenu_submenu_padding_top;
+    }
+    @if $mobimenu_submenu_padding_right != '' {
+    padding-right:$mobimenu_submenu_padding_right;
+    }
+    @if $mobimenu_submenu_padding_bottom != '' {
+    padding-bottom:$mobimenu_submenu_padding_bottom;
+    }
+    @if $mobimenu_submenu_padding_left != '' {
+    padding-left:$mobimenu_submenu_padding_left;
+    }
+    li {
+      @if $mobimenu_submenu_item_bg != '' {
+      background: $mobimenu_submenu_item_bg;
+      }
+      @if $mobimenu_submenu_item_padding_top != '' {
+      padding-top:$mobimenu_submenu_item_padding_top;
+      }
+      @if $mobimenu_submenu_item_padding_right != '' {
+      padding-right:$mobimenu_submenu_item_padding_right;
+      }
+      @if $mobimenu_submenu_item_padding_bottom != '' {
+      padding-bottom:$mobimenu_submenu_item_padding_bottom;
+      }
+      @if $mobimenu_submenu_item_padding_left != '' {
+      padding-left:$mobimenu_submenu_item_padding_left;
+      }
+    }
+    li:hover {
+      @if $mobimenu_submenu_item_hover_bg != '' {
+      background: $mobimenu_submenu_item_hover_bg;
+      }
+    }
+    a {
+      @if $mobimenu_submenu_fontsize != 'null' {
+      font-size: $mobimenu_submenu_fontsize + 'px';
+      }
+      @if $mobimenu_submenu_link_color != '' {
+      color: $mobimenu_submenu_link_color;
+      }
+    }
+    a:hover {
+      @if $mobimenu_submenu_link_hover_color != '' {
+      color: $mobimenu_submenu_link_hover_color;
+      }
+    }
+}

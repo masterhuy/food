@@ -1,0 +1,51 @@
+@if $login_page_width == 1 {
+    #authentication #wrapper {
+        margin:0 auto;
+        max-width:$body_container_width;
+    }
+}
+#login-wrapper h3 {
+  @if $login_page_title_font_size !='null' {
+  font-size: $login_page_title_font_size;
+  }
+  @if $login_page_title_font_weight != '' {
+  font-weight: $login_page_title_font_weight;
+  }
+  @if $login_page_title_font_style != '' {
+  font-style: $login_page_title_font_style;
+  }
+  @if $login_page_title_font_transform != '' {
+  text-transform: $login_page_title_font_transform;
+  }
+  @if $login_page_title_color != '' {
+  color: $login_page_title_color;
+  }
+}
+.login-box {
+    border:$login_page_box_border_width + ' ' + $login_page_box_border_style + ' ' + $login_page_box_border_color;
+    @if $login_page_box_padding_top != '' {
+    padding-top:$login_page_box_padding_top;
+    }
+    @if $login_page_box_padding_right != '' {
+    padding-right:$login_page_box_padding_right;
+    }
+    @if $login_page_box_padding_bottom != '' {
+    padding-bottom:$login_page_box_padding_bottom;
+    }
+    @if $login_page_box_padding_left != '' {
+    padding-left:$login_page_box_padding_left;
+    }
+}
+@if $login_page_hide_header != 'null' {
+#authentication header#header {
+    display:none;
+}
+#authentication .breadcrumb {
+    display:none;
+}
+}
+@if $login_page_hide_footer != 'null' {
+#authentication footer#footer {
+    display:none;
+}
+}
