@@ -97,12 +97,35 @@ function footerCollapse() {
   }
 }
 jQuery(document).ready(function () {
-  if ($(".gdz-megamenu").length > 0){
-    $('.gdz-megamenu').jmsMegaMenu({
+  var menuItem = $('.gdz-megamenu .nav > .menu-item .mega-nav li');
+    menuItem.each(function() {
+      let dataGroup = $(this).attr('data-group');
+      if(dataGroup == '0'){
+        $(this).removeClass('group');
+      }
+  });
+  // if ($(".gdz-megamenu").length > 0){
+  //   $('.gdz-megamenu').jmsMegaMenu({
+  //     event: 'click',
+  //     duration: 100,
+  //   });
+  // }
+  $('#hor-menu .gdz-megamenu').jmsMegaMenu({
+    event: 'click',
+    duration: 100
+  });
+  $('.vermenu .gdz-megamenu').jmsMegaMenu({
       event: 'hover',
-      duration: 100,
-    });
-  }  
+      duration: 100
+  });
+  $('.pb-menu .gdz-megamenu').jmsMegaMenu({
+      event: 'hover',
+      duration: 100
+  });
+  $('#off-canvas-menu .gdz-megamenu').jmsMegaMenu({
+      event: 'click',
+      duration: 100
+  });
   changeShopGrid();
   footerCollapse();
 });

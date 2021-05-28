@@ -282,6 +282,13 @@ jQuery(function ($) {
 		li_sel.attr('data-group',$(this).val());
     });
 
+	var menuItem = $('.gdz-megamenu .nav > .menu-item .mega-nav li');
+		menuItem.each(function() {
+		let dataGroup = $(this).attr('data-group');
+		if(dataGroup == '0'){
+			$(this).removeClass('group');
+		}
+	});
 
 	$('#page-header-desc-configuration-save_style').click(function (d) {
 		d.preventDefault();

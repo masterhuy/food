@@ -34,7 +34,9 @@
 			data-mobile2_height = "{$slider->mobile2_height}"
 			data-tablet_height = "{$slider->tablet_height}"
 		 	class="slider" >
-		<div class="fs_loader"></div>
+		<div class="fs_loader">
+			<div class="spinner"></div>
+		</div>
 		{foreach from=$slider->slides item=slide}
 			<div class="slide {$slide->class_suffix}" style="background:{$slide->bg_color} url({$root_url nofilter}modules/gdz_slider/views/img/slides/{$slide->bg_image nofilter}) no-repeat center top;background-size:cover;" {if $slide->slide_link}onclick="document.location='{$slide->slide_link nofilter}';"{/if}>
 				{foreach from=$slide->layers item=layer}
