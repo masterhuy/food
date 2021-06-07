@@ -1,0 +1,43 @@
+#contact-wrapper {
+
+}
+#contact-wrapper .contact-row {
+		margin-top:30px;
+}
+#contact-wrapper h3 {
+		margin-bottom:20px;
+}
+#contact-wrapper select,
+#contact-wrapper input {
+		height:40px;
+}
+#contact-info .info-address::before {
+    content: url(../img/icon/plane.png);
+    margin-right: 12px;
+    position: relative;
+    top: 4px;
+}
+#contact-info .phone::before {
+    content: url(../img/icon/phone.png);
+    margin-right: 6px;
+    position: relative;
+    top: 3px;
+}
+#contact-info .fax::before {
+		content: url(../img/icon/plane.png);
+		margin-right: 12px;
+		position: relative;
+		top: 4px;
+}
+#contact-info .email::before {
+    content: url(../img/icon/develope.png);
+    margin-right: 6px;
+    position: relative;
+    top: 3px;
+}
+#contact-info .section {
+		margin-bottom:10px;
+}
+#contact-map .contact-box {
+		width:100%;
+}

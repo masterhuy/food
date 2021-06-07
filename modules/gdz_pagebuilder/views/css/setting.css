@@ -1,0 +1,106 @@
+/**
+* 2007-2020 PrestaShop
+*
+* Godzilla Pagebuilder
+*
+*  @author    Godzilla <joommasters@gmail.com>
+*  @copyright 2007-2020 Godzilla
+*  @license   license http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+*  @Website: https://www.godzillabuilder.com
+*/
+
+.bootstrap .nav-tabs>li>a {
+	border-radius: 0px;
+  text-transform: CAPITALIZE;
+  font-size: 17px;
+	color:#555;
+}
+.bootstrap .nav-tabs>li.active>a,
+.bootstrap .nav-tabs>li.active>a:focus,
+.bootstrap .nav-tabs>li.active>a:hover,
+.bootstrap .nav-tabs>li>a:hover {
+	border-top:3px solid #36bad3;
+}
+.bootstrap .form-control, .bootstrap input[type=password], .bootstrap input[type=search], .bootstrap input[type=text], .bootstrap select, .bootstrap textarea {
+    -webkit-transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    -webkit-transition: border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+    background-color: #f5f8f9;
+    background-image: none;
+    border: 1px solid #c7d6db;
+    border-radius: 3px;
+    color: #555;
+    display: block;
+    font-size: 14px;
+    height: 40px;
+    line-height: 1.42857;
+    padding: 6px 8px;
+    transition: border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+    width: 100%;
+}
+.bootstrap label.control-label {
+    color: #222;
+    font-size: 15px;
+    font-weight: 400;
+		padding-right:10px;
+}
+.bootstrap .input-group-btn:last-child>.btn, .bootstrap .input-group-btn:last-child>.btn-group {
+    line-height: 26px;
+}
+.bootstrap .switch {
+    height: 32px;
+}
+.bootstrap .fixed-width-260 {
+		width:260px!important;
+}
+.bootstrap .prestashop-switch label {
+		line-height: 35px;
+}
+.skin-box {
+	float:left;
+	margin-right:10px;
+}
+.skin-box  img{
+	width:32px;
+	height:32px;
+	display:inline-block;
+	overflow:hidden;
+}
+.skin-box.active img {
+	border:1px solid #000;
+}
+.input-field {
+	display:block;
+}
+.input-field input {
+	margin:0px 0px 0px -1px;
+	line-height: 38px;
+	width:100px;
+	float:left;
+	text-align:center;
+	border:1px solid #c7d6db;
+}
+.input-field input:first-child {
+	border-top-left-radius:3px;
+	border-bottom-left-radius:3px;
+}
+.input-field input:last-child {
+	border-top-right-radius:3px;
+	border-bottom-right-radius:3px;
+}
+.input-field .input-group-addon {
+	display:inline-block;
+	line-height: 28px;
+	width: 30px;
+}
+.input-label {
+	display:block;
+	margin-top:10px;
+}
+.input-label span {
+	width:99px;
+	float:left;
+	text-align:center;
+	text-transform: uppercase;
+}

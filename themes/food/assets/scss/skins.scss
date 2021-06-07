@@ -1,0 +1,69 @@
+h1, h2, h3, h4, h5, h6{
+    color: $active;
+}
+a {
+	&:hover {
+		color: $active;
+	}
+}
+.btn{
+    &.btn-active, &:hover{
+        border-color: $active;
+        background-color: $active;
+    }
+}
+
+.popup-newsletter .block_newsletter .content button{
+    background-color: $active;
+    border-color: $active;
+}
+
+.fs-pager-wrapper a span,
+.fs-pager-wrapper a.active span {
+    background-color: $active;
+    border-color: $active;
+}
+.fs-pager-wrapper a.active span::before{
+    border-color: $active;
+}
+
+.owl-dots button span,
+.owl-dots button.active span {
+    background-color: $active;
+    border-color: $active;
+}
+.owl-dots button.active span::before{
+    border-color: $active;
+}
+
+
+#hor-menu .nav > li > a span{
+    &::after{
+        background-color: $active;
+    }
+}
+.gdz-megamenu .nav > .menu-item .mega-nav li.group > a{
+    color: $active;
+}
+
+.price.new{
+    color: $active;
+}
+.cart-prices-line .value{
+    color: $active;
+}
+#blockcart-modal .value{
+    color: $active;
+}
+#blockcart-modal .btn-default{
+    border-color: $active;
+    color: $active;
+}
+.product-miniature::before{
+    border-color: $active;;
+}
+.addon-tab .nav-tabs .nav-link{
+    &.active, &:hover{
+        color: $active;
+    }
+}

@@ -1,0 +1,74 @@
+@if $product_page_width == 1 {
+    #product #wrapper {
+        margin:0 auto;
+        max-width:$body_container_width;
+    }
+}
+#product .product-name {
+  @if $product_page_title_font_size !='null' {
+  font-size: $product_page_title_font_size;
+  }
+  @if $product_page_title_font_weight != '' {
+  font-weight: $product_page_title_font_weight;
+  }
+  @if $product_page_title_font_style != '' {
+  font-style: $product_page_title_font_style;
+  }
+  @if $product_page_title_font_transform != '' {
+  text-transform: $product_page_title_font_transform;
+  }
+  @if $product_page_title_color != '' {
+  color: $product_page_title_color;
+  }
+}
+#product .product-detail .content_price .price {
+  @if $product_page_price_font_size !='null' {
+  font-size: $product_page_price_font_size;
+  }
+  @if $product_page_price_font_weight != '' {
+  font-weight: $product_page_price_font_weight;
+  }
+  @if $product_page_price_font_style != '' {
+  font-style: $product_page_price_font_style;
+  }
+  @if $product_page_price_font_transform != '' {
+  text-transform: $product_page_price_font_transform;
+  }
+  @if $product_page_price_color != '' {
+  color: $product_page_price_color;
+  }
+}
+.quickview-modal .product-name {
+  @if $quickview_title_font_size !='null' {
+  font-size: $quickview_title_font_size;
+  }
+  @if $quickview_title_font_weight != '' {
+  font-weight: $quickview_title_font_weight;
+  }
+  @if $quickview_title_font_style != '' {
+  font-style: $quickview_title_font_style;
+  }
+  @if $quickview_title_font_transform != '' {
+  text-transform: $quickview_title_font_transform;
+  }
+  @if $quickview_title_color != '' {
+  color: $quickview_title_color;
+  }
+}
+.quickview-modal .content_price .price {
+  @if $quickview_price_font_size !='null' {
+  font-size: $quickview_price_font_size;
+  }
+  @if $quickview_price_font_weight != '' {
+  font-weight: $quickview_price_font_weight;
+  }
+  @if $quickview_price_font_style != '' {
+  font-style: $quickview_price_font_style;
+  }
+  @if $quickview_price_font_transform != '' {
+  text-transform: $quickview_price_font_transform;
+  }
+  @if $quickview_price_color != '' {
+  color: $quickview_price_color;
+  }
+}
