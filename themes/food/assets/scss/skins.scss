@@ -1,0 +1,109 @@
+h1, h2, h3, h4, h5, h6{
+    color: $active;
+}
+a {
+	&:hover {
+		color: $active;
+	}
+}
+.btn{
+    &.btn-active, &:hover{
+        border-color: $active;
+        background-color: $active;
+    }
+}
+
+.popup-newsletter .block_newsletter .content button{
+    background-color: $active;
+    border-color: $active;
+}
+
+.fs-pager-wrapper a span,
+.fs-pager-wrapper a.active span {
+    background-color: $active;
+    border-color: $active;
+}
+.fs-pager-wrapper a.active span::before{
+    border-color: $active;
+}
+.owl-carousel .owl-nav button{
+    &.owl-prev:hover, &.owl-next:hover{
+        background-color: $active;
+    }
+}
+.owl-dots button span,
+.owl-dots button.active span {
+    background-color: $active;
+    border-color: $active;
+}
+.owl-dots button.active span::before{
+    border-color: $active;
+}
+.header-3{
+    .header-bottom{
+        background-color: $active;
+    }
+}
+.header-5 #header-top .header-right .btn-group > a{
+    &:hover path{
+        fill: $active;
+    }
+}
+
+#hor-menu .nav > li > a span{
+    &::after{
+        background-color: $active;
+    }
+}
+.gdz-megamenu .nav > .menu-item .mega-nav li.group > a{
+    color: $active;
+}
+
+.price.new{
+    color: $active;
+}
+.cart-prices-line .value{
+    color: $active;
+}
+#blockcart-modal .value{
+    color: $active;
+}
+#blockcart-modal .btn-default{
+    border-color: $active;
+    color: $active;
+}
+.productbox-2 .product-buttons .ajax-add-to-cart{
+    color: $active;
+    border-color: $active;
+}
+.productbox-3 .product-buttons .btn-icon path{
+    fill: $active;
+}
+.productbox-4 .product-buttons .cart-button{
+    background-color: $active;
+}
+.productbox-4 .product-buttons .btn-icon.quick-view{
+    &:hover{
+        background-color: $active;
+    }
+    path{
+        fill: $active;
+    }
+}
+.product-miniature::before{
+    border-color: $active;;
+}
+.addon-tab .nav-tabs .nav-link{
+    &.active, &:hover{
+        color: $active;
+    }
+}
+.pb-testimonial .quote svg {
+    fill: $active;
+}
+
+.footer-4{
+    .hotline{
+        color: $active;
+    }
+}

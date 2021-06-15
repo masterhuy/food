@@ -1,0 +1,38 @@
+@if $contact_page_width == 1 {
+    #contact #wrapper {
+        margin:0 auto;
+        max-width:$body_container_width;
+    }
+}
+#contact-wrapper h3 {
+  @if $contact_page_title_font_size !='null' {
+  font-size: $contact_page_title_font_size;
+  }
+  @if $contact_page_title_font_weight != '' {
+  font-weight: $contact_page_title_font_weight;
+  }
+  @if $contact_page_title_font_style != '' {
+  font-style: $contact_page_title_font_style;
+  }
+  @if $contact_page_title_font_transform != '' {
+  text-transform: $contact_page_title_font_transform;
+  }
+  @if $contact_page_title_color != '' {
+  color: $contact_page_title_color;
+  }
+}
+.contact-box {
+    border:$contact_page_box_border_width + ' ' + $contact_page_box_border_style + ' ' + $contact_page_box_border_color;
+    @if $contact_page_box_padding_top != '' {
+    padding-top:$contact_page_box_padding_top;
+    }
+    @if $contact_page_box_padding_right != '' {
+    padding-right:$contact_page_box_padding_right;
+    }
+    @if $contact_page_box_padding_bottom != '' {
+    padding-bottom:$contact_page_box_padding_bottom;
+    }
+    @if $contact_page_box_padding_left != '' {
+    padding-left:$contact_page_box_padding_left;
+    }
+}

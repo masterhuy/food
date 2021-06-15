@@ -1,0 +1,62 @@
+.search-box input {
+    height:auto;
+    @if $search_input_text_color != '' {
+    color: $search_input_text_color;
+    }
+    @if $search_input_font_size != 'null' {
+    font-size: $search_input_font_size;
+    }
+    @if $search_input_font_weight != '' {
+    font-weight: $search_input_font_weight;
+    }
+    @if $search_input_font_style != '' {
+    font-style: $search_input_font_style;
+    }
+    @if $search_input_font_transform != '' {
+    text-transform: $search_input_font_transform;
+    }
+    @if $search_input_lineheight != '' {
+    line-height: $search_input_lineheight;
+    }
+    @if $search_input_letterspacing != 'null' {
+    letter-spacing: $search_input_letterspacing + 'em';
+    }
+    @if $search_input_padding_top != '' {
+    padding-top:$search_input_padding_top;
+    }
+    @if $search_input_padding_right != '' {
+    padding-right:$search_input_padding_right;
+    }
+    @if $search_input_padding_bottom != '' {
+    padding-bottom:$search_input_padding_bottom;
+    }
+    @if $search_input_padding_left != '' {
+    padding-left:$search_input_padding_left;
+    }
+    @if $search_input_border_radius_top != '' {
+    border-top-left-radius:$search_input_border_radius_top;
+    }
+    @if $search_input_border_radius_right != '' {
+    border-top-right-radius:$search_input_border_radius_right;
+    }
+    @if $search_input_border_radius_bottom != '' {
+    border-bottom-right-radius:$search_input_border_radius_bottom;
+    }
+    @if $search_input_border_radius_left != '' {
+    border-bottom-left-radius:$search_input_border_radius_left;
+    }
+    border:$search_input_border_width + ' ' + $search_input_border_style + ' ' + $search_input_border_color;
+    @if $search_input_bg_color != '' {
+    background-color: $search_input_bg_color;
+    }
+}
+.fullwidth .search-box {
+  @if $search_box_height != '' {
+  height: $search_box_height + 'px';
+  }
+}
+.search-overlay .search-box {
+  @if $search_box_bg_color != '' {
+  background-color: $search_box_bg_color;
+  }
+}

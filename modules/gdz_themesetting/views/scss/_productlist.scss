@@ -1,0 +1,50 @@
+@if $shop_width == 1 {
+    #category #wrapper {
+        margin:0 auto;
+        max-width:$body_container_width;
+    }
+}
+.products-sort-order .dropdown-menu a:hover, .products-sort-order .dropdown-menu a.current {
+  @if $body_link_hover_color != '' {
+  color: $body_link_hover_color;
+  }
+}
+.switch-view.active i {
+  @if $body_link_hover_color != '' {
+  color: $body_link_hover_color;
+  }
+}
+.product-title a {
+  @if $productbox_title_font_size !='null' {
+  font-size: $productbox_title_font_size;
+  }
+  @if $productbox_title_font_weight != '' {
+  font-weight: $productbox_title_font_weight;
+  }
+  @if $productbox_title_font_style != '' {
+  font-style: $productbox_title_font_style;
+  }
+  @if $productbox_title_font_transform != '' {
+  text-transform: $productbox_title_font_transform;
+  }
+  @if $productbox_title_color != '' {
+  color: $productbox_title_color;
+  }
+}
+.js-product-miniature .content_price {
+  @if $productbox_price_font_size !='null' {
+  font-size: $productbox_price_font_size;
+  }
+  @if $productbox_price_font_weight != '' {
+  font-weight: $productbox_price_font_weight;
+  }
+  @if $productbox_price_font_style != '' {
+  font-style: $productbox_price_font_style;
+  }
+  @if $productbox_price_font_transform != '' {
+  text-transform: $productbox_price_font_transform;
+  }
+  @if $productbox_price_color != '' {
+  color: $productbox_price_color;
+  }
+}

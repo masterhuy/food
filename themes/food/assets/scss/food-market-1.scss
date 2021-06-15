@@ -1,0 +1,261 @@
+$active: #70C03E;
+
+@import './skins.scss';
+
+h1, h2, h3, h4, h5, h6{
+    font-weight: 600;
+}
+.page-index{
+    background: url("../img/food-market-1/food-market-1-bg.jpg") no-repeat center;
+    background-size: cover;
+    #header{
+        position: absolute;
+        width: 100%;
+        left: 0;
+        right: 0;
+        top: 0;
+        z-index: 1000;
+    }
+}
+.productbox-2{
+	.product-flags .product-flag{
+		font-size: 18px;
+		&.discount{
+			border-radius: 50px 0 0 50px;
+			right: 0;
+			top: 23px;
+			padding: 9px 8px 5px 13px;
+		}
+		&.new{
+			border-radius: 0 50px 50px 0;
+			left: 0;
+			top: 23px;
+			padding: 9px 13px 5px 8px;
+		}
+	}
+}
+.fs-pager-wrapper{
+    top: 50%;
+    bottom: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    left: 3.75vw;
+    transform: none;
+    a{
+        height: 20px;
+        &.active{
+            margin: 4px 0;
+        }
+    }
+}
+.gdz-slide-content .btn {
+    padding: 0 31px;
+}
+
+.category-banner{
+    margin-top: -260px;
+    position: relative;
+    z-index: 1000;
+    + .gdz-row{
+        position: relative;
+        z-index: 1000;
+    }
+    &::before{
+        content: url("../img/food-market-2/vector.png");
+        position: absolute;
+        left: -7px;
+        top: 18px;
+        z-index: 999;
+    }
+    .container{
+        padding-left: 12.5px;
+        padding-right: 12.5px;
+        position: relative;
+        z-index: 1000;
+    }
+    .row{
+        margin-left: -12.5px;
+        margin-right: -12.5px;
+        .col-xl-20{
+            padding-left: 12.5px;
+            padding-right: 12.5px;
+        }
+    }
+    .pb-banner{
+        margin-top: 20px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+        border-radius: 20px;
+        &:hover{
+            .pb-banner-title{
+                color: $active;
+            }
+        }
+        .pb-banner-title{
+            color:#3F2803;
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 50px;
+            margin-bottom: 10px;
+            transition: .2s all;
+        }
+    }
+}
+.pb-banner-img{
+    img{
+        border-radius: 20px;
+    }
+}
+.addon-tab .nav-tabs .nav-link{
+    border-color: #fff;
+}
+.pb-categorytab{
+    .nav.nav-tabs{
+        margin-bottom: 58px;
+    }
+}
+.btn-loadmore{
+    > a{
+        text-transform: initial;
+        background-color: $active;
+        border-color: $active;
+        font-weight: 600;
+        height: 44px;
+        line-height: 44px;
+        min-width: 330px;
+        color: #fff;
+    }
+}
+.follow-us{
+    .addon-box{
+        padding-right: 110px;
+    }
+    .pb-heading{
+        margin-bottom: 21px;
+    }
+    .desc{
+        padding-right: 75px;
+        line-height: 28px;
+    }
+    .block_newsletter{
+        margin-top: 32px;
+        margin-bottom: 23px;
+        .content{
+            input{
+                border: 2px solid #f1f1f1;
+                background-color: transparent;
+            }
+            button{
+                background-color: #70C03E;
+                color: #fff;
+                border-color: #70C03E;
+                width: 100%;
+                margin-top: 20px;
+            }
+        }   
+    }
+    #social-links{
+        margin-top: 38px;
+        margin-bottom: 0;
+        li{
+            margin-right: 7px;
+            a{
+                width: 62px;
+                height: 62px;
+                border: 2px solid #EFEFEF;
+                display: inline-flex;
+                border-radius: 50%;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+}
+.our-process{
+    .addon-box{
+        padding-left: 110px;
+        + .addon-box{
+            margin-top: 25px
+        }
+    }
+    .pb-heading{
+        margin-bottom: 33px;
+    }
+    .pb-service-box{
+        display: flex;
+        align-items: center;
+    }
+    .pb-service-icon{
+        display: inline-block;
+        margin-right: 21px;
+        margin-bottom: 0;
+        min-width: 95px;
+    }
+    .pb-service-content{
+        display: inline-block;
+    }
+    .pb-service-title{
+        font-size: 24px;
+        font-weight: 600;
+        color: #3F2803;
+        margin-bottom: 11px;
+    }
+    .pb-service-description{
+        margin-bottom: 0;
+        p{
+            color: rgba(63, 40, 3, 0.7);
+            margin-bottom: 0;
+            line-height: 28px;
+        }
+    }
+}
+.best-sellers{
+    .owl-dots{
+        position: absolute;
+        top: -75px;
+        right: -4px;
+        width: auto;
+        margin: 0;
+        button{
+            &.active span{
+                background: $active;
+                &::before{
+                    width: 22px;
+                    height: 22px;
+                }
+            }
+            span{
+                width: 10px;
+                height: 10px;
+                background: #D3D3D3;
+                border: none;
+            }
+        }
+    }
+}
+
+.instagram-banner{
+    .container{
+        padding-left: 12.5px;
+        padding-right: 12.5px;
+    }
+    .row{
+        margin-left: -12.5px;
+        margin-right: -12.5px;
+        .col-xl-20{
+            padding-left: 12.5px;
+            padding-right: 12.5px;
+        }
+    }
+    .pb-banner-img img{
+        border-radius: 10px;
+    }
+}
+
+
+
+.page-index{
+    #footer.footer-2{
+        margin-top: 0;
+    }
+}

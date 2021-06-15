@@ -1,0 +1,768 @@
+.area-display .list-title-slides{
+	margin-left: 15px;
+	display: inline-block;
+    line-height: 2.2em;
+    height: 2.2em;
+    text-transform: uppercase;
+}
+.wrap-slider{
+    padding: 40px 40px 0 40px;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 30px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    background-color: #333;
+    width: 100%;
+}
+.area-display .btn-info {
+	padding: 5px 10px;
+}
+.tp-caption.active{
+	border: 1px dotted #FF0000 !important;
+}
+.layer-wrapper {
+    background: url(../img/settings/transparent.png) repeat;
+}
+.slider {
+    position: relative;
+    margin: auto;
+}
+.slide .move-toolbar{
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: #fff !important;
+	background-color: #000;
+	z-index: 9;
+	display: inline-block;
+	padding: 5px;
+}
+
+.tp-caption iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	min-width:200px;
+	min-height:120px;
+}
+.tp-caption.layer{
+	margin: 0;
+	padding: 0;
+}
+#layer_form .panel-footer {
+	position:fixed;
+	right:0px;
+	top:300px;
+	width:52px;
+	padding:0px!important;
+	margin:0px!important;
+	background-color:transparent!important;
+}
+#layer_form .panel-footer .btn i {
+	color:#fff!important;
+	font-size:25px;
+	width:25px;
+	height:25px;
+}
+#layer_form .panel-footer .btn {
+	border-radius:0px;
+	float:right;
+	box-shadow: 1px 2px 3px #bbb;
+	margin-bottom:4px;
+	padding:6px 12px!important;
+}
+#slides .panel i {
+    color: #fff;
+    border-radius: 5px;
+    font-size: 12px;
+    line-height: 32px;
+    width: 32px;
+    margin-right: 5px;
+    text-align: center;
+    cursor: pointer;
+    background-color:#353535;
+    float:right;
+}
+#slides .panel .icon-check {
+    background-color: #4db356;
+}
+#slides .panel .icon-remove {
+    background-color: #d5666f;
+}
+#slides .panel .action:hover {
+    background-color: #3498db;
+}
+#slides .panel .button {
+    position: absolute;
+    height:100%;
+    right: 0;
+    top: 0;
+    display:none;
+    color: #fff;
+}
+#slides .panel {
+    width: 220px;
+    height: 160px;
+    margin: 0 10px 10px 0;
+    display: inline-block;
+    position: relative;
+    border: 1px solid #ddd;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#slides .panel:hover {
+    border: 1px solid #252525!important;
+}
+#slides .panel:hover > .title {
+    border-top: 1px solid #252525;
+    color: #fff;
+    background-color: #252525;
+}
+#slides .panel:hover > .title .slider-name {
+    display: none;
+}
+#slides .panel:hover .button {
+    display:block;
+}
+#slides .panel .title {
+    color: #252525;
+    line-height: 22px;
+    font-size: 11px;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0px;
+    height: 32px;
+    left: 0;
+    right: 0;
+    padding: 5px;
+    border-top: 1px solid #ddd;
+}
+#slides .panel .btn {
+    border-radius: 0 !important;
+    margin-right: 6px;
+    padding: 4px 7px;
+}
+#addSlide {
+	position:fixed!important;
+	right:0px!important;
+	top:300px!important;
+	box-shadow: 0 2px 3px #999;
+    cursor: pointer;
+    display: inline-block;
+    height: 50px;
+    line-height: 44px;
+    margin: 2px 0;
+    padding: 5px;
+    text-align: center;
+    width: 50px;
+	z-index:1000;
+	border-radius:0px;
+}
+#addSlide i {
+	color:#FFF;
+	font-size:18px;
+}
+
+#hor-css-linear {
+    background: rgba(0, 0, 0, 0) url("../img/settings/newlinear-horizontal.png") repeat scroll 0 0 / 100px 20px;
+    cursor: pointer;
+    height: 20px;
+    left: 0;
+    position: absolute;
+    top: 10px;
+    right: 0;
+    overflow-x:hidden;
+}
+#hor-css-linear .linear-texts {
+    height: 20px;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    overflow: hidden;
+}
+#hor-css-linear .linear-texts li {
+    color: #ddd;
+    display: inline-block;
+    float: left;
+    font-size: 10px;
+    line-height: 20px;
+    vertical-align: top;
+    width: 100px;
+}
+#ver-css-linear {
+    background: rgba(0, 0, 0, 0) url("../img/settings/newlinear-vertical.png") repeat scroll 0 0 / 20px 100px;
+    cursor: pointer;
+    left: 10px;
+    position: absolute;
+    width: 20px;
+    top:40px;
+    bottom:0;
+}
+#ver-css-linear .linear-texts, #ver-css-linear .linear-texts li {
+    list-style: outside none none;
+}
+#ver-css-linear .linear-texts li span {
+    display: inline-block;
+    margin-left: 2px;
+}
+#ver-css-linear .linear-texts {
+    height: 100%;
+    overflow-y: hidden;
+    left: -12px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    text-align: right;
+    top: 0px;
+    width: 20px;
+}
+#ver-css-linear .linear-texts li {
+    color: #ddd;
+    display: inline-block;
+    font-size: 10px;
+    height: 100px;
+    line-height: 20px;
+    margin-bottom: 0;
+    vertical-align: top;
+}
+#horlinie {
+    background: #4affff none repeat scroll 0 0;
+    cursor: pointer;
+    height: 1px;
+    left: 0;
+    position: absolute;
+    top: 30px;
+    width: 40px;
+    z-index: 9;
+}
+#verlinie {
+    background: #4affff none repeat scroll 0 0;
+    cursor: pointer;
+    height: 40px;
+    left: 30px;
+    position: absolute;
+    top: 0;
+    width: 1px;
+    z-index: 9;
+}
+#frame_layer{
+
+}
+#horlinetext {
+    background: #333 none repeat scroll 0 0;
+    color: #4affff;
+    font-size: 10px;
+    left: 11px;
+    padding: 0 2px;
+    position: absolute;
+    top: 1px;
+}
+#verlinetext {
+    background: #333 none repeat scroll 0 0;
+    color: #4affff;
+    font-size: 10px;
+    left: 2px;
+    line-height: 4px;
+    padding: 2px 3px 4px;
+    position: absolute;
+    top: 22px;
+}
+.mastertimer-wrapper {
+    overflow:hidden;
+}
+.mastertimer-left {
+    border-right: 1px solid #ddd;
+    display: table-cell;
+    min-width: 277px;
+    overflow: hidden;
+    position: relative;
+    vertical-align: top;
+    width: 277px;
+}
+.mastertimer-right {
+    display: table-cell;
+    overflow: hidden;
+    position: relative;
+    vertical-align: top;
+    width: 100%;
+}
+.mastertimer-left ul {
+    margin-top:39px;
+    list-style-type: none;
+}
+.mastertimer-left li {
+    overflow: hidden;
+    line-height:31px;
+    margin-right: 20px;
+    text-align:left;
+}
+.mastertimer-left .material-icons {
+    width: 20px;
+    height: 20px;
+}
+.mastertimer {
+    background: #f1f1f1 none repeat scroll 0 0;
+    border-bottom: 1px solid #d5d5d5;
+    height: 39px;
+    overflow: hidden;
+    position: relative;
+}
+#mastertimer-linear {
+    background: rgba(0, 0, 0, 0) url("../img/settings/newlinear-horizontal.png") repeat scroll 0 0 / 100px 20px;
+    cursor: pointer;
+    height: 16px;
+    position: absolute;
+    top: 20px;
+    z-index: 599;
+}
+#mastertimer-linear .linear-texts,
+#mastertimer-linear .linear-texts li {
+    list-style: outside none none;
+}
+#mastertimer-linear .linear-texts {
+    height: 20px;
+    left: -2px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: -19px;
+}
+#mastertimer-linear .linear-texts li {
+    color: #333;
+    display: inline-block;
+    float: left;
+    font-size: 10px;
+    line-height: 20px;
+    vertical-align: top;
+    width: 100px;
+}
+#mastertimer-linear .linear-texts li span {
+    display: inline-block;
+    margin-left: 0;
+}
+.mastertimer, #mastertimer-linear, #mastertimer-linear .linear-texts {
+    width: 16000px;
+}
+#mastertimer-curtime {
+    border-left: 1px dashed #ddd;
+    box-sizing: border-box;
+    height: 1000px;
+    left: 500px;
+    position: absolute;
+    top: 0;
+    width: 0;
+    z-index: 880;
+}
+#mastertimer-curtime::before {
+    border-color: #ddd transparent transparent;
+    border-style: solid;
+    border-width: 15px 10px 0;
+    content: " ";
+    height: 0;
+    left: -11px;
+    position: absolute;
+    top: 0;
+    width: 0;
+}
+#mastertimer-curtimeinner {
+    background: #ddd none repeat scroll 0 0;
+    color: #666;
+    font-size: 10px;
+    font-weight: 600;
+    left: -13px;
+    line-height: 15px;
+    margin-left: 13px;
+    padding: 0 5px;
+    position: absolute;
+    top: 0;
+}
+
+#time-line ul {
+    list-style: none;
+    padding: 0;
+    margin: 13px 0;
+}
+#time-line li {
+    box-sizing: border-box;
+    height: 31px;
+    max-height: 31px;
+}
+.fulltime {
+    background: #3498db none repeat scroll 0 0;
+    height:8px;
+}
+.fulltime-title {
+    white-space: nowrap;
+    text-align: left;
+}
+.layer-time {
+    background: #333 none repeat scroll 0 0;
+}
+.delay-time {
+    background: #999 none repeat scroll 0 0;
+}
+.layer-time, .delay-time {
+    display: block;
+    height: 8px;
+    left: 0;
+    position: absolute;
+    width:auto;
+    z-index: 5;
+}
+.delay-time .active {
+    background-color: #eeb4ae;
+}
+.active .layer-time {
+    background: #e44632 none repeat scroll 0 0;
+}
+.active .layer-time .delay-time {
+    background: #eeb4ae;
+}
+.mastertimer-layer .ui-resizable-e {
+    border-color: #e44632;
+    background: #fff none repeat scroll 0 0;
+    border: 2px solid #999;
+    border-radius: 8px;
+    height: 12px !important;
+    position: absolute;
+    width: 12px !important;
+    z-index: 5;
+    top:-3px!important;
+}
+.layer-tools {
+    text-transform: uppercase;
+    margin: 40px 0 0px;
+    display:block;
+    height:60px;
+    padding:10px 100px;
+    background:#252525;
+}
+#add-layer-wrap {
+    float:left;
+    display: inline-block;
+    position:relative;
+    z-index:5;
+}
+.layer-tools .btn {
+    padding: 8px 20px;
+    display: flex;
+    font-weight: bold;
+    height: 40px;
+    line-height: 24px;
+}
+#add-layer {
+    margin-left:0px;
+}
+#add-layer-wrap:hover > ul.add-layer-list {
+    display:block;
+}
+.add-layer-list {
+    display: none;
+    position:absolute;
+    right: 0px;
+    left:0px;
+    z-index:1000;
+    background:#222;
+    padding:10px 20px;
+    min-width:90px;
+}
+.add-layer-list li {
+    margin-bottom: 5px;
+}
+.add-layer-list .material-icons {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+
+}
+.add-layer-list a {
+    color:#fff;
+    line-height:27px;
+    cursor:pointer;
+}
+.add-layer-list a:hover {
+    color:#fff;
+    text-decoration: none;
+}
+.add-layer-list a  i {
+    font-size:24px;
+    line-height:24px;
+}
+.layer-tools > a {
+    margin-right: 5px;
+    border: 1px solid #E5E5E5;
+    background: #fff;
+    cursor:pointer;
+}
+.layer-tools > a:hover {
+    border-color: #3498DB;
+    background: #3498DB;
+    color: #fff;
+}
+
+.layer-tools > a:last-child {
+    margin-right: 0;
+}
+#layer_form .material-icons {
+    float:left;
+    margin-right: 5px;
+}
+.mobile-style, .tablet-style, .mobile2-style {
+    margin-left: 20px;
+}
+.tab-mobile, .tab-tablet, .tab-mobile2 {
+    display: none;
+}
+.area-display {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.layer-hide {
+    position:relative;
+    color: #888;
+}
+.layer-hide:after{
+    width: 30px;
+    height: 3px;
+    content: " ";
+    left: -5px;
+    top: 13px;
+    background-color: #888;
+    transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    position: absolute;
+    z-index: 2222;
+}
+
+.area-display .layer-col {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.area-display .layer-col .inner {
+    box-shadow: 0 0 3px #ddd;
+    padding: 20px;
+    background: #fff;
+}
+
+.area-display .layer-col .inner h3.title {
+    margin-top: 0;
+}
+
+.area-display .row label {
+    display: inline-block;
+}
+
+.area-display .row input[type='text'] {
+}
+.area-display .col-4 {
+    border-right:1px solid #ededed;
+}
+.area-display .col-4:last-child {
+    border:0px;
+}
+.area-display .layerlist .layer-item {
+    overflow: hidden;
+    padding: 20px;
+    border: 1px solid #ececec;
+    margin-bottom: 30px;
+    background: #fff;
+}
+
+.area-display .layerlist .layer-sorting {
+    width: 20%;
+    float: left;
+}
+
+.area-display .layerlist .layer-title {
+    width: 50%;
+    float: left;
+}
+
+.area-display .layerlist .layer-action {
+    width: 30%;
+    float: left;
+}
+
+.area-display .layerlist .layer-title span,
+.area-display .layerlist .layer-sorting span {
+    line-height: 37px;
+}
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+    font-weight: 600;
+}
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+    clear: both;
+    display: inline-block;
+    margin: 0;
+}
+.tabcontent .col-3,
+.tabcontent .col-6,
+.tabcontent .col-4{
+    display: inline-block;
+}
+.tabcontent .col-3{
+    width: 24%;
+}
+.layerconfig .form-group {
+    padding: 10px 20px;
+}
+.rotate90 {
+    -ms-transform: rotate(90deg); /* IE 9 */
+    -webkit-transform: rotate(90deg); /* Safari 3-8 */
+    transform: rotate(90deg);
+}
+.flip {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+#quick-layer-selector {
+    padding: 4px 30px;
+    height: 40px;
+    position: relative;
+    display: inline-block;
+    float:left;
+    z-index: 5;
+}
+#quick-layer-selector .confirm,
+#quick-layer-selector .action{
+    display: inline-block;
+}
+#quick-layer-selector .confirm {
+    display: none;
+}
+.layer-container, .editor {
+    display:none;
+    padding: 4px 30px;
+    background-color: #252525;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+#text-editor {
+    height: 200px;
+    background-color: #252525;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+}
+#quick-layer-selector .layer{
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+#quick-layer-selector .material-icons, #quick-layer-selector [class^="icon-"]{
+    font-size: 20px;
+    line-height: 30px;
+    width: 20px;
+}
+#quick-layer-selector .layer-list {
+    padding: 0;
+}
+#quick-layer-selector span:hover,
+#quick-layer-selector .active .item,
+#quick-layer-selector .active span{
+    opacity:1;
+}
+#quick-layer-selector span:hover>.item{
+    opacity:1;
+}
+
+#quick-layer-selector .quick-edit:hover {
+    background-color: #3498db;
+}
+#quick-layer-selector .quick-delete:hover {
+    background-color: #e74b3c;
+}
+#quick-layer-selector .quick-duplicate:hover {
+    background-color: #f1c40f;
+}
+#quick-layer-selector .quick-show:hover {
+    background-color: #02bc13;
+}
+#quick-layer-selector span, #quick-layer-selector input {
+    background-color: #444;
+    display: inline-block;
+    line-height: 30px;
+    border-radius: 5px;
+    color: #fff;
+    opacity: 0.5;
+    padding: 0 7px;
+    float: left;
+    margin-right: 5px;
+    width: auto;
+}
+#quick-layer-selector input {
+    border: 0;
+    cursor: default;
+}
+span #quick-list {
+    border-right: 1px solid #7b7b7b;
+    border-radius: 5px 0 0 5px;
+}
+.quick-list, .quick-edit, .quick-delete, .quick-duplicate, #quick-check, #quick-cancel, .quick-show{
+    cursor: pointer;
+}
+#quick-layer-selector #quick-check {
+    background-color: #27ae60;
+}
+#quick-layer-selector #quick-cancel {
+    background-color: #e74b3c;
+}
+.displaylist .deleteHook {
+    cursor: pointer;
+    margin: 0 5px;
+}
+.displaylist li {
+    margin: 5px;
+}
+.displaylist i.deleteHook {
+    display:none;
+}
+[id^=list_hook_] li:hover > i{
+    display:inline-block;
+}
+.layerconfig .label-tooltip {
+    white-space: nowrap;
+}
+#layer-tools .btn-active {
+    color: #fff;
+    background-color: #00aff0;
+    border-color: #008abd;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+#layer-tools .btn-active i{
+    color: #fff;
+}

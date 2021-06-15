@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+    <name>gdz_hotdeal</name>
+    <displayName><![CDATA[Godzilla HotDeal]]></displayName>
+    <version><![CDATA[4.0.0]]></version>
+    <description><![CDATA[Deal for Prestashop Product.]]></description>
+    <author><![CDATA[Godzilla]]></author>
+    <tab><![CDATA[content_hotdeals]]></tab>
+	<confirmUninstall><![CDATA[Are you sure you want to uninstall?]]></confirmUninstall>
+    <is_configurable>1</is_configurable>
+    <need_instance>0</need_instance>
+	<limited_countries></limited_countries>
+</module>
