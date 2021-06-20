@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Copyright since 2007 PrestaShop SA and Contributors
  * PrestaShop is an International Registered Trademark & Property of PrestaShop SA
@@ -86,7 +87,7 @@ class DashboardModules
 
         /** @var Segment $segment */
         $segment = $this->module->getService('ps_metrics.tracker.segment');
-        $segment->setMessage('Enable stats modules');
+        $segment->setMessage('[MTR] Enable Overview Modules');
         $segment->track();
 
         return $moduleListToEnable;
@@ -120,7 +121,7 @@ class DashboardModules
 
         /** @var Segment $segment */
         $segment = $this->module->getService('ps_metrics.tracker.segment');
-        $segment->setMessage('Disable stats modules');
+        $segment->setMessage('[MTR] Disable Overview Modules');
         $segment->track();
 
         return $disabledModuleList;

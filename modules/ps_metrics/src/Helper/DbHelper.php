@@ -98,4 +98,20 @@ class DbHelper
     {
         return $this->request('getRow', $sql);
     }
+
+    /**
+     * Get mysql configuration for variable max_user_connections
+     * helpfull to prevent error like User o689528 already has more than max_user_connections active connections
+     *
+     * @return int
+     */
+    public function getMaxUserConnections()
+    {
+        $connexions = $this->executeS("show global variables like '%max_user_connections%'");
+        if (empty($connexions) || empty($connexions[0]) || !isset($connexions[0]['Value'])) {
+            return 0;
+        }
+
+        return ($connexions[0]['Value'] === '0') ? 9999 : (int) $connexions[0]['Value'];
+    }
 }

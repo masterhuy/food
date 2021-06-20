@@ -1,0 +1,81 @@
+$active: #B8D021;
+
+@import './skins.scss'; 
+@import './_dark.scss'; 
+
+
+.page-index{
+    #header{
+        position: absolute;
+        width: 100%;
+        left: 0;
+        right: 0;
+        top: 0;
+        z-index: 1000;
+        .header-6 #header-top{
+            &.sticky{
+                .header-right .btn-group{
+                    &.user-info{
+                        > a{
+                            color: #3F2803;
+                            &:hover{
+                                color: $active;
+                                border-color: $active;
+                            }
+                        }
+                    }
+                    > a{
+                        border-color: inherit;
+                        &:hover path{
+                            fill: $active;
+                        }
+                        path{
+                            fill: #3F2803;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.gdz-slide-content .btn {
+    padding: 0 31px;
+}
+.fs-pager-wrapper{
+    top: calc(50% - 41px);
+    bottom: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    left: 5.7vw;
+    transform: translateY(-50%);
+    a{
+        height: 20px;
+        &.active{
+            margin: 4px 0;
+            span::before{
+                background-color: transparent;
+            }
+        }
+        span{
+            background-color: #fff;
+        }
+    }
+}
+.product-miniature .price.new{
+    font-weight: 600;
+}
+.addon-tab .nav.nav-tabs {
+    margin-bottom: 60px;
+    .nav-item{
+        margin-left: 7.5px;
+        margin-right: 7.5px;
+    }
+}
+.banner{
+    position: relative;
+    z-index: 999;
+}
+.owl-dots button span{
+    background-color: #fff;
+}

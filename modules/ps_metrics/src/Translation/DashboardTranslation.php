@@ -319,6 +319,12 @@ class DashboardTranslation
                 'analyticsSentence' => $this->module->l('You must {linktext} account.', 'DashboardTranslation'),
                 'analyticsSentenceLink' => $this->module->l('configure a Google Analytics', 'DashboardTranslation'),
             ],
+            'boxalert' => [
+                'title' => $this->module->l('Something went wrong', 'DashboardTranslation'),
+                'text' => $this->module->l('It looks like your hosting configuration could be the issue ({typeerror}).Please {linktext} to know more.', 'DashboardTranslation'),
+                'link' => $this->module->l('read the FAQ', 'DashboardTranslation'),
+                'maxUserConnections' => $this->module->l('max_user_connections', 'DashboardTranslation'),
+            ],
             'nodata' => [
                 'sentence' => $this->module->l('You don\'t have any data for this KPI ', 'DashboardTranslation'),
                 'noTipscard' => $this->module->l('You don\'t have any tips ', 'DashboardTranslation'),

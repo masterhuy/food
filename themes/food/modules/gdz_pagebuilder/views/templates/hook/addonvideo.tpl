@@ -23,33 +23,33 @@
 *  @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
 *  International Registered Trademark & Property of PrestaShop SA
 *}
-<div class="pb-video">
-{if $video_modal}
+<div class="pb-video {$box_class}">
+	{if $video_modal}
 		<div class="pb-video-wrapper">
-				<button class="pb-video-open-modal" data-toggle="modal" data-target="#pb-video-modal">
-					<i class="fa fa-play-circle"></i>
-				</button>
-				<div class="modal fade pb-video-modal" id="pb-video-modal">
-						<div class="modal-dialog" role="document">
-								<div class="modal-content">
-										<div class="modal-header">
-												<span class="modal-title"></span>
-												<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-														<span aria-hidden="true">×</span>
-												</button>
-										</div>
-										<div class="modal-body">
-												<iframe width="320" height="320" src="{$video_source nofilter}?{$video_setting nofilter}" frameborder="0" allowfullscreen=""></iframe>
-										</div>
-								</div>
+			<button class="pb-video-open-modal" data-toggle="modal" data-target="#pb-video-modal">
+				<i class="fa fa-play-circle"></i>
+			</button>
+			<div class="modal fade pb-video-modal" id="pb-video-modal">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<span class="modal-title"></span>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">×</span>
+							</button>
 						</div>
+						<div class="modal-body">
+							<iframe width="320" height="320" src="{$video_source nofilter}?{$video_setting nofilter}" frameborder="0" allowfullscreen=""></iframe>
+						</div>
+					</div>
 				</div>
+			</div>
 		</div>
-{else}
+	{else}
 		<div class="pb-video-wrapper video-screen-{$aspect_ratio}">
-		{if $video_source}
-		<iframe width="320" height="320" src="{$video_source nofilter}?{$video_setting nofilter}" frameborder="0" allowfullscreen=""></iframe>
-		{/if}
+			{if $video_source}
+				<iframe width="320" height="320" src="{$video_source nofilter}?{$video_setting nofilter}" frameborder="0" allowfullscreen=""></iframe>
+			{/if}
 		</div>
-{/if}
+	{/if}
 </div>

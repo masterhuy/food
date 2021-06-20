@@ -27,7 +27,7 @@
 	data-id-product="{$product.id_product}"
 	data-id-product-attribute="{$product.id_product_attribute}"
 	itemscope itemtype="http://schema.org/Product">
-	<div class="product-preview">
+	<div class="product-preview thumbnail-container">
 		{block name='product_thumbnail'}
 			<div class="product-thumbnail">
 				<a

@@ -30,7 +30,7 @@
     {assign var='footer_layout_link' value="_partials/footers/footer-`$gdzSetting.footer_layout`.tpl"}
 {/if}
 {block name="footer"}
-    <footer id="footer" class="footer-{$footer_layout} {if $gdzSetting.footer_class} {$gdzSetting.footer_class}{/if}">
+    <footer id="footer" class="footer footer-{$footer_layout} {if $gdzSetting.footer_class} {$gdzSetting.footer_class}{/if}">
         {include file=$footer_layout_link}
     </footer>
 {/block}

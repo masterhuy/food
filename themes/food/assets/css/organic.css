@@ -109,6 +109,10 @@ a:hover {
   color: #70C03E;
 }
 
+.footer-5 #footer-main .block-content li a:hover {
+  color: #70C03E;
+}
+
 .page-index #header {
   position: absolute;
   width: 100%;

@@ -27,7 +27,7 @@
 	data-id-product="{$product.id_product}"
 	data-id-product-attribute="{$product.id_product_attribute}"
 	itemscope itemtype="http://schema.org/Product">
-	<div class="product-preview">
+	<div class="product-preview thumbnail-container">
 		{block name='product_thumbnail'}
 			<div class="product-thumbnail">
 				<a
@@ -35,8 +35,8 @@
 					class="product-image{if $gdzSetting.productbox_hover == 'swap-image' && isset($product.images.1) && $product.images.1} swap-image{else} blur-image{/if}"
 				>
 					<img class="img-responsive product-img1{if $gdzSetting.carousel_lazyload} owl-lazy{/if}"
-						{if $gdzSetting.carousel_lazyload}data-src="{$product.cover.bySize.home_default.url}"{else}
-							src = "{$product.cover.bySize.home_default.url}"
+						{if $gdzSetting.carousel_lazyload}data-src="{$product.cover.bySize.home_default_300x300.url}"{else}
+							src = "{$product.cover.bySize.home_default_300x300.url}"
 						{/if}
 						alt = "{$product.cover.legend}"
 						title="{$product.name|escape:'html':'UTF-8'}"
@@ -44,7 +44,7 @@
 					/>
 					{if $gdzSetting.productbox_hover == 'swap-image' && isset($product.images.1) && $product.images.1}
 						<img class="img-responsive product-img2"
-							src = "{$product.images.1.bySize.home_default.url}"
+							src = "{$product.images.1.bySize.home_default_300x300.url}"
 							alt = "{$product.images.1.legend}"
 							title="{$product.name|escape:'html':'UTF-8'}"
 							data-full-size-image-url = "{$product.images.1.large.url}"

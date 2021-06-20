@@ -54,8 +54,12 @@
                 {include file='catalog/_partials/product-flags.tpl'}
 			</div>
 		{/block}
-
 		<div class="product-info">
+            <div class="category-name">
+                <a href="{url entity='category' id=$product.id_category_default}">
+                    {$product.category_name|escape:'html':'UTF-8'}
+                </a>
+            </div>
 			{block name='product_name'}
 				<h3 class="product-title" itemprop="name"><a class="product-link" href="{$product.canonical_url}">{$product.name|truncate:30:'...'}</a></h3>
 			{/block}

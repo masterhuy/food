@@ -109,6 +109,10 @@ a:hover {
   color: #70C03E;
 }
 
+.footer-5 #footer-main .block-content li a:hover {
+  color: #70C03E;
+}
+
 @media (min-width: 1600px) {
   .container {
     max-width: 1560px;
@@ -126,6 +130,10 @@ a:hover {
   top: 0;
   background-color: #fff;
   z-index: 1001;
+}
+
+.productbox-2 .category-name {
+  display: none;
 }
 
 .slider-foodmarket .gdz-slider-wrapper .btn {

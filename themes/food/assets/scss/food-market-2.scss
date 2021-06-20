@@ -22,7 +22,11 @@ $active: #70C03E;
         z-index: 1001;
     }
 }
-
+.productbox-2{
+    .category-name{
+        display: none;
+    }
+}
 .slider-foodmarket{
     .gdz-slider-wrapper{
         .btn{

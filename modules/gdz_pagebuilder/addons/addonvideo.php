@@ -215,7 +215,7 @@ class gdzAddonVideo extends gdzAddonBase
                 'video_setting' => $video_setting,
                 'aspect_ratio'  => $addon->fields[3]->value,
                 'video_modal'  => $addon->fields[4]->value,
-                'box_class' => $addon->fields[7]->value
+                'box_class' => $addon->fields[13]->value
             )
         );
         $this->overwrite_tpl = $addon->fields[count($addon->fields)-1]->value;

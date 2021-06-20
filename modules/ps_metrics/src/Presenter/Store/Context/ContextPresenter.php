@@ -24,6 +24,7 @@ namespace PrestaShop\Module\Ps_metrics\Presenter\Store\Context;
 use PrestaShop\Module\Ps_metrics\Adapter\LinkAdapter;
 use PrestaShop\Module\Ps_metrics\Api\HttpApi;
 use PrestaShop\Module\Ps_metrics\Context\PrestaShopContext;
+use PrestaShop\Module\Ps_metrics\Helper\DbHelper;
 use PrestaShop\Module\Ps_metrics\Helper\ToolsHelper;
 use PrestaShop\Module\Ps_metrics\Module\DashboardModules;
 use PrestaShop\Module\Ps_metrics\Presenter\PresenterInterface;
@@ -86,6 +87,11 @@ class ContextPresenter implements PresenterInterface
      */
     private $toolsHelper;
 
+    /**
+     * @var DbHelper
+     */
+    private $dbHelper;
+
     public function __construct(
         Ps_metrics $module,
         PrestaShopContext $context,
@@ -96,7 +102,8 @@ class ContextPresenter implements PresenterInterface
         DashboardModules $dashboardModules,
         AnalyticsAccountsListProvider $analyticsAccountsListProvider,
         HttpApi $httpApi,
-        ToolsHelper $toolsHelper
+        ToolsHelper $toolsHelper,
+        DbHelper $dbHelper
     ) {
         $this->module = $module;
         $this->context = $context;
@@ -108,6 +115,7 @@ class ContextPresenter implements PresenterInterface
         $this->analyticsAccountsListProvider = $analyticsAccountsListProvider;
         $this->httpApi = $httpApi;
         $this->toolsHelper = $toolsHelper;
+        $this->dbHelper = $dbHelper;
     }
 
     /**
@@ -169,6 +177,7 @@ class ContextPresenter implements PresenterInterface
                     'settings' => $this->linkAdapter->getAdminLink($this->module->metricsSettingsController),
                     'upgrade' => $this->linkAdapter->getAdminLink($this->module->metricsUpgradeController),
                     'faq' => $this->linkAdapter->getAdminLink($this->module->metricsSettingsController) . '#/help',
+                    'plans' => $this->linkAdapter->getAdminLink($this->module->metricsSettingsController) . '#/plans',
                 ],
                 'i18n' => [
                     'isoCode' => $this->context->getLanguageIsoCode(),
@@ -181,11 +190,36 @@ class ContextPresenter implements PresenterInterface
                     'url' => $currentShop['url'],
                 ],
                 'readmeUrl' => $this->getReadme(),
-                'productTourFreeDone' => \Configuration::get('PS_METRICS_PRODUCT_TOUR_FREE', 0),
-                'productTourAdvancedDone' => \Configuration::get('PS_METRICS_PRODUCT_TOUR_ADVANCED', 0),
+                'productTourFreeDone' => (bool) \Configuration::get('PS_METRICS_PRODUCT_TOUR_FREE', 0),
+                'productTourAdvancedDone' => (bool) \Configuration::get('PS_METRICS_PRODUCT_TOUR_ADVANCED', 0),
+                'productTourFreeDoneDate' => $this->getProductTourDate('PS_METRICS_PRODUCT_TOUR_FREE'),
+                'productTourAdvancedDoneDate' => $this->getProductTourDate('PS_METRICS_PRODUCT_TOUR_ADVANCED'),
                 'showOtherDashboardBlocks' => !$this->checkIfPageIsOldStats(),
+                'maxUserConnections' => $this->dbHelper->getMaxUserConnections(),
             ],
         ];
+    }
+
+    /**
+     * Retrieve the date_add when a field has been added to
+     * the configuration table
+     *
+     * @param string $key name field in configuration table
+     *
+     * @return string date
+     */
+    private function getProductTourDate($key)
+    {
+        $query = $this->dbHelper->getValue('SELECT date_add
+            FROM ' . _DB_PREFIX_ . 'configuration c
+            WHERE c.name = "' . $key . '"');
+
+        if (!empty($query)) {
+            $date = new \DateTime($query);
+            $query = $date->format('Y-m-d');
+        }
+
+        return $query;
     }
 
     /**

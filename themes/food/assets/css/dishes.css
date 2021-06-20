@@ -109,6 +109,10 @@ a:hover {
   color: #FF3514;
 }
 
+.footer-5 #footer-main .block-content li a:hover {
+  color: #FF3514;
+}
+
 body, a {
   color: #06163A;
 }
@@ -159,6 +163,8 @@ body, a {
 
 .gdz-slide-content .btn {
   padding: 0 31px;
+  -webkit-box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
 }
 
 .fs-pager-wrapper {
@@ -188,7 +194,7 @@ body, a {
 .service-box {
   margin-top: -100px;
   position: relative;
-  z-index: 1000;
+  z-index: 999;
 }
 .service-box::before {
   content: url("../img/dishes/img-1.png");
@@ -221,6 +227,154 @@ body, a {
   color: #62718D;
 }
 
+.categorytab {
+  position: relative;
+  z-index: 1;
+}
+.categorytab::before {
+  content: url("../img/dishes/img-2.png");
+  position: absolute;
+  right: -9px;
+  top: 43%;
+  z-index: 1;
+}
+
 .category-tab-right .title h3 {
   color: inherit;
+  font-weight: 600;
+}
+.category-tab-right .nav.nav-tabs {
+  margin-bottom: 62px;
+}
+
+.delivry .pb-service-box {
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.08);
+          box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+  padding: 39px 25px 11px;
+}
+.delivry .pb-service-box .pb-service-icon {
+  margin-bottom: 31px;
+  min-height: 43px;
+}
+.delivry .pb-service-box .pb-service-icon img {
+  width: auto !important;
+}
+.delivry .pb-service-title {
+  font-size: 22px;
+  font-weight: 500;
+  color: inherit;
+  margin-bottom: 11px;
+}
+.delivry .pb-service-description p {
+  color: #62718D;
+  line-height: 26px;
+}
+
+.testimonial {
+  position: relative;
+  z-index: 1;
+}
+.testimonial::before {
+  content: url("../img/dishes/img-3.png");
+  position: absolute;
+  left: -9px;
+  top: -38px;
+  z-index: 1;
+}
+.testimonial::after {
+  content: url("../img/dishes/img-4.png");
+  position: absolute;
+  right: -9px;
+  bottom: -55px;
+  z-index: 1;
+}
+.testimonial .container-fluid > .row {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.testimonial .pb-image img {
+  margin-left: auto;
+  display: block;
+  margin-right: 48px;
+}
+.testimonial .title {
+  font-weight: 600;
+}
+
+.map .pb-map {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.col-contact-info h3 {
+  font-weight: 600;
+}
+.col-contact-info h5 {
+  font-weight: 500;
+}
+.col-contact-info p {
+  font-weight: 500;
+  letter-spacing: 0.03em;
+}
+.col-contact-info .social-links {
+  margin-top: 11px;
+  margin-bottom: 0;
+}
+.col-contact-info .social-links li {
+  margin-right: 16px;
+}
+
+.col-contact-form .contact-form {
+  margin-top: 4px;
+}
+.col-contact-form .contact-form .form-group {
+  margin-bottom: 30px;
+}
+.col-contact-form .contact-form label {
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  line-height: 29px;
+  margin-bottom: 12px;
+}
+.col-contact-form .contact-form .form-control {
+  height: 52px;
+  background: #FFFFFF;
+  border: 2px solid #F4F4F4;
+  border-radius: 10px;
+  color: #62718D;
+  font-size: 17px;
+  padding: 7px 16px;
+}
+.col-contact-form .contact-form .form-control:focus {
+  border-color: inherit;
+}
+.col-contact-form .contact-form .form-control::-webkit-input-placeholder {
+  color: #62718D;
+}
+.col-contact-form .contact-form .form-control::-moz-placeholder {
+  color: #62718D;
+}
+.col-contact-form .contact-form .form-control:-ms-input-placeholder {
+  color: #62718D;
+}
+.col-contact-form .contact-form .form-control::-ms-input-placeholder {
+  color: #62718D;
+}
+.col-contact-form .contact-form .form-control::placeholder {
+  color: #62718D;
+}
+.col-contact-form .contact-form textarea.form-control {
+  height: 120px;
+}
+.col-contact-form .contact-form .btn-submit {
+  font-size: 20px;
+  letter-spacing: -0.02em;
+  padding: 8px 40px 5px;
+  height: 50px;
+  -webkit-box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
 }

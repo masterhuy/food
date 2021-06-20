@@ -18,6 +18,9 @@ h1, h2, h3, h4, h5, h6{
     }
 }
 .productbox-2{
+    .category-name{
+        display: none;
+    }
 	.product-flags .product-flag{
 		font-size: 18px;
 		&.discount{

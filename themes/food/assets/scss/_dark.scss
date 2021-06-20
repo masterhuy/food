@@ -1,0 +1,79 @@
+.bg-dark{
+    color: rgba(255, 255, 255, 0.7);
+    background-color: #18191A!important;
+    a{
+        color: #fff;
+        &:hover{
+            color: $active;
+        }
+    }
+    #header-top{
+        .header-right{
+            .btn-group{
+                &.user-info > a:hover{
+                    border-color: $active;
+                }
+                > a{
+                    &:hover{
+                        path{
+                            fill: $active;
+                        }
+                    }
+                    path{
+                        fill: #fff;
+                    }
+                }
+            }
+        }
+    }
+    .sticky #hor-menu .nav > li > a{
+        color: #3F2803;
+    }
+    #hor-menu .nav > li > a{
+        color: #fff;
+    }
+    .gdz-slide-content .btn {
+        &:hover{
+            color: #fff;
+        }
+    }
+    .product-miniature{
+        background-color: #212126;
+        box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.1);
+        border-radius: 15px;
+        border: 1px solid #212126;
+        transition: .2s all;
+        .category-name{
+            a{
+                color: rgba(255, 255, 255, 0.7);
+            }
+        }
+        &:hover{
+            border-color: $active;
+        }
+        .price.new{
+            color: #fff;
+        }
+    }
+    .productbox-2 .product-buttons .ajax-add-to-cart{
+        background-color: transparent;
+        &:hover{
+            background-color: $active;
+        }
+    }
+
+    .addon-tab .nav-tabs .nav-link{
+        color: rgba(255, 255, 255, 0.5);
+        background-color: #2f3032;
+        border-color:#2f3032;
+        &.active, &:hover{
+            background-color: $active;
+            border-color: $active;
+            color: #fff;
+        }
+    }
+    .owl-dots button.active span::before{
+        background-color: transparent;
+    }
+
+}

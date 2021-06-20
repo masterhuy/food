@@ -109,6 +109,10 @@ a:hover {
   color: #70C03E;
 }
 
+.footer-5 #footer-main .block-content li a:hover {
+  color: #70C03E;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
 }
@@ -126,6 +130,9 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 1000;
 }
 
+.productbox-2 .category-name {
+  display: none;
+}
 .productbox-2 .product-flags .product-flag {
   font-size: 18px;
 }

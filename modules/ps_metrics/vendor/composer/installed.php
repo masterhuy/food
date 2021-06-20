@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '62cbc8e7a6ab9fe93f2ecfe05bfa1a1d908d5b05',
+    'reference' => '5e892ca6d82a4b8426f7183c5f822dee7d7e70a8',
     'name' => 'prestashop/ps_metrics',
   ),
   'versions' => 
@@ -83,12 +83,12 @@
     ),
     'prestashop/module-lib-service-container' => 
     array (
-      'pretty_version' => '1.3.1',
-      'version' => '1.3.1.0',
+      'pretty_version' => '1.4.0',
+      'version' => '1.4.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '8a64bd83c71fdb077fbd05fbf2677b16ec2d8e53',
+      'reference' => '96f4f551b96cffb1f78462cd4722f0d2b057abda',
     ),
     'prestashop/prestashop-accounts-installer' => 
     array (
@@ -106,7 +106,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '62cbc8e7a6ab9fe93f2ecfe05bfa1a1d908d5b05',
+      'reference' => '5e892ca6d82a4b8426f7183c5f822dee7d7e70a8',
     ),
     'psr/cache' => 
     array (
@@ -176,12 +176,12 @@
     ),
     'segmentio/analytics-php' => 
     array (
-      'pretty_version' => '1.7.0',
-      'version' => '1.7.0.0',
+      'pretty_version' => '1.8.0',
+      'version' => '1.8.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'e0aef0001b6d3a375341888b7bb98e34de62ecae',
+      'reference' => '7e25b2f6094632bbfb79e33ca024d533899a2ffe',
     ),
     'symfony/cache' => 
     array (

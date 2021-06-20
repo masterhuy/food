@@ -81,7 +81,7 @@ class Ps_metrics extends Module
     {
         $this->name = 'ps_metrics';
         $this->tab = 'advertising_marketing';
-        $this->version = '2.1.2';
+        $this->version = '2.2.1';
         $this->author = 'PrestaShop';
         $this->need_instance = 0;
         $this->module_key = '697657ffe038d20741105e95a10b12d1';
@@ -159,7 +159,7 @@ class Ps_metrics extends Module
 
         /** @var PrestaShop\Module\Ps_metrics\Tracker\Segment $segment */
         $segment = $this->container->getService('ps_metrics.tracker.segment');
-        $segment->setMessage('Uninstall module');
+        $segment->setMessage('[MTR] Uninstall Module');
         $segment->track();
 
         /** @var PrestaShop\Module\Ps_metrics\Module\DashboardModules $dashboardModules */
@@ -183,7 +183,7 @@ class Ps_metrics extends Module
     {
         /** @var PrestaShop\Module\Ps_metrics\Tracker\Segment $segment */
         $segment = $this->container->getService('ps_metrics.tracker.segment');
-        $segment->setMessage('Enable module');
+        $segment->setMessage('[MTR] Enable Module');
         $segment->track();
 
         return parent::enable($force_all);
@@ -200,7 +200,7 @@ class Ps_metrics extends Module
     {
         /** @var PrestaShop\Module\Ps_metrics\Tracker\Segment $segment */
         $segment = $this->container->getService('ps_metrics.tracker.segment');
-        $segment->setMessage('Disable module');
+        $segment->setMessage('[MTR] Disable Module');
         $segment->track();
 
         return parent::disable($force_all);
