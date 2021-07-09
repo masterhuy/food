@@ -23,10 +23,10 @@
 *  International Registered Trademark & Property of PrestaShop SA
 *}
 <div class="top-seller hidden-sm-down">
-  <h3>{l s='Best Sellers' d='Modules.Bestsellers.Shop'}</h3>
-  <div class="products">
-    {foreach from=$products item="product"}
-      {include file="catalog/_partials/miniatures/product.tpl" product=$product}
-    {/foreach}
-  </div>
+    <h3>{l s='Best Sellers' d='Modules.Bestsellers.Shop'}</h3>
+    <div class="products">
+        {foreach from=$products item="product"}
+            {include file="catalog/_partials/miniatures/product-flex.tpl" product=$product}
+        {/foreach}
+    </div>
 </div>

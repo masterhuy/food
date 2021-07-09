@@ -22,22 +22,22 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
- {if $gdzSetting.productbox_type == 'product-1'}
-  {assign var='productbox' value='catalog/_partials/miniatures/product-1-big.tpl'}
- {elseif $gdzSetting.productbox_type == 'product-2'}
-  {assign var='productbox' value='catalog/_partials/miniatures/product-2-big.tpl'}
- {elseif $gdzSetting.productbox_type == 'product-3'}
-  {assign var='productbox' value='catalog/_partials/miniatures/product-3-big.tpl'}
- {/if}
+{if isset($smarty.get.productbox_type) && $smarty.get.productbox_type != ''}
+    {assign var='productbox' value="catalog/_partials/miniatures/`$smarty.get.productbox_type`-big.tpl"}
+{else}
+    {assign var='productbox' value="catalog/_partials/miniatures/`$gdzSetting.productbox_type`-big.tpl"}
+{/if}
+
 <div id="js-product-list">
     <div class="products row">
         {foreach from=$listing.products key="index" item="product"}
-            {block name='product_miniature'}
-                {include file=$productbox product=$product index=$index}
-            {/block}
+            <div class="col-product">
+                {block name='product_miniature'}
+                    {include file=$productbox product=$product index=$index}
+                {/block}
+            </div>
         {/foreach}
     </div>
-
     {block name='pagination'}
         {include file='_partials/pagination.tpl' pagination=$listing.pagination}
     {/block}

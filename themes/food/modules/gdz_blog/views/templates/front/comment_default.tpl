@@ -87,7 +87,7 @@
 			<input id="item_id_comment_send" name="post_id" type="hidden" value="{$post.post_id nofilter}" />
 			<input id="item_id_comment_reply" name="post_id_comment_reply" type="hidden" value="" />
 			<p class="">
-				<button id="submitComment" class="btn btn-default" name="submitComment" type="submit">{l s='Submit Comment' mod='gdz_blog'}</button>
+				<button id="submitComment" class="btn btn-active" name="submitComment" type="submit">{l s='Submit Comment' mod='gdz_blog'}</button>
 			</p>
 		</div>
 	</form>

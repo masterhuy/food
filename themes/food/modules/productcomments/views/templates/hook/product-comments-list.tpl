@@ -30,7 +30,6 @@
 <div class="row">
   <div class="col-md-12 col-sm-12" id="product-comments-list-header">
     <div class="comments-nb">
-      <i class="material-icons shopping-cart">chat</i>
       {l s='Comments' d='Modules.Productcomments.Shop'} ({$nb_comments})
     </div>
     {include file='module:productcomments/views/templates/hook/average-grade-stars.tpl' grade=$average_grade}
@@ -52,8 +51,7 @@
   <div class="col-md-12 col-sm-12" id="product-comments-list-footer">
     <div id="product-comments-list-pagination"></div>
     {if $post_allowed && $nb_comments != 0}
-      <button class="btn btn-comment btn-comment-big post-product-comment">
-        <i class="material-icons shopping-cart">edit</i>
+      <button class="btn btn-active post-product-comment">
         {l s='Write your review' d='Modules.Productcomments.Shop'}
       </button>
     {/if}

@@ -25,7 +25,7 @@
 <div class="breadcrumb-wrapper hidden-sm-down">
 <div class="breadcrumb">
     <div class="container">
-        <h3>
+        <h3 class="{if $gdzSetting.breadcrumb_align}text-{$gdzSetting.breadcrumb_align}{/if}">
         {if $page.page_name == 'cms'}
           {$cms.meta_title}
         {elseif $page.page_name == 'cms_category'}
@@ -35,10 +35,11 @@
         {elseif $page.page_name == 'module-gdz_pagebuilder-page'}
           {$gdz_pagebuilder_page.title}
         {elseif $page.page_name == 'module-gdz_blog-categories'}
-          {l s="categories" d="Shop.Theme"}
+          {l s="categories" d="Shop.Theme.Catalog"}
         {elseif $page.page_name == 'contact'}
-          {l s="Contact" d="Shop.Theme"}
+          {l s="Contact" d="Shop.Theme.Catalog"}
         {else}
+          {$page.page_name}
         {/if}
         </h3>
 

@@ -87,15 +87,16 @@
 					{include file='catalog/_partials/variant-links.tpl' variants=$product.main_variants}
 				{/block}
 			{/if}
-				<div class="product-short-desc">
-					{$product.description_short|truncate:300:'...' nofilter}
-				</div>
+			<div class="product-short-desc">
+				{$product.description_short|truncate:300:'...' nofilter}
+			</div>
     		<div class="product-buttons">
 				{if $gdzSetting.productbox_wishlist}
 					<a href="#" title="{l s='Add to wishlist' d='Shop.Theme.Actions'}" class="addToWishlist btn-icon" onclick="WishlistCart('wishlist_block_list', 'add', '{$product.id_product|escape:'html'}', false, 1); return false;" data-id-product="{$product.id_product|escape:'html'}">
 						<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path fill-rule="evenodd" clip-rule="evenodd" d="M10.5 4.30061C11.4537 3.18061 12.915 2.47186 14.4375 2.47186C17.1325 2.47186 19.25 4.58936 19.25 7.28436C19.25 10.5891 16.2799 13.2824 11.7798 17.3631L11.7688 17.3731L10.5 18.5281L9.23125 17.3819L9.19671 17.3505C4.7098 13.2731 1.75 10.5834 1.75 7.28436C1.75 4.58936 3.8675 2.47186 6.5625 2.47186C8.085 2.47186 9.54625 3.18061 10.5 4.30061ZM10.5 16.1656L10.5875 16.0781C14.7525 12.3069 17.5 9.81311 17.5 7.28436C17.5 5.53436 16.1875 4.22186 14.4375 4.22186C13.09 4.22186 11.7775 5.08811 11.3225 6.28686H9.68625C9.2225 5.08811 7.91 4.22186 6.5625 4.22186C4.8125 4.22186 3.5 5.53436 3.5 7.28436C3.5 9.81311 6.2475 12.3069 10.4125 16.0781L10.5 16.1656Z" fill="black" fill-opacity="0.54"/>
 						</svg>
+						<span>{l s='Add to wishlist' d='Shop.Theme.Actions'}</span>
 					</a>
 				{/if}
 				{if !$configuration.is_catalog && $gdzSetting.productbox_addtocart}
@@ -123,10 +124,11 @@
 					{/if}
 				{/if}
 				{if $gdzSetting.productbox_quickview}
-					<a href="#" title="{l s='Quickview' d='Shop.Theme.Actions'}" data-link-action="quickview" class="btn-icon quick-view">
+					<a href="#" title="{l s='Quick view' d='Shop.Theme.Actions'}" data-link-action="quickview" class="btn-icon quick-view">
 						<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path fill-rule="evenodd" clip-rule="evenodd" d="M0.833374 10C2.27504 6.34167 5.83337 3.75 10 3.75C14.1667 3.75 17.725 6.34167 19.1667 10C17.725 13.6583 14.1667 16.25 10 16.25C5.83337 16.25 2.27504 13.6583 0.833374 10ZM17.35 10C15.975 7.19167 13.1584 5.41667 10 5.41667C6.8417 5.41667 4.02503 7.19167 2.65003 10C4.02503 12.8083 6.8417 14.5833 10 14.5833C13.1584 14.5833 15.975 12.8083 17.35 10ZM10 7.91667C11.15 7.91667 12.0834 8.85 12.0834 10C12.0834 11.15 11.15 12.0833 10 12.0833C8.85004 12.0833 7.91671 11.15 7.91671 10C7.91671 8.85 8.85004 7.91667 10 7.91667ZM6.25004 10C6.25004 7.93333 7.93337 6.25 10 6.25C12.0667 6.25 13.75 7.93333 13.75 10C13.75 12.0667 12.0667 13.75 10 13.75C7.93337 13.75 6.25004 12.0667 6.25004 10Z" fill="black" fill-opacity="0.54"/>
 						</svg>
+						<span>{l s='Quick view' d='Shop.Theme.Actions'}</span>
 					</a>
 				{/if}
     		</div>

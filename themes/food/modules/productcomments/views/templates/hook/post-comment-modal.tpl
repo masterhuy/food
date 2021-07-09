@@ -39,7 +39,7 @@
       <div class="modal-body">
         <form id="post-product-comment-form" action="{$post_comment_url nofilter}" method="POST">
           <div class="row">
-            <div class="col-md-2 col-sm-2">
+            <div class="col-md-4 col-sm-2">
               {if isset($product) && $product}
                 {block name='product_flags'}
                   <ul class="product-flags">
@@ -60,13 +60,13 @@
                 {/block}
               {/if}
             </div>
-            <div class="col-md-4 col-sm-4">
+            <div class="col-md-5 col-sm-4">
               <h3>{$product.name}</h3>
               {block name='product_description_short'}
-                <div itemprop="description">{$product.description_short nofilter}</div>
+                <div class="description_short" itemprop="description">{$product.description_short nofilter}</div>
               {/block}
             </div>
-            <div class="col-md-6 col-sm-6">
+            <div class="col-md-3 col-sm-6">
               {if $criterions|@count > 0}
                 <ul id="criterions_list">
                   {foreach from=$criterions item='criterion'}
@@ -85,7 +85,7 @@
               {/if}
             </div>
           </div>
-
+          <br>
           <div class="row">
             {if !$logged}
               <div class="col-md-8 col-sm-8">
@@ -103,7 +103,7 @@
               </div>
             {/if}
           </div>
-
+          <br>
           <div class="row">
             <div class="col-md-12 col-sm-12">
               <label class="form-label" for="comment_content">{l s='Review' d='Modules.Productcomments.Shop'}<sup class="required">*</sup></label>
@@ -120,10 +120,10 @@
               <p class="required"><sup>*</sup> {l s='Required fields' d='Modules.Productcomments.Shop'}</p>
             </div>
             <div class="col-md-6 col-sm-6 post-comment-buttons">
-              <button type="button" class="btn btn-comment-inverse btn-comment-big" data-dismiss="modal" aria-label="{l s='Cancel' d='Modules.Productcomments.Shop'}">
+              <button type="button" class="btn" data-dismiss="modal" aria-label="{l s='Cancel' d='Modules.Productcomments.Shop'}">
                 {l s='Cancel' d='Modules.Productcomments.Shop'}
               </button>
-              <button type="submit" class="btn btn-comment btn-comment-big">
+              <button type="submit" class="btn btn-active">
                 {l s='Send' d='Modules.Productcomments.Shop'}
               </button>
             </div>

@@ -74,18 +74,5 @@
 
         {hook h='displayProductPriceBlock' product=$product type="weight" hook_origin='product_sheet'}
 
-        {block name='product_availability'}
-            {if $product.show_availability && $product.availability_message}
-            <span id="product-availability">
-                {if $product.availability == 'available'}
-                    <span>{$product.availability_message}</span>
-                {elseif $product.availability == 'last_remaining_items'}
-                    <span>{l s='last item' d='Shop.Theme.Catalog'}</span>
-                {else}
-                    <span>{$product.availability_message}</span>
-                {/if}
-            </span>
-            {/if}
-        {/block}
   </div>
 {/if}

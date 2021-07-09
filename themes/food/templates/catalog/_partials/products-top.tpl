@@ -25,20 +25,47 @@
 <div id="js-product-list-top" class="filters-panel">
 	<div class="row align-items-center">
 		<div class="col-4 col-md-6 col-sm-5 text-left">
-      {if $gdzSetting.shop_switchlist == 1}
-			<div class="view-mode">
-				<a class="switch-view view-grid {if $gdzSetting.shop_list == 'grid'}active{/if}" href="#"><i class="feather icon-grid"></i></a>
-				<a class="switch-view view-list {if $gdzSetting.shop_list == 'list'}active{/if}" href="#"><i class="feather icon-list"></i></a>
-			</div>
-      {/if}
+			<div class="js-item-show"></div>
+			{if $gdzSetting.shop_switchlist == 1}
+				<div class="view-mode">
+					<a class="switch-view view-grid grid-2" href="#">
+						<svg width="12" height="19" viewBox="0 0 12 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<rect width="5" height="19" fill="#E2E2E2"/>
+							<rect x="7" width="5" height="19" fill="#E2E2E2"/>
+						</svg>
+					</a>
+					<a class="switch-view view-grid grid-3 {if $gdzSetting.shop_list == 'grid'}active{/if}" href="#">
+						<svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<rect width="5" height="19" fill="#E2E2E2"/>
+							<rect x="7" width="5" height="19" fill="#E2E2E2"/>
+							<rect x="14" width="5" height="19" fill="#E2E2E2"/>
+						</svg>
+					</a>
+					<a class="switch-view view-grid grid-4" href="#">
+						<svg width="26" height="19" viewBox="0 0 26 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<rect width="5" height="19" fill="#E2E2E2"/>
+							<rect x="7" width="5" height="19" fill="#E2E2E2"/>
+							<rect x="14" width="5" height="19" fill="#E2E2E2"/>
+							<rect x="21" width="5" height="19" fill="#E2E2E2"/>
+						</svg>
+					</a>
+					<a class="switch-view view-list {if $gdzSetting.shop_list == 'list'}active{/if}" href="#">
+						<svg width="25" height="19" viewBox="0 0 25 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<rect y="19" width="5" height="25" transform="rotate(-90 0 19)" fill="#E2E2E2"/>
+							<rect y="12" width="5" height="25" transform="rotate(-90 0 12)" fill="#E2E2E2"/>
+							<rect y="5" width="5" height="25" transform="rotate(-90 0 5)" fill="#E2E2E2"/>
+						</svg>
+					</a>
+				</div>
+			{/if}
 		</div>
 		<div class="col-8 col-md-6 col-sm-7 text-right">
 			<div class="sort-by">
-        {if $gdzSetting.shop_sortby == 1}
-				{block name='sort_by'}
-					{include file='catalog/_partials/sort-orders.tpl' sort_orders=$listing.sort_orders}
-				{/block}
-        {/if}
+				{if $gdzSetting.shop_sortby == 1}
+					{block name='sort_by'}
+						{include file='catalog/_partials/sort-orders.tpl' sort_orders=$listing.sort_orders}
+					{/block}
+				{/if}
 			</div>
 		</div>
 	</div>

@@ -23,7 +23,7 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 <div id="header-top" class="header-top{if $gdzSetting.header_sticky == 1} header-sticky{/if}{if ($gdzSetting.header_sticky == 1) && ($gdzSetting.header_sticky_effect != '')} {$gdzSetting.header_sticky_effect}{/if}">
-    <div class="container-fluid">
+    <div class="container-fluid {$gdzSetting.header_sticky_effect}">
         <div class="row align-items-center">
             <div class="layout-column col-3 header-left">
                 {include file='_partials/headers/logo.tpl'}

@@ -29,7 +29,7 @@
         <div class="panel panel-default">
               <div class="panel-heading">
                     <h4 class="panel-title">
-                        <a data-toggle="collapse" data-parent="#accordion" href="#description">{l s='Description' d='Shop.Theme.Catalog'}</a>
+                        <a data-toggle="collapse" href="#description">{l s='Description' d='Shop.Theme.Catalog'}</a>
                     </h4>
               </div>
               <div id="description" class="panel-collapse collapse show">
@@ -44,7 +44,7 @@
         <div class="panel panel-default">
               <div class="panel-heading">
                   <h4 class="panel-title">
-                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#product-details">{l s='Product Details' d='Shop.Theme.Catalog'}</a>
+                    <a class="collapsed" data-toggle="collapse" href="#product-details">{l s='Product Details' d='Shop.Theme.Catalog'}</a>
                   </h4>
               </div>
               <div id="product-details" class="panel-collapse collapse">
@@ -59,7 +59,7 @@
         <div class="panel panel-default">
               <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#attachments">{l s='Attachments' d='Shop.Theme.Catalog'}</a>
+                    <a class="collapsed" data-toggle="collapse" href="#attachments">{l s='Attachments' d='Shop.Theme.Catalog'}</a>
                 </h4>
               </div>
               <div id="attachments" class="panel-collapse collapse">
@@ -90,7 +90,7 @@
       <div class="panel panel-default">
           <div class="panel-heading">
               <h4 class="panel-title">
-                  <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#extra-{$extraKey}">{$extra.title}</a>
+                  <a class="collapsed" data-toggle="collapse" href="#extra-{$extraKey}">{$extra.title}</a>
               </h4>
           </div>
           <div id="extra-{$extraKey}" class="panel-collapse collapse">

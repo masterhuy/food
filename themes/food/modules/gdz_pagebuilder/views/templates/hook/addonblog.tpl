@@ -66,7 +66,7 @@
 							<div class="post-intro">{$post.introtext nofilter}</div>
 						{/if}
 						{if $show_readmore == '1'}
-							<a class="btn post-readmore" href="{$post.postlink|escape:'htmlall':'UTF-8'|replace:'&amp;':'&'}"><span>{$readmore_text nofilter}</span></a>
+							<a class="btn btn-active post-readmore" href="{$post.postlink|escape:'htmlall':'UTF-8'|replace:'&amp;':'&'}"><span>{$readmore_text nofilter}</span></a>
 						{/if}
 				</div>
 			{/foreach}

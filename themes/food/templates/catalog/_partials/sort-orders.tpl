@@ -23,11 +23,16 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 <div class="inlude_sort_by">
-	<span class="hidden-sm-down sort-by">{l s='Sort by' d='Shop.Theme.Actions'}:</span>
-	<div class="{if !empty($listing.rendered_facets)}{else}{/if}  products-sort-order dropdown">
-		<a class="select-title" rel="nofollow" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	<span class="hidden-sm-down sort-by">{l s='Sorting:' d='Shop.Theme.Actions'}</span>
+	<div class="{if !empty($listing.rendered_facets)}{else}{/if} products-sort-order dropdown">
+		<a class="select-title" rel="nofollow" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static">
 			<span>{if isset($listing.sort_selected)}{$listing.sort_selected}{else}{l s='Select' d='Shop.Theme.Actions'}{/if}</span>
-			<i class="feather icon-plus"></i>
+			<i>
+				<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<rect width="22" height="22" transform="translate(22) rotate(90)" fill="white"/>
+					<path d="M6.7925 7.60376L11 11.8021L15.2075 7.60376L16.5 8.89626L11 14.3963L5.5 8.89626L6.7925 7.60376Z" fill="#3F2803" fill-opacity="0.7"/>
+				</svg>
+			</i>
 		</a>
 		<div class="dropdown-menu">
 			{foreach from=$listing.sort_orders item=sort_order}
@@ -42,3 +47,4 @@
 		</div>
 	</div>
 </div>
+

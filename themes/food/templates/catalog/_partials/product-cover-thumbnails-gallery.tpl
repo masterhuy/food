@@ -29,7 +29,7 @@
                 {foreach from=$product.images item=image}
                     <li class="thumb-container" data-image="{$image.bySize.large_default.url}" data-zoom-image="{$image.bySize.large_default.url}">
                         <img
-                            class="thumb js-thumb {if $image.id_image == $product.cover.id_image} selected {/if}"
+                            class="thumb js-thumb {if $image.id_image == $product.cover.id_image} selected {/if} {if $gdzSetting.product_image_zoom == 'elevatezoom'} product-image-zoom{/if}"
                             data-image-medium-src="{$image.bySize.medium_default.url}"
                             data-image-large-src="{$image.bySize.large_default.url}"
                             src="{$image.bySize.large_default.url}"

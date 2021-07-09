@@ -35,7 +35,6 @@
 							</svg>
 						</div>
 					</div>
-					
 					<div class="pb-testimonial-author">
 						{if $show_image}
 							<div class="pb-testimonial-img">

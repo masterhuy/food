@@ -96,8 +96,8 @@
             {/if}
         {/block}
 
-        {block name='product_footer'}
-            {hook h='displayFooterProduct' product=$product category=$category}
+        {block name='product_footer_before'}
+            {hook h='displayFooterBefore' product=$product category=$category}
         {/block}
 
         {block name='product_images_modal'}

@@ -30,7 +30,6 @@ h6 {
   font-size:1rem;
 }
 input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"] {
-    border-radius: 0px;
     width: 100%;
     border: 1px solid #ebebeb;
     padding: 0 15px;
@@ -53,6 +52,7 @@ input[type=number] {
   padding-right: 10px;*/
 }
 #content-wrapper {
+  width: 100%;
 }
 .layout-full-width #content-wrapper {
     width:100%;
@@ -1151,9 +1151,7 @@ header .row .col-auto {
       display: none!important;
   }
 }
-.zoomContainer {
-	z-index: 5000;
-}
+
 .store-item {
   border-bottom: 1px solid #dedede;
   padding:1.5rem 0;

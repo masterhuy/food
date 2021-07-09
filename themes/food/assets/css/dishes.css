@@ -11,9 +11,17 @@ a:hover {
   background-color: #FF3514;
 }
 
+.breadcrumb-wrapper .breadcrumb li a:hover {
+  color: #FF3514;
+}
+
 .popup-newsletter .block_newsletter .content button {
   background-color: #FF3514;
   border-color: #FF3514;
+}
+
+.gdz-megamenu .nav > .menu-item .mega-nav li > a:hover {
+  color: #FF3514;
 }
 
 .fs-pager-wrapper a span,
@@ -24,6 +32,10 @@ a:hover {
 
 .fs-pager-wrapper a.active span::before {
   border-color: #FF3514;
+}
+
+.gdz-slider-wrapper .nav-control > a {
+  background-color: #FF3514;
 }
 
 .owl-carousel .owl-nav button.owl-prev:hover, .owl-carousel .owl-nav button.owl-next:hover {
@@ -82,14 +94,14 @@ a:hover {
   fill: #FF3514;
 }
 
-.productbox-4 .product-buttons .cart-button {
+.productbox-4 .block-addtocart .product-buttons .cart-button {
   background-color: #FF3514;
 }
 
-.productbox-4 .product-buttons .btn-icon.quick-view:hover {
+.productbox-4 .block-addtocart .product-buttons .btn-icon.quick-view:hover {
   background-color: #FF3514;
 }
-.productbox-4 .product-buttons .btn-icon.quick-view path {
+.productbox-4 .block-addtocart .product-buttons .btn-icon.quick-view path {
   fill: #FF3514;
 }
 
@@ -103,6 +115,99 @@ a:hover {
 
 .pb-testimonial .quote svg {
   fill: #FF3514;
+}
+
+.pb-testimonial .pb-testimonial-comment svg path {
+  fill: #FF3514;
+}
+
+.pb-testimonial.with-thumbnails .pb-testimonial-carousel .owl-nav button:hover path {
+  fill: #FF3514;
+}
+
+/* Product list */
+#search_filters .ui-slider .ui-slider-handle {
+  border-color: #FF3514;
+}
+
+#search_filters .filter-block .icon-close:hover svg path {
+  fill: #FF3514;
+}
+
+#search_filters .facet.Weight .facet-label > a:hover {
+  border-color: #FF3514;
+}
+
+#search_filters .facet.Weight .facet-label.active > a {
+  border-color: #FF3514;
+  color: #FF3514;
+}
+
+.products-sort-order .dropdown-menu a:hover, .products-sort-order .dropdown-menu a.current {
+  color: #FF3514;
+}
+
+.switch-view.active rect {
+  fill: #FF3514;
+}
+
+.products-list .product-miniature .product-info .product-buttons .btn-icon:hover path {
+  fill: #FF3514;
+  fill-opacity: 1;
+}
+.products-list .product-miniature .product-info .product-buttons .btn-icon:hover span {
+  color: #FF3514;
+}
+
+.pagination li a:hover {
+  color: #FF3514;
+}
+.pagination li a:hover path {
+  fill: #FF3514;
+  fill-opacity: 1;
+}
+.pagination li.current a {
+  color: #FF3514;
+}
+
+/* details */
+.available-quantity {
+  color: #FF3514;
+}
+
+.bootstrap-touchspin .input-group-btn-vertical .btn-touchspin:hover i::before {
+  color: #FF3514;
+}
+
+.product-actions .addToWishlist:hover {
+  color: #FF3514;
+}
+
+.product-actions .addToWishlist:hover svg path {
+  fill: #FF3514;
+}
+
+.product-images .thumb-container > .thumb.selected,
+.product-images .thumb-container > .thumb:hover {
+  border-color: #FF3514;
+}
+
+.images-container .slick-arrow:hover {
+  background-color: #FF3514;
+}
+
+#more_info_block li a.active, #more_info_block li a:hover {
+  color: #FF3514;
+}
+
+.product-variants-item ul li:hover .radio-label, .product-variants-item input:checked ~ .radio-label {
+  color: #FF3514;
+  border-color: #FF3514;
+}
+
+/* footer */
+.footer #footer-main .block-content li a:hover {
+  color: #FF3514;
 }
 
 .footer-4 .hotline {

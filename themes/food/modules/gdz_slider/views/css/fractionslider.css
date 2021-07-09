@@ -43,33 +43,22 @@
 
 .fraction-slider .prev,
 .fraction-slider .next{
-	display:none;
 	position:absolute;
-	width:45px; height:45px;
+	top: 50%;
+	transform: translateY(-50%);
+	width:53px; 
+	height:53px;
+	border-radius: 50%;
 	z-index:9999;
 }
 
 .fraction-slider .prev{
-	left:20px; top:48%;
-	background:url(../img/fraction/fs.prevnext.png) 0px 0px no-repeat transparent;
-
+	left:50px;
 }
-.fraction-slider .prev:hover{
-	background:url(../img/fraction/fs.prevnext.png) 0px -45px no-repeat transparent;
-}
-
 .fraction-slider .next{
-	right:20px; top:48%;
-	background:url(../img/fraction/fs.prevnext.png) -45px 0px no-repeat transparent;
-}
-.fraction-slider .next:hover{
-	background:url(../img/fraction/fs.prevnext.png) -45px -45px no-repeat transparent;
+	right:50px;
 }
 
-.fraction-slider:hover .prev,
-.fraction-slider:hover .next{
-	display:block;
-}
 
 /** PAGER **/
 

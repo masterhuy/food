@@ -23,41 +23,37 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  *}
 
-{assign var='icon' value=$icon|default:'check_circle'}
 {assign var='modal_message' value=$modal_message|default:''}
 
 <script type="text/javascript">
-  document.addEventListener("DOMContentLoaded", function() {
-    const alertModal = $('#{$modal_id}');
-    alertModal.on('hidden.bs.modal', function () {
-      alertModal.modal('hide');
+    document.addEventListener("DOMContentLoaded", function() {
+        const alertModal = $('#{$modal_id}');
+        alertModal.on('hidden.bs.modal', function () {
+        alertModal.modal('hide');
+        });
     });
-  });
 </script>
 
 <div id="{$modal_id}" class="modal fade product-comment-modal" role="dialog" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h2>
-          <i class="material-icons {$icon}">{$icon}</i>
-          {$modal_title}
-        </h2>
-      </div>
-      <div class="modal-body">
-        <div class="row">
-          <div class="col-md-12  col-sm-12" id="{$modal_id}-message">
-            {$modal_message}
-          </div>
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>{$modal_title}</h2>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-12" id="{$modal_id}-message">
+                        {$modal_message}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 post-comment-buttons">
+                        <button type="button" class="btn btn-active" data-dismiss="modal" aria-label="{l s='OK' d='Modules.Productcomments.Shop'}">
+                            {l s='OK' d='Modules.Productcomments.Shop'}
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="row">
-          <div class="col-md-12  col-sm-12 post-comment-buttons">
-            <button type="button" class="btn btn-comment btn-comment-huge" data-dismiss="modal" aria-label="{l s='OK' d='Modules.Productcomments.Shop'}">
-              {l s='OK' d='Modules.Productcomments.Shop'}
-            </button>
-          </div>
-        </div>
-      </div>
     </div>
-  </div>
 </div>

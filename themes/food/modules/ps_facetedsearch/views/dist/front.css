@@ -62,33 +62,33 @@
   cursor: pointer; }
 
 #search_filters .ui-widget-header {
-  background: #e76f3a;
+  background: #DFDFDF;
+  height: 5px;
 }
 
 #search_filters .ui-slider .ui-slider-handle {
   top: -6px;
   background: #ffffff;
-  border: 2px solid #e76f3a;
-  width: 15px;
-  height: 15px;
+  border: 4px solid #e76f3a;
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
+}
+#search_filters .ui-slider .ui-slider-handle:focus-visible{
+  outline: none;
 }
 #search_filters .ui-slider-horizontal {
   height: 4px;
   border-radius: 0;
   border: 0;
   background: #ebebeb;
-  margin-top: 37px;
+  margin-top: 10px;
   width: calc(100% - 15px);
 }
 .ranger{
-  margin-top: 29px;
-  letter-spacing: 0.3px;
+  margin-left: 5px;
 }
-.ranger::before {
-  content: "Ranger";
-  margin-right: 5px;
-}
+
 
 #search_filters .facet .facet-label {
   width: 100%;

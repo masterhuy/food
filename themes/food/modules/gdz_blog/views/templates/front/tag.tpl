@@ -55,7 +55,7 @@
 					</div>
 				{/if}				
 				<div class="blog-intro">{$post.introtext nofilter}</div>				
-				<a class="btn btn-default blog-readmore" href="#">{l s='Read more' mod='gdz_blog'} ...</a>
+				<a class="btn btn-active blog-readmore" href="#">{l s='Read more' mod='gdz_blog'} ...</a>
 			</article>			
 		{/foreach}
 	</div>

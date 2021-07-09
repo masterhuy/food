@@ -25,9 +25,11 @@
 <div id="js-product-list">
     <div class="products row">
         {foreach from=$listing.products item="product"}
-            {block name='product_miniature'}
-                {include file='catalog/_partials/miniatures/product.tpl' product=$product}
-            {/block}
+            <div class="col-product">
+                {block name='product_miniature'}
+                    {include file='catalog/_partials/miniatures/product.tpl' product=$product}
+                {/block}
+            </div>
         {/foreach}
     </div>
 

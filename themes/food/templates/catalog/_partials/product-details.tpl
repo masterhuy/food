@@ -14,7 +14,7 @@
                 {/if}
             </div>
         {/if}
-        {if isset($product.reference_to_display)}
+        {if isset($product.reference_to_display) && $product.reference_to_display neq ''}
             <div class="product-reference">
                 <label class="label">{l s='Reference :' d='Shop.Theme.Catalog'} </label>
                 <span itemprop="sku">{$product.reference_to_display}</span>
@@ -25,8 +25,8 @@
     {block name='product_quantities'}
         {if $product.show_quantities}
             <div class="product-quantities">
-                <label class="label">{l s='In stock :' d='Shop.Theme.Catalog'}</label>
-                <span>{$product.quantity} {$product.quantity_label}</span>
+                <label class="label">{l s='In stock' d='Shop.Theme.Catalog'}</label>
+                <span data-stock="{$product.quantity}" data-allow-oosp="{$product.allow_oosp}">{$product.quantity} {$product.quantity_label}</span>
             </div>
         {/if}
     {/block}
@@ -47,13 +47,13 @@
     {/block}
 
     {block name='product_features'}
-        {if $product.features}
+        {if $product.grouped_features}
             <div class="product-features">
                 <h3 class="h6">{l s='Data sheet' d='Shop.Theme.Catalog'}</h3>
                 <dl class="data-sheet">
-                    {foreach from=$product.features item=feature}
+                    {foreach from=$product.grouped_features item=feature}
                         <dt class="name">{$feature.name}</dt>
-                        <dd class="value">{$feature.value}</dd>
+                        <dd class="value">{$feature.value|escape:'htmlall'|nl2br nofilter}</dd>
                     {/foreach}
                 </dl>
             </div>
@@ -62,16 +62,16 @@
 
     {* if product have specific references, a table will be added to product details section *}
     {block name='product_specific_references'}
-        {if isset($product.specific_references)}
-            <div class="product-features">
-                <h3 class="h6">{l s='Specific References' d='Shop.Theme.Catalog'}</h3>
+        {if !empty($product.specific_references)}
+            <section class="product-features">
+                <p class="h6">{l s='Specific References' d='Shop.Theme.Catalog'}</p>
                 <dl class="data-sheet">
                     {foreach from=$product.specific_references item=reference key=key}
-                        <dt class="name">{$key}</dt>
-                        <dd class="value">{$reference}</dd>
+                    <dt class="name">{$key}</dt>
+                    <dd class="value">{$reference}</dd>
                     {/foreach}
                 </dl>
-            </div>
+            </section>
         {/if}
     {/block}
 

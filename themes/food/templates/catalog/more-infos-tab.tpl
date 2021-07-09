@@ -24,46 +24,58 @@
  *}
 <div id="more_info_block" class="tabs tab-{$gdzSetting.product_page_tab_align}">
     {block name='product_tabs'}
-    <ul class="nav nav-tabs">
-        {if $product.description}<li class="nav-item"><a data-toggle="tab" href="#description" class="nav-link active">{l s='Description' d='Shop.Theme.Catalog'}</a></li>{/if}
-        <li class="nav-item"><a data-toggle="tab" href="#product-details" class="nav-link">{l s='Product Details' d='Shop.Theme.Catalog'}</a></li>
-        {if $product.attachments}<li><a data-toggle="tab" href="#attachments">{l s='Attachments' d='Shop.Theme.Catalog'}</a></li>{/if}
-        {foreach from=$product.extraContent item=extra key=extraKey}
-        <li class="nav-item"><a data-toggle="tab" href="#extra-{$extraKey}" class="nav-link">{$extra.title}</a></li>
-        {/foreach}
-    </ul>
-    <div class="tab-content">
-        {if $product.description}
-        <div class="tab-pane active" id="description" role="tabpanel" aria-labelledby="description-tab">
-          {block name='product_description'}
-            <div class="product-description">{$product.description nofilter}</div>
-          {/block}
+        <ul class="nav nav-tabs">
+            {if $product.description}
+                <li class="nav-item"><a data-toggle="tab" href="#description" class="nav-link active">{l s='Description' d='Shop.Theme.Catalog'}</a></li>
+            {/if}
+                <li class="nav-item"><a data-toggle="tab" href="#product-details" class="nav-link">{l s='Product Details' d='Shop.Theme.Catalog'}</a></li>
+            {if $product.attachments}
+                <li><a data-toggle="tab" href="#attachments">{l s='Attachments' d='Shop.Theme.Catalog'}</a></li>
+            {/if}
+            {foreach from=$product.extraContent item=extra key=extraKey}
+                <li class="nav-item"><a data-toggle="tab" href="#extra-{$extraKey}" class="nav-link">{$extra.title}</a></li>
+            {/foreach}
+            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#reviews">{l s='Reviews' d='Shop.Theme.Catalog'}</a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
+                
+                {block name='product_footer'}
+                    {hook h='displayFooterProduct' product=$product category=$category}
+                {/block}
+                
+            </div> 
+            {if $product.description}
+                <div class="tab-pane active" id="description" role="tabpanel" aria-labelledby="description-tab">
+                    {block name='product_description'}
+                        <div class="product-description">{$product.description nofilter}</div>
+                    {/block}
+                </div>  
+            {/if}
+            <div class="tab-pane" id="product-details" role="tabpanel" aria-labelledby="product-details-tab">
+                {block name='product_details'}
+                    {include file='catalog/_partials/product-details.tpl'}
+                {/block}
+            </div>
+            {if $product.attachments}
+                <div class="tab-pane" id="attachments" role="tabpanel" aria-labelledby="attachments-tab">
+                    <section class="product-attachments">
+                        <h3 class="h5 text-uppercase">{l s='Download' d='Shop.Theme.Actions'}</h3>
+                        {foreach from=$product.attachments item=attachment}
+                            <div class="attachment">
+                                <h4><a href="{url entity='attachment' params=['id_attachment' => $attachment.id_attachment]}">{$attachment.name}</a></h4>
+                                <p>{$attachment.description}</p
+                                <a href="{url entity='attachment' params=['id_attachment' => $attachment.id_attachment]}">
+                                    {l s='Download' d='Shop.Theme.Actions'} ({$attachment.file_size_formatted})
+                                </a>
+                            </div>
+                        {/foreach}
+                    </section>
+                </div>
+            {/if}
+            {foreach from=$product.extraContent item=extra key=extraKey}
+                <div class="tab-panel {$extra.attr.class}" id="extra-{$extraKey}" role="tabpanel" aria-labelledby="extra-{$extraKey}-tab">{$extra.content nofilter}</div>
+            {/foreach}
         </div>
-        {/if}
-        <div class="tab-pane" id="product-details" role="tabpanel" aria-labelledby="product-details-tab">
-          {block name='product_details'}
-              {include file='catalog/_partials/product-details.tpl'}
-          {/block}
-        </div>
-        {if $product.attachments}
-        <div class="tab-pane" id="attachments" role="tabpanel" aria-labelledby="attachments-tab">
-            <section class="product-attachments">
-                    <h3 class="h5 text-uppercase">{l s='Download' d='Shop.Theme.Actions'}</h3>
-                    {foreach from=$product.attachments item=attachment}
-                    <div class="attachment">
-                        <h4><a href="{url entity='attachment' params=['id_attachment' => $attachment.id_attachment]}">{$attachment.name}</a></h4>
-                        <p>{$attachment.description}</p
-                        <a href="{url entity='attachment' params=['id_attachment' => $attachment.id_attachment]}">
-                        {l s='Download' d='Shop.Theme.Actions'} ({$attachment.file_size_formatted})
-                        </a>
-                    </div>
-                    {/foreach}
-            </section>
-        </div>
-        {/if}
-        {foreach from=$product.extraContent item=extra key=extraKey}
-        <div class="tab-panel {$extra.attr.class}" id="extra-{$extraKey}" role="tabpanel" aria-labelledby="extra-{$extraKey}-tab">{$extra.content nofilter}</div>
-        {/foreach}
-    </div>
     {/block}
 </div>

@@ -23,21 +23,13 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 <div class="same-category">
-    <div class="container">
-        <div class="addon-title">
-            <h3>
-                {l s='Related Products' d='Shop.Theme.Catalog'}
-            </h3>
-        </div>
-        <div class="product_box">
-            <div class="products customs-carousel-product"> 
-                {foreach from=$products item="product"}
-                    <div class="item ajax_block_product">
-                        {include file="catalog/_partials/miniatures/product.tpl" product=$product}
-                    </div>
-                {/foreach}
+    <h2>{l s='Related Products' d='Shop.Theme.Catalog'}</h2>
+    <div class="products owl-carousel customs-carousel-product" data-md="4" data-sm="3" data-xs="2" data-margin="30" data-nav="true" data-dots="false"> 
+        {foreach from=$products item="product"}
+            <div class="item">
+                {include file="catalog/_partials/miniatures/product.tpl" product=$product}
             </div>
-        </div>
+        {/foreach}
     </div>
 </div>
 

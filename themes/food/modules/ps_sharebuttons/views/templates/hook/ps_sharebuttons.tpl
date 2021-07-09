@@ -23,21 +23,20 @@
 *  International Registered Trademark & Property of PrestaShop SA
 *}
 {block name='social_sharing'}
-  {if $social_share_links}
-    <div class="block-social">
-      <ul>
-			<li class="social-title">
+	{if $social_share_links}
+		<div class="block-social">
+			<label class="social-title">
 				{l s='Share' d='Shop.Theme.Actions'}
-			</li>
-
-			{foreach from=$social_share_links item='social_share_link'}
-				<li class="{$social_share_link.class} icon-gray">
-					<a href="{$social_share_link.url}" title="{$social_share_link.label}" target="_blank">
-						<i class="fa fa-{if $social_share_link.class == 'googleplus'}google-plus{else}{$social_share_link.class}{/if}"></i>
-					</a>
-				</li>
-			{/foreach}
-      </ul>
-    </div>
-  {/if}
+			</label>
+			<ul>
+				{foreach from=$social_share_links item='social_share_link'}
+					<li class="{$social_share_link.class} icon-gray">
+						<a href="{$social_share_link.url}" title="{$social_share_link.label}" target="_blank">
+							<i class="fa fa-{if $social_share_link.class == 'googleplus'}google-plus{else}{$social_share_link.class}{/if}"></i>
+						</a>
+					</li>
+				{/foreach}
+			</ul>
+		</div>
+	{/if}
 {/block}

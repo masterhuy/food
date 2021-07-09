@@ -29,13 +29,23 @@
                 {foreach from=$nodes item=node}
                 <li data-depth="{$depth}" class="cat-item">
                     {if $depth===0}
-                        <a href="{$node.link}">
+                        <a class="category-sub-link" href="{$node.link}">
                             {$node.name}
                         </a>
                         {if $node.children}
                             <span class="navbar-toggler collapse-icons collapsed" data-toggle="collapse" data-target="#exCollapsingNavbar{$node.id}">
-                                <i class="ptw-icon {$gdzSetting.more_icon} closing" aria-hidden="true"></i>
-                                <i class="ptw-icon {$gdzSetting.less_icon} opening" aria-hidden="true"></i>
+                                <i class="closing">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="22" height="22" transform="translate(22) rotate(90)" fill="white"/>
+                                        <path d="M6.7925 7.60376L11 11.8021L15.2075 7.60376L16.5 8.89626L11 14.3963L5.5 8.89626L6.7925 7.60376Z" fill="#3F2803" fill-opacity="0.7"/>
+                                    </svg>
+                                </i>
+                                <i class="opening">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="22" height="22" transform="translate(0 22) rotate(-90)" fill="white"/>
+                                        <path d="M15.2075 14.3962L11 10.1979L6.7925 14.3962L5.5 13.1037L11 7.60374L16.5 13.1037L15.2075 14.3962Z" fill="#3F2803" fill-opacity="0.7"/>
+                                    </svg>
+                                </i>
                             </span>
                         {/if}
                         {if $node.children}
@@ -47,8 +57,18 @@
                         <a class="category-sub-link" href="{$node.link}">{$node.name}
                             {if $node.children}
                                 <span class="navbar-toggler collapse-icons" data-toggle="collapse" data-target="#exCollapsingNavbar{$node.id}">
-                                    <i class="ptw-icon {$gdzSetting.more_icon} closing" aria-hidden="true"></i>
-                                    <i class="ptw-icon {$gdzSetting.less_icon} opening" aria-hidden="true"></i>
+                                    <i class="closing">
+                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="22" height="22" transform="translate(22) rotate(90)" fill="white"/>
+                                            <path d="M6.7925 7.60376L11 11.8021L15.2075 7.60376L16.5 8.89626L11 14.3963L5.5 8.89626L6.7925 7.60376Z" fill="#3F2803" fill-opacity="0.7"/>
+                                        </svg>
+                                    </i>
+                                    <i class="opening">
+                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="22" height="22" transform="translate(0 22) rotate(-90)" fill="white"/>
+                                            <path d="M15.2075 14.3962L11 10.1979L6.7925 14.3962L5.5 13.1037L11 7.60374L16.5 13.1037L15.2075 14.3962Z" fill="#3F2803" fill-opacity="0.7"/>
+                                        </svg>
+                                    </i>
                                 </span>
                             {/if}
                         </a>

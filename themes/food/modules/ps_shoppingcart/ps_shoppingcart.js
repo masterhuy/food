@@ -27,6 +27,8 @@ $('body').on('click', '.ajax-add-to-cart', function (event) {
     $(this).attr('data-token') +
     '&add=1&action=update';
   var actionURL = prestashop['urls']['base_url'] + 'index.php?controller=cart';
+  $(this).removeClass('checked');
+	$(this).addClass('checking');
   var callerElement = $(this);
   if ($('#cart_block').hasClass('no-ajax')) document.location = actionURL;
   $.post(actionURL, query, null, 'json')
@@ -38,6 +40,9 @@ $('body').on('click', '.ajax-add-to-cart', function (event) {
           linkAction: 'add-to-cart',
         },
       });
+      $(callerElement).removeClass('checking');
+      $(callerElement).addClass('checked');
+      window.setTimeout( function() {$(callerElement).removeClass('checked');}, 3000 );
     })
     .fail(function (resp) {
       prestashop.emit('handleError', {
@@ -45,6 +50,13 @@ $('body').on('click', '.ajax-add-to-cart', function (event) {
         resp: resp,
       });
     });
+});
+
+$('body').on('click', '[data-button-action="add-to-cart"]', function (event) {
+  $(this).removeClass('addtocart-selected');
+  $(this).addClass('addtocart-selected');
+  $(this).removeClass('checked');
+  $(this).addClass('checking');
 });
 
 $(document).ready(function () {
@@ -75,6 +87,7 @@ $(document).ready(function () {
         };
       }
       $.post(refreshURL, requestData)
+      
         .then(function (resp) {
           $('.blockcart').replaceWith(resp.preview);
           if (resp.modal && $('#cart_block').hasClass('popup')) {
@@ -95,6 +108,10 @@ $(document).ready(function () {
               $('#cart_block').removeClass('bounce');
             }, 3000);
           }
+          var callerElement = $('.add-to-cart');
+          $(callerElement).removeClass('checking');
+          $(callerElement).addClass('checked');
+          window.setTimeout( function() {$(callerElement).removeClass('checked');}, 2000 );
         })
         .fail(function (resp) {
           prestashop.emit('handleError', {

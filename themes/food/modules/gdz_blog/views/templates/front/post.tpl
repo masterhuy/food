@@ -186,7 +186,7 @@
 										<div id="new_comment_form_footer">
 											<input id="item_id_comment_send" name="post_id" type="hidden" value="{$post.post_id|escape:'html':'UTF-8'}" />
 											<input id="item_id_comment_reply" name="post_id_comment_reply" type="hidden" value="" />
-											<button id="submitComment" class="btn-default" name="submitComment" type="submit">{l s='Submit' d='Modules.JmsBlog'}</button>
+											<button id="submitComment" class="btn btn-active" name="submitComment" type="submit">{l s='Submit' d='Modules.JmsBlog'}</button>
 										</div>
 									</form>
 								</div>

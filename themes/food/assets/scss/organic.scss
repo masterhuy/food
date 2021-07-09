@@ -3,14 +3,6 @@ $active: #70C03E;
 @import './skins.scss';
 
 
-.page-index #header{
-    position: absolute;
-    width: 100%;
-    left: 0;
-    right: 0;
-    top: 0;
-    z-index: 1000;
-}
 #header-top{
     .header-right{
         top: 3px;
@@ -25,6 +17,12 @@ $active: #70C03E;
     transform: translateX(-50%);
 }
 .organic-banner{
+    .btn:hover{
+        color: $active;
+        &::after{
+            background-color: $active;
+        }
+    }
     .pb-banner-title{
         span span{
             font-size: 50px;

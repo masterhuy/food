@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
 /** CerebriSansPro Thin **/
 @font-face {
     font-family: 'Cerebri Sans Pro';
@@ -85,4 +88,13 @@
 	src: url("../fonts/font-alako/Alakob.eot?") format("eot"), url("../fonts/font-alako/Alakob.woff") format("woff"), url("../fonts/font-alako/Alakob.ttf") format("truetype"), url("../fonts/font-alako/Alakob.svg#Alako-Bold") format("svg");
 	font-weight: normal;
 	font-style: normal;
+}
+
+/* Svn wellfont */
+@font-face {
+    font-family: 'SVN-Wellfont';
+    src: url("../fonts/font-svn-wellfont/SVN-Wellfont.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;    
 }

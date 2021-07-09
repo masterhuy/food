@@ -79,3 +79,119 @@ $active: #B8D021;
 .owl-dots button span{
     background-color: #fff;
 }
+.banner-fullwidth{
+    .container-fluid{
+        padding-left: 126px;
+        padding-right: 126px;
+    }
+    h5{
+        font-weight: 600;
+        margin-bottom: -4px;
+        span{
+            font-size: 44px;
+            font-weight: 300;
+            margin-left: -11px;
+        }
+    }
+    h6{
+        font-weight: 600;
+        letter-spacing: -0.01em;
+        margin-bottom: 5px;
+    }
+}
+.service-box{
+    .layout-column:nth-child(2){
+        .pb-service-box{
+            background-color: #212126;
+        }
+    }
+    .pb-service-box{
+        border: 3px solid #212126;
+        border-radius: 20px;
+        padding: 40px 20px 20px;
+        .pb-service-icon{
+            margin-bottom: 49px;
+            img{
+                width: auto !important;
+            }
+        }
+    }
+    .pb-service-title{
+        font-size: 27px;
+        color: #fff;
+        margin-bottom: 17px;
+    }
+    .pb-service-description{
+        padding: 0 20px;
+        p{
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.7);
+            font-style: italic;
+        }
+    }
+}
+.testimonial{
+    position: relative;
+    z-index: 1;
+    &::before{
+        content: url("../img/food-delivery/leaf-1.png");
+        position: absolute;
+        right: 13px;
+        top: -102px;
+        z-index: 1;
+    }
+    &::after{
+        content: url("../img/food-delivery/leaf-2.png");
+        position: absolute;
+        left: -9px;
+        bottom: 249px;
+        z-index: 1;
+    }
+    .pb-image{
+        img{
+            margin-left: 86px;
+        }
+    }
+}
+
+.newsletter{
+    .layout-column{
+        display: flex;
+        align-items: center;
+    }
+    h5{
+        font-weight: 500;
+        margin-right: 25px;
+    }
+    .block_newsletter{
+        margin-right: 82px;
+        .content{
+            display: flex;
+        }
+        input{
+            margin-right: 15px;
+            background: rgba(245, 245, 245, 0.15);
+            border-radius: 50px;
+            border: none;
+            width: 443px;
+            color: rgba(255, 255, 255, 0.7);
+            &::placeholder{
+                color: rgba(255, 255, 255, 0.7);
+            }
+        }
+        button{
+            background-color: $active;
+            border-color: $active;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 600;
+            letter-spacing: 0;
+        }
+    }
+    #social-links{
+        margin-bottom: 0;
+        li + li{
+            margin-left: 15px;
+        }
+    }
+}

@@ -116,8 +116,9 @@
 }
 
 .product-comment-modal .modal-header h2 {
-  float: left;
   font-size: 20px;
+  margin-bottom: 0;
+  color: inherit;
 }
 
 .product-comment-modal .modal-dialog {
@@ -126,35 +127,34 @@
 }
 
 .product-comment-modal .modal-dialog h3 {
-  font-size: 14px;
+  color: inherit;
 }
+.product-comment-modal .description_short{
+  color: rgba(63, 40, 3, 0.7);
+}
+
 
 .product-comment-modal .modal-dialog .product-flag {
   display: none;
 }
 
-.product-comment-modal .modal-dialog .product-cover,
-.product-comment-modal .modal-dialog .product-cover img {
-  width: 99px;
-  height: 99px;
-}
 
 .product-comment-modal label.form-label {
-  font-size: 16px;
-  margin: 10px 0;
+  font-size: 14px;
+  font-weight: 600;
 }
 
 .product-comment-modal input {
   width: 100%;
   height: 44px;
-  border: 1px solid #bfbfbf;
+  border: 1px solid #ededed;
   padding: 0 10px;
 }
 
 .product-comment-modal textarea {
   width: 100%;
   min-height: 80px;
-  border: 1px solid #bfbfbf;
+  border: 1px solid #ededed;
   margin-bottom: 10px;
   padding: 10px 10px;
 }
@@ -175,6 +175,10 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+}
+
+.product-comment-modal .post-comment-buttons button + button{
+  margin-left: 15px;
 }
 
 .product-comment-modal .post-comment-buttons .btn-comment {
@@ -214,16 +218,14 @@
 .star-content div.star,
 .star-content div.star-on,
 .star-content div.star-hover {
-  display: block;
   width: 20px;
   height: 20px;
-  background: url(../img/stars.png) no-repeat 0 0 transparent;
-  flex: auto;
-  margin-left: 3px;
+  background: url(../img/small_stars.png) no-repeat 0 0 transparent;
+  margin-left: 0px;
 }
 .star-content div.star-on,
 .star-content div.star-hover {
-  background-position: -24px 0;
+  background-position: -19px 0;
 }
 
 .small-stars .star-content div.star,
@@ -247,6 +249,7 @@
 .grade-stars {
   position: relative;
   min-width: 120px;
+  height: 20px;
   display: inline-block;
 }
 
@@ -278,13 +281,21 @@
 #post-product-comment-modal .criterion-rating {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  flex-wrap: wrap;
 }
 
 #post-product-comment-modal .criterion-rating label {
-  color: #363a41;
   font-size: 14px;
-  font-weight: bold;
+  font-weight: 600;
+}
+#post-product-comment-modal .modal-dialog .close {
+  opacity: 1;
+  position: absolute;
+  right: 10px;
+  top: 4px;
+  z-index: 99;
+  padding: 0;
+  margin: 0;
 }
 
 #post-product-comment-form input.error,
@@ -298,22 +309,17 @@
   border: solid 1px #d0e9c6;
 }
 
+
 /**
  *  Product comments list
  */
 
 #product-comments-list-header {
-  padding: 20px 15px;
-  color: #232323;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
+  padding: 0px 15px;
 }
 
 #product-comments-list-header .comments-nb {
   padding-left: 0;
-  padding-top: 3px;
 }
 
 #product-comments-list-header .comments-nb .material-icons {
@@ -326,14 +332,10 @@
 }
 
 .product-comment-list-item {
-  padding: 26px 0;
-  margin: 0 0 20px;
-  background-color: #ffffff;
-  text-align: left;
+  margin: 15px 0;
 }
-
-#empty-product-comment {
-  text-align: center;
+.post-product-comment {
+  text-transform: initial;
 }
 
 .product-comment-list-item .grade-stars .star-content {
@@ -341,14 +343,21 @@
 }
 
 .product-comment-list-item .comment-infos {
-  height: 19px;
-  color: #6b868f;
-  font-size: 14px;
-  letter-spacing: -0.28px;
-  line-height: 19px;
-  min-height: 100px;
+  background: #f8f8f8;
+  padding: 17px 20px 14px;
+  border-radius: 10px;
 }
-
+.product-comment-list-item .comment-infos h4 {
+  color: inherit;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+.product-comment-list-item .comment-infos .comment-date{
+  font-weight: 600;
+}
+.product-comment-list-item .comment-infos .comment-date span{
+  font-weight: 400;
+}
 .product-comment-list-item .comment-infos .grade-stars {
   margin-bottom: 20px;
 }
@@ -363,12 +372,7 @@
 }
 
 .product-comment-list-item .comment-content p {
-  color: #363a42;
-  font-size: 14px;
-  letter-spacing: -0.28px;
-  line-height: 19px;
-  word-break: break-word;
-  white-space: pre-wrap;
+  color: rgba(63, 40, 3, 0.7);
 }
 
 .product-comment-list-item .comment-content .comment-buttons a {

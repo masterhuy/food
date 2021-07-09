@@ -11,9 +11,17 @@ a:hover {
   background-color: #70C03E;
 }
 
+.breadcrumb-wrapper .breadcrumb li a:hover {
+  color: #70C03E;
+}
+
 .popup-newsletter .block_newsletter .content button {
   background-color: #70C03E;
   border-color: #70C03E;
+}
+
+.gdz-megamenu .nav > .menu-item .mega-nav li > a:hover {
+  color: #70C03E;
 }
 
 .fs-pager-wrapper a span,
@@ -24,6 +32,10 @@ a:hover {
 
 .fs-pager-wrapper a.active span::before {
   border-color: #70C03E;
+}
+
+.gdz-slider-wrapper .nav-control > a {
+  background-color: #70C03E;
 }
 
 .owl-carousel .owl-nav button.owl-prev:hover, .owl-carousel .owl-nav button.owl-next:hover {
@@ -82,14 +94,14 @@ a:hover {
   fill: #70C03E;
 }
 
-.productbox-4 .product-buttons .cart-button {
+.productbox-4 .block-addtocart .product-buttons .cart-button {
   background-color: #70C03E;
 }
 
-.productbox-4 .product-buttons .btn-icon.quick-view:hover {
+.productbox-4 .block-addtocart .product-buttons .btn-icon.quick-view:hover {
   background-color: #70C03E;
 }
-.productbox-4 .product-buttons .btn-icon.quick-view path {
+.productbox-4 .block-addtocart .product-buttons .btn-icon.quick-view path {
   fill: #70C03E;
 }
 
@@ -105,21 +117,105 @@ a:hover {
   fill: #70C03E;
 }
 
+.pb-testimonial .pb-testimonial-comment svg path {
+  fill: #70C03E;
+}
+
+.pb-testimonial.with-thumbnails .pb-testimonial-carousel .owl-nav button:hover path {
+  fill: #70C03E;
+}
+
+/* Product list */
+#search_filters .ui-slider .ui-slider-handle {
+  border-color: #70C03E;
+}
+
+#search_filters .filter-block .icon-close:hover svg path {
+  fill: #70C03E;
+}
+
+#search_filters .facet.Weight .facet-label > a:hover {
+  border-color: #70C03E;
+}
+
+#search_filters .facet.Weight .facet-label.active > a {
+  border-color: #70C03E;
+  color: #70C03E;
+}
+
+.products-sort-order .dropdown-menu a:hover, .products-sort-order .dropdown-menu a.current {
+  color: #70C03E;
+}
+
+.switch-view.active rect {
+  fill: #70C03E;
+}
+
+.products-list .product-miniature .product-info .product-buttons .btn-icon:hover path {
+  fill: #70C03E;
+  fill-opacity: 1;
+}
+.products-list .product-miniature .product-info .product-buttons .btn-icon:hover span {
+  color: #70C03E;
+}
+
+.pagination li a:hover {
+  color: #70C03E;
+}
+.pagination li a:hover path {
+  fill: #70C03E;
+  fill-opacity: 1;
+}
+.pagination li.current a {
+  color: #70C03E;
+}
+
+/* details */
+.available-quantity {
+  color: #70C03E;
+}
+
+.bootstrap-touchspin .input-group-btn-vertical .btn-touchspin:hover i::before {
+  color: #70C03E;
+}
+
+.product-actions .addToWishlist:hover {
+  color: #70C03E;
+}
+
+.product-actions .addToWishlist:hover svg path {
+  fill: #70C03E;
+}
+
+.product-images .thumb-container > .thumb.selected,
+.product-images .thumb-container > .thumb:hover {
+  border-color: #70C03E;
+}
+
+.images-container .slick-arrow:hover {
+  background-color: #70C03E;
+}
+
+#more_info_block li a.active, #more_info_block li a:hover {
+  color: #70C03E;
+}
+
+.product-variants-item ul li:hover .radio-label, .product-variants-item input:checked ~ .radio-label {
+  color: #70C03E;
+  border-color: #70C03E;
+}
+
+/* footer */
+.footer #footer-main .block-content li a:hover {
+  color: #70C03E;
+}
+
 .footer-4 .hotline {
   color: #70C03E;
 }
 
 .footer-5 #footer-main .block-content li a:hover {
   color: #70C03E;
-}
-
-.page-index #header {
-  position: absolute;
-  width: 100%;
-  left: 0;
-  right: 0;
-  top: 0;
-  z-index: 1000;
 }
 
 #header-top .header-right {
@@ -136,6 +232,12 @@ a:hover {
           transform: translateX(-50%);
 }
 
+.organic-banner .btn:hover {
+  color: #70C03E;
+}
+.organic-banner .btn:hover::after {
+  background-color: #70C03E;
+}
 .organic-banner .pb-banner-title span span {
   font-size: 50px;
   font-family: "Alako-Bold";

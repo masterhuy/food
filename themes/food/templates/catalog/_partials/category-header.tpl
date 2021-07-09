@@ -22,19 +22,19 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
- {if $category.description && $gdzSetting.shop_cat_desc && $category.image.large.url && $gdzSetting.shop_cat_banner}
- <div id="js-product-list-header">
+{if $category.description && $gdzSetting.shop_cat_desc && $category.image.large.url && $gdzSetting.shop_cat_banner}
+    <div id="js-product-list-header">
         <div class="block-category">
             <div class="block-category-inner">
-                {if $category.description && $gdzSetting.shop_cat_desc}
-                    <div id="category-description" class="text-muted">{$category.description nofilter}</div>
-                {/if}
                 {if $category.image.large.url && $gdzSetting.shop_cat_banner}
                     <div class="category-cover">
                         <img src="{$category.image.large.url}" alt="{if !empty($category.image.legend)}{$category.image.legend}{else}{$category.name}{/if}">
                     </div>
                 {/if}
+                {if $category.description && $gdzSetting.shop_cat_desc}
+                    <div id="category-description" class="text-muted">{$category.description nofilter}</div>
+                {/if}
             </div>
         </div>
- </div>
- {/if}
+    </div>
+{/if}

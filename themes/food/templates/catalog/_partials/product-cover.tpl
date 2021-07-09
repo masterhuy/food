@@ -30,7 +30,7 @@
       {/foreach}
     </ul>
     {/if}
-    <img class="js-qv-product-cover{if $gdzSetting.product_image_zoom == 'elevatezoom'} product-image-zoom{/if}" src="{$product.cover.bySize.large_default.url}" data-zoom-image="{$product.cover.bySize.large_default.url}" alt="{$product.cover.legend}" title="{$product.cover.legend}" style="width:100%;" itemprop="image">
+    <img class="js-qv-product-cover{if $gdzSetting.product_image_zoom == 'elevatezoom'} product-image-zoom{/if}" src="{$product.default_image.bySize.large_default.url}" data-zoom-image="{$product.default_image.bySize.large_default.url}" alt="{$product.default_image.legend}" title="{$product.default_image.legend}" style="width:100%;" itemprop="image">
     <div class="zoom-icon hidden-xs" data-toggle="modal" data-target="#product-modal">
     <i class="ptw-icon icon-search-5_medium"></i>
     </div>

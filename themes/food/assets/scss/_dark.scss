@@ -6,6 +6,15 @@
         &:hover{
             color: $active;
         }
+        &.btn{
+            color: #3F2803;
+            &:hover{
+                color: #fff;
+            }
+        }
+        &.btn-active{
+            color: #fff;
+        }
     }
     #header-top{
         .header-right{
@@ -22,6 +31,17 @@
                     path{
                         fill: #fff;
                     }
+                }
+            }
+        }
+    }
+    .header-7{
+        .hotline{
+            border-color: #fff;
+            color: #fff;
+            svg{
+                path{
+                    fill: #fff;
                 }
             }
         }
@@ -75,5 +95,16 @@
     .owl-dots button.active span::before{
         background-color: transparent;
     }
-
+    #footer{
+        background-color: #18191A;
+    }
+    .footer-5 .line {
+        background-color: rgba(255,255,255,0.15);
+    }
+    .footer-5 #footer-main .block-content li a {
+        color: rgba(255, 255, 255, 0.8);
+    }
+    .footer-5 .instagram .row > div a{
+        border: none;
+    }
 }

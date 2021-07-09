@@ -1,7 +1,7 @@
 $active: #70C03E;
 
 /* Spacing */
-@for $i from 0 through 15 {
+@for $i from 0 through 100 {
     .mt-#{$i} {
         margin-top: #{$i}px !important;
     }
@@ -16,5 +16,11 @@ $active: #70C03E;
 
     .pb-#{$i} {
         padding-bottom: #{$i}px !important;
+    }
+}
+
+@for $i from 1 through 9 {
+    .font-weight-#{$i} {
+        font-weight: #{$i}00;
     }
 }

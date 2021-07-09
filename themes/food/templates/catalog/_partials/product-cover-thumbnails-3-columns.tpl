@@ -22,17 +22,14 @@
  * @license   http://opensource.org/licenses/osl-3.0.php Open Software License (OSL 3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-<div class="images-container 3-columns">
-    {block name='product_cover'}
-        {include file='catalog/_partials/product-cover.tpl'}
-    {/block}
+<div class="images-container layout-3-columns">
     {block name='product_images'}
         <div class="js-qv-mask mask">
             <div id="gal1" class="product-images js-qv-product-images hor-slick-thumbs">
                 {foreach from=$product.images item=image}
                     <div class="thumb-container" data-image="{$image.bySize.large_default.url}" data-zoom-image="{$image.bySize.large_default.url}">
                         <img
-                            class="thumb js-thumb {if $image.id_image == $product.cover.id_image} selected {/if}"
+                            class="thumb js-thumb {if $image.id_image == $product.cover.id_image} selected {/if} {if $gdzSetting.product_image_zoom == 'elevatezoom'} product-image-zoom{/if}"
                             data-image-medium-src="{$image.bySize.medium_default.url}"
                             data-image-large-src="{$image.bySize.large_default.url}"
                             src="{$image.bySize.large_default.url}"
@@ -40,6 +37,7 @@
                             title="{$image.legend}"
                             width="100"
                             itemprop="image"
+                            
                         >
                     </div>
                 {/foreach}

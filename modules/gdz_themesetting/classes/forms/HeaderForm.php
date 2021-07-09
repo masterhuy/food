@@ -106,19 +106,6 @@ class gdzHeaderForm
                                     'name' => $this->module->l('Layout 7', 'HeaderForm'),
                                     'img' => 'headers/7.jpg'
                                 ),
-                                array(
-                                    'id_option' => 8,
-                                    'name' => $this->module->l('Layout 8', 'HeaderForm'),
-                                    'img' => 'headers/8.jpg'
-                                ),array(
-                                    'id_option' => 9,
-                                    'name' => $this->module->l('Layout 9', 'HeaderForm'),
-                                    'img' => 'headers/9.jpg'
-                                ),array(
-                                    'id_option' => 10,
-                                    'name' => $this->module->l('Layout 10', 'HeaderForm'),
-                                    'img' => 'headers/10.jpg'
-                                )
                             ),
                             'id' => 'id_option',
                             'name' => 'name',
