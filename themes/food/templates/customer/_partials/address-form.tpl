@@ -44,7 +44,7 @@
     <footer class="form-footer clearfix">
       <input type="hidden" name="submitAddress" value="1">
       {block name='form_buttons'}
-        <button class="btn-default pull-xs-right btn-fullwidth" type="submit" class="form-control-submit">
+        <button class="btn btn-active pull-xs-right btn-fullwidth" type="submit" class="form-control-submit">
           {l s='Save' d='Shop.Theme.Actions'}
         </button>
       {/block}

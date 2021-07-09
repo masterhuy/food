@@ -2,6 +2,7 @@
 @import "product.css";
 @import "product-list.css";
 @import "contact.css";
+@import "account.css";
 @import "cart.css";
 @import "checkout.css";
 @import './_variables.scss';
@@ -34,9 +35,15 @@ p {
 	margin-bottom: 5px;
 }
 .form-control{
+	border-radius: 5px;
+	color: rgba(63, 40, 3, 0.7);
 	&:focus{
 		box-shadow: none;
 		border-color: inherit;
+		color: rgba(63, 40, 3, 0.7);
+	}
+	&::placeholder{
+		color: rgba(63, 40, 3, 0.7);
 	}
 }
 button, svg, path{
@@ -93,8 +100,20 @@ h1, h2, h3, h4, h5, h6{
 		box-shadow: none;
 	}
 }
+.btn-link{
+	color: inherit;
+}
 .btn-circle{
 	border-radius: 50%;
+}
+.table{
+	color: inherit;
+}
+.label{
+	border-radius: 3px;
+}
+.alert ul{
+	margin-bottom: 0;
 }
 input, textarea{
 	border-radius: 10px;
@@ -2144,13 +2163,6 @@ input, textarea{
 	}
 }
 
-/* others */
-.currency-info, .languages-info{
-	> a svg{
-		display: none;
-	}
-}
-
 /* Product list */
 .filters-panel{
 	.col-4{
@@ -2400,6 +2412,20 @@ input, textarea{
 		padding-bottom: 0;
 		margin-bottom: 0;
 	}
+}
+
+/* others */
+.currency-info, .languages-info{
+	> a svg{
+		display: none;
+	}
+}
+.psgdprgetdatabtn17{
+	float: none;
+}
+#exportDataToCsv {
+	margin-left: 0;
+	margin-right: 0;
 }
 
 /* footer */

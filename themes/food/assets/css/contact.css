@@ -4,27 +4,96 @@
 #contact-wrapper .contact-row {
   margin-top: 30px;
 }
-#contact-wrapper .title {
-  border-bottom: 1px solid #efefef;
-  padding-bottom: 24px;
-  margin-bottom: 41px;
+#contact-wrapper select, #contact-wrapper input {
+  height: 52px;
+  background: #FFFFFF;
+  border: 2px solid #F4F4F4;
+  border-radius: 10px;
 }
-#contact-wrapper .title h3 {
-  text-transform: initial;
+#contact-wrapper textarea {
+  background: #FFFFFF;
+  border: 2px solid #F4F4F4;
+  border-radius: 10px;
+  height: 170px;
 }
-#contact-wrapper h3 {
+#contact-wrapper .form-group {
+  margin-bottom: 30px;
+}
+#contact-wrapper .newsletter-box {
+  margin-top: 100px;
+  padding: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: url("../img/newsletter-contact-bn.png") no-repeat center;
+  background-size: cover;
+}
+#contact-wrapper .newsletter-box .title {
+  font-size: 32px;
+  font-weight: 600;
+  padding-top: 9px;
+  color: #fff;
+  margin-right: 45px;
+}
+#contact-wrapper .newsletter-box .block_newsletter .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+#contact-wrapper .newsletter-box .block_newsletter .content input {
+  height: 50px;
+  border-radius: 50px;
+  width: 495px;
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+}
+#contact-wrapper .newsletter-box .block_newsletter .content input::-webkit-input-placeholder {
+  color: #fff;
+}
+#contact-wrapper .newsletter-box .block_newsletter .content input::-moz-placeholder {
+  color: #fff;
+}
+#contact-wrapper .newsletter-box .block_newsletter .content input:-ms-input-placeholder {
+  color: #fff;
+}
+#contact-wrapper .newsletter-box .block_newsletter .content input::-ms-input-placeholder {
+  color: #fff;
+}
+#contact-wrapper .newsletter-box .block_newsletter .content input::placeholder {
+  color: #fff;
+}
+#contact-wrapper .newsletter-box .block_newsletter .content button {
+  border-color: #fff;
+  margin-left: 25px;
+}
+#contact-wrapper .newsletter-box .block_newsletter .content button:hover {
+  color: #fff;
+}
+
+#contact-info h3 {
   font-size: 38px;
   margin-bottom: 9px;
   padding-right: 20px;
   line-height: 50px;
 }
-#contact-wrapper select {
-  height: 40px;
+#contact-info .title {
+  border-bottom: 1px solid #efefef;
+  padding-bottom: 24px;
+  margin-bottom: 41px;
 }
-#contact-wrapper input {
-  height: 40px;
+#contact-info .title h3 {
+  text-transform: initial;
 }
-
 #contact-info .section {
   margin-bottom: 10px;
 }
@@ -52,4 +121,40 @@
 
 #contact-map .contact-box {
   width: 100%;
+}
+
+#contact-form h3 {
+  font-size: 30px;
+  font-weight: 600;
+  text-transform: initial !important;
+  margin-bottom: 34px;
+}
+#contact-form .form-group > label {
+  display: none;
+}
+#contact-form .group-span-filestyle > label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 10px;
+}
+#contact-form .input-group-btn .btn .buttonText {
+  font-size: 16px;
+}
+#contact-form .form-footer {
+  margin-top: 50px;
+}
+#contact-form .form-footer .btn-submit {
+  letter-spacing: -0.02em;
+  font-size: 20px;
+  height: auto;
+  padding: 8px 31px 3px;
+  text-transform: initial;
+}
+
+.contact-layout-1 #contact-form {
+  margin-top: 86px;
 }

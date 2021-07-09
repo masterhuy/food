@@ -22,40 +22,42 @@
  * @license   http://opensource.org/licenses/osl-3.0.php Open Software License (OSL 3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-
- {block name='page_content'}
-     {block name='login_form_container'}
-      <div class="login-layout-1" id="login-wrapper">
-          <div class="login-image" id="login-image">
-              <div class="login-box">
-                  <img width="100%" src="{$gdzSetting.login_page_image}" />
-              </div>
-          </div>
-          <div class="row login-row">
-              <div class="col-md-6">
-                  <div class="login-box login-form">
-                      <h3>{l s='Login' d='Shop.Theme.CustomerAccount'}</h3>
-                      {render file='customer/_partials/login-form.tpl' ui=$login_form}
-                      {block name='display_after_login_form'}
-                        {hook h='displayCustomerLoginFormAfter'}
-                      {/block}
-                  </div>
-              </div>
-              <div class="col-md-6">
-                  <div class="login-box signup-form">
-                      <h3>{l s='Sign Up' d='Shop.Theme.CustomerAccount'}</h3>
-                      {if $gdzSetting.login_page_signup_content}
-                      <div class="signup-content">
-                          {$gdzSetting.login_page_signup_content nofilter}
-                      </div>
-                      {/if}
-                      <div class="no-account">
-                          <a href="{$urls.pages.register}" data-link-action="display-register-form">
-                            {l s='No account? Create one here' d='Shop.Theme.Customeraccount'}
-                          </a>
-                      </div>
-                  </div>
-              </div>
-          </div>
-     {/block}
- {/block}
+{block name='page_content'}
+    {block name='login_form_container'}
+        <div class="login-layout-1" id="login-wrapper">
+            {if {$gdzSetting.login_page_image}}
+                <div class="login-image" id="login-image">
+                    <div class="login-box">
+                        <img width="100%" src="{$gdzSetting.login_page_image}" />
+                    </div>
+                </div>
+            {/if}
+            <div class="row login-row">
+                <div class="col-12 col-md-6">
+                    <div class="login-box login-form">
+                        <h3>{l s='Login' d='Shop.Theme.Customeraccount'}</h3>
+                        {render file='customer/_partials/login-form.tpl' ui=$login_form}
+                        {block name='display_after_login_form'}
+                            {hook h='displayCustomerLoginFormAfter'}
+                        {/block}
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="login-box signup-form">
+                        <h3>{l s='Sign Up' d='Shop.Theme.Customeraccount'}</h3>
+                        {if $gdzSetting.login_page_signup_content}
+                        <div class="signup-content">
+                            {$gdzSetting.login_page_signup_content nofilter}
+                        </div>
+                        {/if}
+                        <div class="no-account">
+                            <a class="btn-link" href="{$urls.pages.register}" data-link-action="display-register-form">
+                                {l s='No account? Create one here' d='Shop.Theme.Customeraccount'}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {/block}
+{/block}

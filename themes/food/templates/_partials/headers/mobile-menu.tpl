@@ -28,7 +28,7 @@
 		<i class="feather icon-menu"></i>
 </a>
 <div class="mobile-menu-wrap hidden-lg">
-    <button id="mobile-menu-close" class="close-button"><h3>{l s='Menu' d='Shop.Theme'}</h3> <i class="feather icon-x"></i></button>
+    <button id="mobile-menu-close" class="close-button"><h3>{l s='Menu' d='Shop.Theme.Catalog'}</h3> <i class="feather icon-x"></i></button>
     <nav id="off-canvas-menu">
       {widget name="gdz_megamenu" hook='MobiMenu'}
     </nav>

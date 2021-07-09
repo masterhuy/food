@@ -24,7 +24,7 @@
  *}
 {if $order.messages}
 <div class="box messages">
-  <h3>{l s='Messages' d='Shop.Theme.CustomerAccount'}</h3>
+  <h3>{l s='Messages' d='Shop.Theme.Customeraccount'}</h3>
   {foreach from=$order.messages item=message}
     <div class="message row">
       <div class="col-sm-4">
@@ -43,8 +43,8 @@
   <form action="{$urls.pages.order_detail}" method="post">
 
     <header>
-      <h4>{l s='Add a message' d='Shop.Theme.CustomerAccount'}</h4>
-      <p>{l s='If you would like to add a comment about your order, please write it in the field below.' d='Shop.Theme.CustomerAccount'}</p>
+      <h4>{l s='Add a message' d='Shop.Theme.Customeraccount'}</h4>
+      <p>{l s='If you would like to add a comment about your order, please write it in the field below.' d='Shop.Theme.Customeraccount'}</p>
     </header>
 
     <section class="form-fields">

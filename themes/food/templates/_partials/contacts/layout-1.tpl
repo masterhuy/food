@@ -41,6 +41,12 @@
                 {widget name="contactform"}
             </div>
         </div>
+        <div class="col-12">
+            <div class="newsletter-box">
+                <p class="title">{l s='Be the first to get discount!' d='Shop.Theme.Global'}</p>
+                {widget name="ps_emailsubscription" hook='displayFooter'}
+            </div>
+        </div>
     </div>
 </div>
 {/block}

@@ -30,7 +30,7 @@
             </h3>
 		</div>
 		<div id="_desktop_search_filters_clear_all" class="hidden-sm-down clear-all-wrapper collapse show">
-		    <button data-search-url="{$clear_all_link}" class="btn-default active btn-tertiary js-search-filters-clear-all">
+		    <button data-search-url="{$clear_all_link}" class="btn btn-active btn-tertiary js-search-filters-clear-all">
 				{l s='Clear all' d='Shop.Theme.Actions'}
 		    </button>
 		</div>
@@ -102,7 +102,7 @@
                 <form>
                 <input type="hidden" name="order" value="{$sort_order}">
                 <select name="q">
-                    <option disabled selected hidden>{l s='(no filter)' d='Shop.Theme'}</option>
+                    <option disabled selected hidden>{l s='(no filter)' d='Shop.Theme.Catalog'}</option>
                     {foreach from=$facet.filters item="filter"}
                     {if $filter.displayed}
                         <option

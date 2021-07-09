@@ -12,9 +12,9 @@
 * @license   http://addons.prestashop.com/en/content/12-terms-and-conditions-of-use
 * International Registered Trademark & Property of PrestaShop SA
 *}
-
-<a id="identity-link" href="{$link->getModuleLink('psgdpr', 'gdpr')}">
+<a class="col-12 col-md-6 col-lg-4" id="identity-link" href="{$link->getModuleLink('psgdpr', 'gdpr')}">
     <span class="link-item">
-        <i class="ptw-icon {$gdzSetting.customersignin_icon}"></i> {l s='GDPR - Personal data' mod='psgdpr'}
+        <i class="fa fa-user"></i>
+        {l s='GDPR - Personal data' mod='psgdpr'}
     </span>
 </a>

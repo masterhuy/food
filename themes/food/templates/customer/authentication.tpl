@@ -25,7 +25,7 @@
 {extends file='page.tpl'}
 
 {block name='page_title'}
-  {l s='Log in to your account' d='Shop.Theme.CustomerAccount'}
+  {l s='Log in to your account' d='Shop.Theme.Customeraccount'}
 {/block}
 {if $gdzSetting.login_page_layout == 'layout-1'}
     {include file='customer/_partials/login/layout-1.tpl'}

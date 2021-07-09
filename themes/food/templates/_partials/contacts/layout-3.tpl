@@ -28,13 +28,8 @@
 <div class="contact-layout-3" id="contact-wrapper">
     <div class="row contact-row">
           <div class="col-md-6">
-              <div class="contact-map" id="contact-map">
-                  <div class="contact-box">
-                    <iframe width="100%" height="550" style="border:0"
-                      src="{$gdzSetting.contact_page_map_src}"
-                      allowfullscreen="">
-                    </iframe>
-                  </div>
+              <div class="contact-image">
+                  <img width="100%" src="{$gdzSetting.contact_page_image}" />
               </div>
           </div>
           <div class="col-md-6">

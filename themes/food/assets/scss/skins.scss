@@ -12,6 +12,11 @@ a {
         background-color: $active;
     }
 }
+.btn-link{
+    &:hover{
+        color: $active;
+    }
+}
 .breadcrumb-wrapper .breadcrumb li a:hover{
     color: $active;
 }
@@ -193,6 +198,13 @@ a {
 .product-variants-item ul li:hover .radio-label, .product-variants-item input:checked ~.radio-label {
     color: $active;
     border-color: $active;
+}
+
+/*account*/
+.show-pass button{
+    &:hover{
+        color: $active;
+    }
 }
 
 /* footer */

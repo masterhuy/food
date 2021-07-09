@@ -29,7 +29,7 @@
             <p class="text-2">{l s='Oops! This page Could Not Be Found!' d='Shop.Theme.Global'}</p>
             <p class="text-3">{l s='Sorry bit the page you are looking for does not exist, have been removed or name changed' d='Shop.Theme.Global'}</p>
             
-            <a class="btn-default back-to-home" href="{$urls.base_url}">{l s='Back to homepage' d='Shop.Theme.Global'}</a>
+            <a class="btn btn-active back-to-home" href="{$urls.base_url}">{l s='Back to homepage' d='Shop.Theme.Global'}</a>
         
             {block name='hook_not_found'}
                 {hook h='displayNotFound'}

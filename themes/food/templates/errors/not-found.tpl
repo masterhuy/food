@@ -23,8 +23,8 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 <section id="content" class="page-content page-not-found"> 
-	<h4>{l s='Sorry for the inconvenience.' d='Shop.Theme'}</h4>
-	<p class="small-text">{l s='Search again what you are looking for' d='Shop.Theme'}</p>
+	<h4>{l s='Sorry for the inconvenience.' d='Shop.Theme.Catalog'}</h4>
+	<p class="small-text">{l s='Search again what you are looking for' d='Shop.Theme.Catalog'}</p>
 	<div class="search-box">
 	 {block name='search'}
       {hook h='displaySearch'}

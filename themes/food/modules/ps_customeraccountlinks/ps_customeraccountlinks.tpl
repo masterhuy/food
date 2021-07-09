@@ -25,7 +25,7 @@
 
 <div id="block_myaccount_infos" class="col-md-2 links wrapper block">
   <h3 class="myaccount-title hidden-sm-down block-title">
-      {l s='Your account' d='Shop.Theme.CustomerAccount'}    
+      {l s='Your account' d='Shop.Theme.Customeraccount'}    
   </h3>
   <div class="block-content">
       <ul class="account-list collapse" id="footer_account_list">

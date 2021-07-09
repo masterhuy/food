@@ -77,19 +77,11 @@
     padding-top: .4rem;
     padding-bottom: .4rem;
 }
-#customer-form .custom-checkbox {
-    display: -webkit-box;
-    display: -moz-box;
-    display: box;
-    display: -moz-flex;
-    display: -ms-flexbox;
-    display: flex;
-}
 .custom-checkbox input[type=checkbox] {
-    margin-right: 3px;
+    margin-right: 5px;
     display: inline-block;
-    width: 16px;
-    height: 16px;
+    width: 12px;
+    height: 12px;
     vertical-align: middle;
     cursor: pointer;
     position: relative;

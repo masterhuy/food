@@ -24,7 +24,7 @@
  *}
 <section id="js-active-search-filters" class="{if $activeFilters|count}active_filters{else}hide{/if}">
   {block name='active_filters_title'}
-    <h3 class=" active-filter-title">{l s='Active filters' d='Shop.Theme'}</h3>
+    <h3 class=" active-filter-title">{l s='Active filters' d='Shop.Theme.Catalog'}</h3>
   {/block}
 
   {if $activeFilters|count}

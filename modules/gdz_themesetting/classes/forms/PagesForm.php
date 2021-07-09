@@ -701,7 +701,7 @@ class gdzPagesForm
                                 ),
                                 array(
                                     'id_option' => 'layout-4',
-                                    'name' => $this->module->l('Layout 3', 'PagesForm'),
+                                    'name' => $this->module->l('Layout 4', 'PagesForm'),
                                     'img' => 'login/layout-4.jpg'
                                 ),
                             ),

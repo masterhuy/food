@@ -42,18 +42,9 @@
 				{capture name=path}{$post.title|escape:'html':'UTF-8'}{/capture}
 				<div class="single-blog">
 					<div class="blog-post">
-						{if $post.link_video && $gdz_blog_setting.GDZBLOG_SHOW_MEDIA}
-							<div class="post-video">
-								{$post.link_video}
-							</div>
-						{elseif $post.image && $gdz_blog_setting.GDZBLOG_SHOW_MEDIA}
-							<div class="post-thumb">
-								<img src="{$image_baseurl|escape:'html':'UTF-8'}{$post.image|escape:'html':'UTF-8'}" alt="{l s='Image Blog' d='Modules.JmsBlog'}" />
-
-							</div>
-						{/if}
 						{assign var=params value=['post_id' => $post.post_id, 'category_slug' => $post.category_alias, 'slug' => $post.alias]}
 						{assign var=catparams value=['category_id' => $post.category_id, 'slug' => $post.category_alias]}
+						<h1 class="title">{$post.title|escape:'html':'UTF-8'}</h1>
 						<ul class="post-meta">
 							{if $gdz_blog_setting.GDZBLOG_SHOW_CATEGORY}
 								<li class="category-name">
@@ -66,6 +57,7 @@
 								</li>
 							{/if}
 							<li class="created">
+								{l s='Posted:' d='Modules.JmsBlog'}
 								<span class="day">{$post.created|escape:'html':'UTF-8'|date_format:'%e'}</span>
 								<span class="month">{$post.created|escape:'html':'UTF-8'|date_format:'%b'}</span>
 							</li>
@@ -80,8 +72,15 @@
 								</li>
 							{/if}
 						</ul>
-						<h1 class="title">{$post.title|escape:'html':'UTF-8'}</h1>
-
+						{if $post.link_video && $gdz_blog_setting.GDZBLOG_SHOW_MEDIA}
+							<div class="post-video">
+								{$post.link_video}
+							</div>
+						{elseif $post.image && $gdz_blog_setting.GDZBLOG_SHOW_MEDIA}
+							<div class="post-thumb">
+								<img src="{$image_baseurl|escape:'html':'UTF-8'}{$post.image|escape:'html':'UTF-8'}" alt="{l s='Image Blog' d='Modules.JmsBlog'}" />
+							</div>
+						{/if}
 						<div class="post-fulltext">
 							{$post.fulltext nofilter}
 						</div>

@@ -23,6 +23,7 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  *}
 <section class="contact-form">
+    <h3>{l s='Fill up the form if you have any question' d='Modules.Contactform.Shop'}</h3>
     <form action="{$urls.pages.contact|escape:'htmlall':'UTF-8'}" method="post" {if $contact.allow_file_upload}enctype="multipart/form-data"{/if}>
         {if $notifications}
             <div class="notification {if $notifications.nw_error}notification-error{else}notification-success{/if}">
@@ -35,20 +36,27 @@
         {/if}
         {if !$notifications || $notifications.nw_error}
             <section class="form-fields">
-                <div class="form-group">
-                    <label>{l s='Subject Heading' d='Modules.Contactform.Shop'}</label>
-                    <select name="id_contact" class="form-control">
-                        {foreach from=$contact.contacts item=contact_elt}
-                            <option value="{$contact_elt.id_contact|escape:'htmlall':'UTF-8'}">{$contact_elt.name}</option>
-                        {/foreach}
-                    </select>
-                </div>
+                <div class="row">
+                    <div class="form-group col">
+                        <label>{l s='Subject Heading' d='Modules.Contactform.Shop'}</label>
+                        <select name="id_contact" class="form-control">
+                            {foreach from=$contact.contacts item=contact_elt}
+                                <option value="{$contact_elt.id_contact|escape:'htmlall':'UTF-8'}">{$contact_elt.name}</option>
+                            {/foreach}
+                        </select>
+                    </div>
+                    <div class="form-group col">
+                        <label>{l s='Email address' d='Modules.Contactform.Shop'}</label>
+                        <input type="email" class="form-control" name="from" placeholder="{l s='Your email address...' d='Modules.Contactform.Shop'}" value="{$contact.email|escape:'htmlall':'UTF-8'}" />
+                    </div>
 
-                <div class="form-group">
-                    <label>{l s='Email address' d='Modules.Contactform.Shop'}</label>
-                    <input type="email" class="form-control" name="from" placeholder="{l s='Email address...' d='Modules.Contactform.Shop'}" value="{$contact.email|escape:'htmlall':'UTF-8'}" />
+                    {if $contact.allow_file_upload}
+                        <div class="form-group col">
+                            <input type="file" name="fileUpload" class="filestyle" data-buttonText="{l s='Choose file' d='Shop.Theme.Actions'}">
+                        </div>
+                    {/if}
                 </div>
-
+                
                 {if $contact.orders}
                 <label>
                     <span>{l s='Order reference' d='Modules.Contactform.Shop'}</span>
@@ -61,16 +69,9 @@
                 </label>
                 {/if}
 
-                {if $contact.allow_file_upload}
-                    <div class="form-group">
-                        <label>{l s='Attach File' d='Modules.Contactform.Shop'}</label>
-                        <input type="file" class="form-control-file" name="fileUpload" placeholder="{l s='Attach File' d='Modules.Contactform.Shop'}"/>
-                    </div>
-                {/if}
-
                 <div class="form-group">
                     <label>{l s='Enter message' d='Modules.Contactform.Shop'}</label>
-                    <textarea class="form-control" placeholder="Text message..." cols="67" rows="3" name="message">{if $contact.message}{$contact.message|escape:'htmlall':'UTF-8'}{/if}</textarea>
+                    <textarea class="form-control" placeholder="{l s='Your message...' d='Modules.Contactform.Shop'}" cols="67" rows="3" name="message">{if $contact.message}{$contact.message|escape:'htmlall':'UTF-8'}{/if}</textarea>
                 </div>
                 
                 {hook h='displayGDPRConsent' id_module=$id_module}
@@ -86,7 +87,7 @@
                 <input type="text" name="url" value=""/>
                 <input type="hidden" name="token" value="{$token|escape:'htmlall':'UTF-8'}" />
                 <button class="btn btn-active btn-submit" type="submit" name="submitMessage">
-                    {l s='Submit' d='Modules.Contactform.Shop'}
+                    {l s='Send message' d='Modules.Contactform.Shop'}
                 </button>
             </footer>
         {/if}

@@ -23,38 +23,37 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 <div class="breadcrumb-wrapper hidden-sm-down">
-<div class="breadcrumb">
-    <div class="container">
-        <h3 class="{if $gdzSetting.breadcrumb_align}text-{$gdzSetting.breadcrumb_align}{/if}">
-        {if $page.page_name == 'cms'}
-          {$cms.meta_title}
-        {elseif $page.page_name == 'cms_category'}
-          {$cms_category.name}
-        {elseif $page.page_name == 'category'}
-          {$category.name}
-        {elseif $page.page_name == 'module-gdz_pagebuilder-page'}
-          {$gdz_pagebuilder_page.title}
-        {elseif $page.page_name == 'module-gdz_blog-categories'}
-          {l s="categories" d="Shop.Theme.Catalog"}
-        {elseif $page.page_name == 'contact'}
-          {l s="Contact" d="Shop.Theme.Catalog"}
-        {else}
-          {$page.page_name}
-        {/if}
-        </h3>
-
-        <div data-depth="{$breadcrumb.count}" class="row align-items-center{if $gdzSetting.breadcrumb_seperator} seperator-{$gdzSetting.breadcrumb_seperator}{/if}">
-            <ul itemscope itemtype="http://schema.org/BreadcrumbList" class="{if $gdzSetting.breadcrumb_align}align-{$gdzSetting.breadcrumb_align}{/if}">
-                {foreach from=$breadcrumb.links item=path name=breadcrumb}
-                    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                        <a itemprop="item" href="{$path.url}">
-                            <span itemprop="name">{$path.title}</span>
-                        </a>
-                        <meta itemprop="position" content="{$smarty.foreach.breadcrumb.iteration}">
-                    </li>
-                {/foreach}
-            </ul>
+    <div class="breadcrumb">
+        <div class="container">
+            <h3 class="{if $gdzSetting.breadcrumb_align}text-{$gdzSetting.breadcrumb_align}{/if}">
+                {if $page.page_name == 'cms'}
+                    {$cms.meta_title}
+                {elseif $page.page_name == 'cms_category'}
+                    {$cms_category.name}
+                {elseif $page.page_name == 'category'}
+                    {$category.name}
+                {elseif $page.page_name == 'module-gdz_pagebuilder-page'}
+                    {$gdz_pagebuilder_page.title}
+                {elseif $page.page_name == 'module-gdz_blog-categories'}
+                    {l s="categories" d="Shop.Theme.Catalog"}
+                {elseif $page.page_name == 'contact'}
+                    {l s="Contact" d="Shop.Theme.Catalog"}
+                {else}
+                    {$page.meta.title}
+                {/if}
+            </h3>
+            <div data-depth="{$breadcrumb.count}" class="row align-items-center{if $gdzSetting.breadcrumb_seperator} seperator-{$gdzSetting.breadcrumb_seperator}{/if}">
+                <ul itemscope itemtype="http://schema.org/BreadcrumbList" class="{if $gdzSetting.breadcrumb_align}align-{$gdzSetting.breadcrumb_align}{/if}">
+                    {foreach from=$breadcrumb.links item=path name=breadcrumb}
+                        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                            <a itemprop="item" href="{$path.url}">
+                                <span itemprop="name">{$path.title}</span>
+                            </a>
+                            <meta itemprop="position" content="{$smarty.foreach.breadcrumb.iteration}">
+                        </li>
+                    {/foreach}
+                </ul>
+            </div>
         </div>
     </div>
-</div>
 </div>

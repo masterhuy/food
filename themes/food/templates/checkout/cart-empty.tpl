@@ -29,14 +29,14 @@
 {/block}
 
 {block name='continue_shopping' append}
-  <a class="btn-default" href="{$urls.pages.index}">
+  <a class="btn btn-active" href="{$urls.pages.index}">
     {l s='Continue shopping' d='Shop.Theme.Actions'}
   </a>
 {/block}
 
 {block name='cart_actions'}
   <div class="checkout text-xs-center card-block">
-    <button type="button" class="btn-default active disabled" disabled>{l s='Checkout' d='Shop.Theme.Actions'}</button>
+    <button type="button" class="btn btn-active disabled" disabled>{l s='Checkout' d='Shop.Theme.Actions'}</button>
   </div>
 {/block}
 

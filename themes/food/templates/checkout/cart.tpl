@@ -43,7 +43,7 @@
 					</div>
 
 					{block name='continue_shopping'}
-			  			<a class="btn-default btn-border-bottom continue-shopping pull-right mb-3" href="{$urls.pages.index}">
+			  			<a class="btn btn-active continue-shopping pull-right mb-3" href="{$urls.pages.index}">
 							{l s='Continue shopping' d='Shop.Theme.Actions'}
 			  			</a>
 					{/block}

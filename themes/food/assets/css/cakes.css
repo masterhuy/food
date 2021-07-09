@@ -11,6 +11,10 @@ a:hover {
   background-color: #D3183A;
 }
 
+.btn-link:hover {
+  color: #D3183A;
+}
+
 .breadcrumb-wrapper .breadcrumb li a:hover {
   color: #D3183A;
 }
@@ -203,6 +207,11 @@ a:hover {
 .product-variants-item ul li:hover .radio-label, .product-variants-item input:checked ~ .radio-label {
   color: #D3183A;
   border-color: #D3183A;
+}
+
+/*account*/
+.show-pass button:hover {
+  color: #D3183A;
 }
 
 /* footer */

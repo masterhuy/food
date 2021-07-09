@@ -26,9 +26,9 @@
  {block name='page_content'}
      {block name='login_form_container'}
       <div class="login-layout-2 row" id="login-wrapper">
-          <div class="col-md-6">
+          <div class="col-12 col-md-6">
               <div class="login-box login-form">
-                  <h3>{l s='Login' d='Shop.Theme.CustomerAccount'}</h3>
+                  <h3>{l s='Login' d='Shop.Theme.Customeraccount'}</h3>
                   {render file='customer/_partials/login-form.tpl' ui=$login_form}
                   {block name='display_after_login_form'}
                       {hook h='displayCustomerLoginFormAfter'}
@@ -36,19 +36,19 @@
               </div>
               <div class="login-row">
                   <div class="login-box signup-form">
-                      <h3>{l s='Sign Up' d='Shop.Theme.CustomerAccount'}</h3>
+                      <h3>{l s='Sign Up' d='Shop.Theme.Customeraccount'}</h3>
                       <div class="signup-content">
                           {$gdzSetting.login_page_signup_content nofilter}
                       </div>
                       <div class="no-account">
-                          <a href="{$urls.pages.register}" data-link-action="display-register-form">
+                          <a class="btn-link" href="{$urls.pages.register}" data-link-action="display-register-form">
                             {l s='No account? Create one here' d='Shop.Theme.Customeraccount'}
                           </a>
                       </div>
                   </div>
               </div>
           </div>
-          <div class="col-md-6 login-image" id="login-image">
+          <div class="col-12 col-md-6 login-image" id="login-image">
               <div class="login-box">
                   <img width="100%" src="{$gdzSetting.login_page_image}" />
               </div>

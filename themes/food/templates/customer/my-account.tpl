@@ -25,99 +25,83 @@
 {extends file='customer/page.tpl'}
 
 {block name='page_title'}
-  {l s='Your account' d='Shop.Theme.Customeraccount'}
+    {l s='Your account' d='Shop.Theme.Customeraccount'}
 {/block}
 
 {block name='page_content'}
-  <div class="">
-    <div class="links row">
-      <div class="col">
-          <a id="identity-link" href="{$urls.pages.identity}">
-            <span class="link-item">
-              <i class="fa fa-user-o"></i>
-              {l s='Information' d='Shop.Theme.Customeraccount'}
-            </span>
-          </a>
-      </div>
-      {if $customer.addresses|count}
-      <div class="col">
-          <a id="addresses-link" href="{$urls.pages.addresses}">
-            <span class="link-item">
-              <i class="fa fa-address-card"></i>
-              {l s='Addresses' d='Shop.Theme.Customeraccount'}
-            </span>
-          </a>
-      </div>
-      {else}
-      <div class="col">
-          <a id="address-link" href="{$urls.pages.address}">
-            <span class="link-item">
-              <i class="fa fa-address-card"></i>
-              {l s='Add first address' d='Shop.Theme.Customeraccount'}
-            </span>
-          </a>
-      </div>
-      {/if}
+    <div class="">
+        <div class="links row">
+            <a class="col-12 col-md-6 col-lg-4" id="identity-link" href="{$urls.pages.identity}">
+                <span class="link-item">
+                <i class="fa fa-user"></i>
+                {l s='Information' d='Shop.Theme.Customeraccount'}
+                </span>
+            </a>
+        {if $customer.addresses|count}
+            <a class="col-12 col-md-6 col-lg-4" id="addresses-link" href="{$urls.pages.addresses}">
+                <span class="link-item">
+                <i class="fa fa-address-card"></i>
+                {l s='Addresses' d='Shop.Theme.Customeraccount'}
+                </span>
+            </a>
+        {else}
+            <a class="col-12 col-md-6 col-lg-4" id="address-link" href="{$urls.pages.address}">
+                <span class="link-item">
+                <i class="fa fa-address-card"></i>
+                {l s='Add first address' d='Shop.Theme.Customeraccount'}
+                </span>
+            </a>
+        {/if}
 
-      {if !$configuration.is_catalog}
-      <div class="col">
-          <a id="history-link" href="{$urls.pages.history}">
-            <span class="link-item">
-              <i class="fa fa-calendar-alt"></i>
-              {l s='Order history and details' d='Shop.Theme.Customeraccount'}
-            </span>
-          </a>
-      </div>
-      {/if}
+        {if !$configuration.is_catalog}
+            <a class="col-12 col-md-6 col-lg-4" id="history-link" href="{$urls.pages.history}">
+                <span class="link-item">
+                <i class="fa fa-calendar"></i>
+                {l s='Order history and details' d='Shop.Theme.Customeraccount'}
+                </span>
+            </a>
+        {/if}
 
-      {if !$configuration.is_catalog}
-      <div class="col">
-          <a id="order-slips-link" href="{$urls.pages.order_slip}">
-            <span class="link-item">
-              <i class="fa fa-list-alt"></i>
-              {l s='Credit slips' d='Shop.Theme.Customeraccount'}
-            </span>
-          </a>
-      </div>
-      {/if}
+        {if !$configuration.is_catalog}
+            <a class="col-12 col-md-6 col-lg-4" id="order-slips-link" href="{$urls.pages.order_slip}">
+                <span class="link-item">
+                <i class="fa fa-list-alt"></i>
+                {l s='Credit slips' d='Shop.Theme.Customeraccount'}
+                </span>
+            </a>
+        {/if}
 
-      {if $configuration.voucher_enabled && !$configuration.is_catalog}
-      <div class="col">
-          <a id="discounts-link" href="{$urls.pages.discount}">
-            <span class="link-item">
-              <i class="fa fa-tags"></i>
-              {l s='Vouchers' d='Shop.Theme.Customeraccount'}
-            </span>
-          </a>
-      </div>
-      {/if}
+        {if $configuration.voucher_enabled && !$configuration.is_catalog}
+            <a class="col-12 col-md-6 col-lg-4" id="discounts-link" href="{$urls.pages.discount}">
+                <span class="link-item">
+                <i class="fa fa-tags"></i>
+                    {l s='Vouchers' d='Shop.Theme.Customeraccount'}
+                </span>
+            </a>
+        {/if}
 
-      {if $configuration.return_enabled && !$configuration.is_catalog}
-      <div class="col">
-          <a id="returns-link" href="{$urls.pages.order_follow}">
-            <span class="link-item">
-              <i class="fa fa-box-open"></i>
-              {l s='Merchandise returns' d='Shop.Theme.Customeraccount'}
-            </span>
-          </a>
-      </div>
-      {/if}
-      <div class="col">
-        {block name='display_customer_account'}
-          {hook h='displayCustomerAccount'}
-        {/block}
-      </div>
+        {if $configuration.return_enabled && !$configuration.is_catalog}
+            <a class="col-12 col-md-6 col-lg-4" id="returns-link" href="{$urls.pages.order_follow}">
+                <span class="link-item">
+                <i class="fa fa-box-open"></i>
+                {l s='Merchandise returns' d='Shop.Theme.Customeraccount'}
+                </span>
+            </a>
+        {/if}
+            {block name='display_customer_account'}
+                {hook h='displayCustomerAccount'}
+            {/block}
+        </div>
     </div>
-  </div>
 {/block}
 
 
 {block name='page_footer'}
-  {block name='my_account_links'}
-    <div class="text-sm-center">
-      <a href="{$logout_url}" >
-        {l s='Sign out' d='Shop.Theme.Actions'}
-      </a>
-    </div>
-  {/block}
+    {block name='my_account_links'}
+        <div class="text-sm-center">
+            <a href="{$logout_url}" >
+                {l s='Sign out' d='Shop.Theme.Actions'}
+            </a>
+        </div>
+    {/block}
 {/block}
