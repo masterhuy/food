@@ -23,7 +23,7 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 <section class="featuredproducts">
-    <h2 class="mb-30">{l s='Our Products' d='Modules.Featuredproducts.Shop'}</h2>
+    <h2 class="mb-30">{l s='Featured Products' d='Modules.Featuredproducts.Shop'}</h2>
     <div class="products row">
         {foreach from=$products item="product"}
             <div class="item col-12 col-sm-6 col-lg-3">

@@ -27,17 +27,21 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <i class="ptw-icon {$gdzSetting.close_icon}"></i>
+                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="icon/navigation/close_24px">
+                        <path id="icon/navigation/close_24px_2" d="M23.75 8.0125L21.9875 6.25L15 13.2375L8.0125 6.25L6.25 8.0125L13.2375 15L6.25 21.9875L8.0125 23.75L15 16.7625L21.9875 23.75L23.75 21.9875L16.7625 15L23.75 8.0125Z" fill="black" fill-opacity="0.54"/>
+                        </g>
+                    </svg>
                 </button>
             </div>
             <div class="modal-body" id="main">
                 <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-12 left">
+                    <div class="col-md-6 col-12 col-left">
                         {block name='product_cover_thumbnails'}
                             {include file='catalog/_partials/product-cover-thumbnails-quickview.tpl'}
                         {/block}
                     </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12 right">
+                    <div class="col-md-6 col-12 col-right">
                         {block name='page_header_container'}
                             {block name='page_header'}
                                 <h2 itemprop="name" class="product-name">{block name='page_title'}{$product.name}{/block}</h2>
@@ -66,34 +70,6 @@
                                         <input type="hidden" name="id_product" value="{$product.id}" id="product_page_product_id">
                                         <input type="hidden" name="id_customization" value="{$product.id_customization}" id="product_customization_id">
 
-                                        {block name='product_pack'}
-                                            {if $packItems}
-                                                <section class="product-pack">
-                                                    <h3 class="h4">{l s='This pack contains' d='Shop.Theme.Catalog'}</h3>
-                                                    <article>
-                                                        <div class="card">
-                                                            <div class="pack-product-container">
-                                                                <table class="table">
-                                                                    <thead>
-                                                                        <tr>
-                                                                            <th>Products</th>
-                                                                            <th>Price</th>
-                                                                            <th>Quantity</th>
-                                                                        </tr>
-                                                                    </thead>
-                                                                    {foreach from=$packItems item="product_pack"}
-                                                                        {block name='product_miniature'}
-                                                                            {include file='catalog/_partials/miniatures/pack-product.tpl' product=$product_pack}
-                                                                        {/block}
-                                                                    {/foreach}
-                                                                </table>
-                                                            </div>
-                                                        </div>
-                                                    </article>
-                                                </section>
-                                            {/if}
-                                        {/block}
-
                                         {block name='product_discounts'}
                                             {include file='catalog/_partials/product-discounts.tpl'}
                                         {/block}
@@ -111,39 +87,31 @@
                             </div>
 
                             <ul class="other-info">
-                                {if $product.reference}
-                                    <!-- number of item in stock -->
-                                    <li id="product_reference">
-                                        <label>{l s='Product Code:' d='Shop.Theme.Catalog'}</label>
-                                        <span class="editable">{$product.reference}</span>
+                                {if isset($product.reference_to_display) && $product.reference_to_display neq ''}
+                                    <li class="product-reference">
+                                        <label>{l s='SKU' d='Shop.Theme.Catalog'}: </label>
+                                        <span itemprop="sku">{$product.reference_to_display}</span>
                                     </li>
                                 {/if}
-                                <!-- availability or doesntExist -->
-                                <li id="availability_statut">
-                                    <label id="availability_label">
-                                        {l s='Availability:' d='Shop.Theme.Catalog'}
-                                    </label>
-                                    <span id="availability_value" class="label-availability">
-                                        {if $product.quantity|intval <= 0}
-                                            {l s='Out stock' d='Shop.Theme.Catalog'}
-                                        {else}
-                                            {l s='In stock' d='Shop.Theme.Catalog'}
-                                        {/if}
-                                    </span>
+                            <li class="product-category">
+                                    <label>{l s='Category:' d='Shop.Theme.Catalog'}</label>
+                                    <a class="editable" href="{url entity='category' id=$product.id_category_default}">
+                                        {$product.category|escape:'html':'UTF-8'}
+                                    </a
                                 </li>
                                 <li>
                                     {if $product.additional_shipping_cost > 0}
-                                        <label>{l s='Shipping tax: '}</label>
+                                        <label>{l s='Shipping tax : '}</label>
                                         <span class="shipping_cost">{$product.additional_shipping_cost}</span>
                                     {else}
-                                        <label>{l s='Shipping tax:'}</label>
-                                        <span class="shipping_cost">{l s=' Free'}</span>
+                                        <label>{l s='Shipping tax : '}</label>
+                                        <span class="shipping_cost">{l s=' Free' d='Shop.Theme.Catalog'}</span>
                                     {/if}
                                 </li>
                             </ul>
                         </div>
                         {if $gdzSetting.quickview_sharing}
-                        {hook h='displayProductButtons' product=$product}
+                            {hook h='displayProductButtons' product=$product}
                         {/if}
                     </div>
                 </div>

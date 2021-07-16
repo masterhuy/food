@@ -39,10 +39,12 @@
   padding: 20px;
   border: 1px solid #ebebeb;
   margin-bottom: 30px;
+  border-radius: 10px;
 }
 #my-account .links .link-item i {
   margin-right: 0;
   margin-bottom: 10px;
+  font-size: 25px;
 }
 
 #mywishlist #block-order-detail {

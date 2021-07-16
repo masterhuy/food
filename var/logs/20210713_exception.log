@@ -1,0 +1,36 @@
+*ERROR* 	v1.7.7.4	2021/07/13 - 06:35:52: Table &#039;food.ps_hotdeals&#039; doesn&#039;t exist&lt;br /&gt;&lt;br /&gt;&lt;pre&gt;
+                SELECT hs.`id_hotdeals` as id_hotdeals,
+                hss.`active`,hss.`ordering`,hss.`id_product`,hss.`deals_time`
+
+                FROM ps_hotdeals hs
+                LEFT JOIN ps_hotdeals_items hss ON (hs.id_hotdeals = hss.id_hotdeals)
+
+                WHERE id_shop = 1
+                ORDER BY hs.id_hotdeals&lt;/pre&gt; at line 769 in file classes/db/Db.php
+*ERROR* 	v1.7.7.4	2021/07/13 - 06:38:42: Table &#039;food.ps_hotdeals&#039; doesn&#039;t exist&lt;br /&gt;&lt;br /&gt;&lt;pre&gt;
+                SELECT hs.`id_hotdeals` as id_hotdeals,
+                hss.`active`,hss.`ordering`,hss.`id_product`,hss.`deals_time`
+
+                FROM ps_hotdeals hs
+                LEFT JOIN ps_hotdeals_items hss ON (hs.id_hotdeals = hss.id_hotdeals)
+
+                WHERE id_shop = 1
+                ORDER BY hs.id_hotdeals&lt;/pre&gt; at line 769 in file classes/db/Db.php
+*ERROR* 	v1.7.7.4	2021/07/13 - 21:42:10: Table &#039;food.ps_hotdeals&#039; doesn&#039;t exist&lt;br /&gt;&lt;br /&gt;&lt;pre&gt;
+                SELECT hs.`id_hotdeals` as id_hotdeals,
+                hss.`active`,hss.`ordering`,hss.`id_product`,hss.`deals_time`
+
+                FROM ps_hotdeals hs
+                LEFT JOIN ps_hotdeals_items hss ON (hs.id_hotdeals = hss.id_hotdeals)
+
+                WHERE id_shop = 1
+                ORDER BY hs.id_hotdeals&lt;/pre&gt; at line 769 in file classes/db/Db.php
+*ERROR* 	v1.7.7.4	2021/07/13 - 21:42:16: Table &#039;food.ps_hotdeals&#039; doesn&#039;t exist&lt;br /&gt;&lt;br /&gt;&lt;pre&gt;
+                SELECT hs.`id_hotdeals` as id_hotdeals,
+                hss.`active`,hss.`ordering`,hss.`id_product`,hss.`deals_time`
+
+                FROM ps_hotdeals hs
+                LEFT JOIN ps_hotdeals_items hss ON (hs.id_hotdeals = hss.id_hotdeals)
+
+                WHERE id_shop = 1
+                ORDER BY hs.id_hotdeals&lt;/pre&gt; at line 769 in file classes/db/Db.php

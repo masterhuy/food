@@ -32,7 +32,7 @@
                     </div>
                 {/if}
                 {if $category.description && $gdzSetting.shop_cat_desc}
-                    <div id="category-description" class="text-muted">{$category.description nofilter}</div>
+                    <div id="category-description">{$category.description nofilter}</div>
                 {/if}
             </div>
         </div>

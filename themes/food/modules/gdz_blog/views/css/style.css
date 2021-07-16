@@ -9,7 +9,7 @@
 *  @Website: https://www.godzillabuilder.com
 */
 .blog-widget {
-    margin-bottom: 30px;
+    margin-bottom: 33px;
 }
 .widget-tabs .nav-tabs {
     border-bottom: 1px solid #ededed;
@@ -27,11 +27,9 @@
     width: 100%;
 }
 .blog-widget .widget-title {
-    font-size: 1.25rem;
-    color: #000;
-    letter-spacing: 0.7px;
-    cursor: pointer;
-    margin-bottom: 1.25rem;
+  font-size: 22px;
+  margin-bottom: 15px;
+  font-weight: 600;
 }
 .widget-tabs h6 {
 	font-size: 15px;
@@ -69,9 +67,11 @@
 	display:none;
 }
 .widget-categories li a {
-	display:block;
-	line-height:36px;
-	position:relative;
+  display: block;
+  line-height: 32px;
+  position: relative;
+  letter-spacing: 0.02em;
+  color: rgba(63, 40, 3, 0.7);
 }
 .widget-categories li a span {
 	display:block;
@@ -97,25 +97,22 @@
 	margin-bottom:30px;
 }
 .cat-post-list .item {
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 }
 .post-image,
 .post-thumb {
   margin-bottom: 10px;
 }
 .blog-readmore {
-  font-size: 12px;
-  font-weight: 500;
-  color: #000;
-  float:right;
-  text-transform: uppercase;
+  text-transform: initial;
+  padding: 0 17px;
 }
 .post-image img,
 .post-thumb img {
   width: 100%;
 }
 .post-meta {
-  margin-bottom: 7px;
+  margin-bottom: 23px;
 }
 .post-meta li {
   display: inline-block;
@@ -126,4 +123,7 @@
 }
 .social-sharing {
   margin: 50px 0px;
+}
+.cat-intro{
+  margin-bottom: 10px;
 }

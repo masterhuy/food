@@ -94,7 +94,7 @@
 				</div>
 				<br />
 				<div class="btn_action">
-					<a href="javascript:;" class="exclusive lnksave btn btn-primary" onclick="WishlistProductManage('wlp_bought_{$product.id_product_attribute}', 'update', '{$id_wishlist}', '{$product.id_product}', '{$product.id_product_attribute}', $('#quantity_{$product.id_product}_{$product.id_product_attribute}').val(), $('#priority_{$product.id_product}_{$product.id_product_attribute}').val());" title="{l s='Save' d='Shop.Theme.Catalog'}">{l s='Save' d='Shop.Theme.Catalog'}</a>
+					<a href="javascript:;" class="exclusive lnksave btn btn-active" onclick="WishlistProductManage('wlp_bought_{$product.id_product_attribute}', 'update', '{$id_wishlist}', '{$product.id_product}', '{$product.id_product_attribute}', $('#quantity_{$product.id_product}_{$product.id_product_attribute}').val(), $('#priority_{$product.id_product}_{$product.id_product_attribute}').val());" title="{l s='Save' d='Shop.Theme.Catalog'}">{l s='Save' d='Shop.Theme.Catalog'}</a>
 				</div>
 				</div>
 			</li>

@@ -42,7 +42,7 @@
             <div class="delivery-options">
               {foreach from=$delivery_options item=carrier key=carrier_id}
                   <div class="row delivery-option">
-                    <div class="col-sm-1">
+                    <div class="col-sm-1 ">
                       <span class="custom-radio float-xs-left">
                         <input type="radio" name="delivery_option[{$id_address}]" id="delivery_option_{$carrier.id}" value="{$carrier_id}"{if $delivery_option == $carrier_id} checked{/if}>
                         <span></span>
@@ -50,22 +50,22 @@
                     </div>
                     <label for="delivery_option_{$carrier.id}" class="col-sm-11 delivery-option-2">
                       <div class="row">
-                        <div class="col-sm-5 col-xs-12">
+                        <div class="col-sm-5 col-12">
                           <div class="row">
                             {if $carrier.logo}
-                            <div class="col-xs-3">
+                            <div class="col-3">
                                 <img src="{$carrier.logo}" alt="{$carrier.name}" />
                             </div>
                             {/if}
-                            <div class="{if $carrier.logo}col-xs-9{else}col-xs-12{/if}">
+                            <div class="{if $carrier.logo}col-9{else}col-12{/if}">
                               <span class="h6 carrier-name">{$carrier.name}</span>
                             </div>
                           </div>
                         </div>
-                        <div class="col-sm-4 col-xs-12">
+                        <div class="col-sm-4 col-12">
                           <span class="carrier-delay">{$carrier.delay}</span>
                         </div>
-                        <div class="col-sm-3 col-xs-12">
+                        <div class="col-sm-3 col-12">
                           <span class="carrier-price">{$carrier.price}</span>
                         </div>
                       </div>
@@ -81,7 +81,7 @@
           <div class="order-options">
             <div id="delivery">
               <label for="delivery_message">{l s='If you would like to add a comment about your order, please write it in the field below.' d='Shop.Theme.Checkout'}</label>
-              <textarea rows="2" cols="120" id="delivery_message" name="delivery_message">{$delivery_message}</textarea>
+              <textarea class="form-control" rows="2" cols="120" id="delivery_message" name="delivery_message">{$delivery_message}</textarea>
             </div>
 
             {if $recyclablePackAllowed}
@@ -101,13 +101,13 @@
 
               <div id="gift" class="collapse{if $gift.isGift} in{/if}">
                 <label for="gift_message">{l s='If you\'d like, you can add a note to the gift:' d='Shop.Theme.Checkout'}</label>
-                <textarea rows="2" cols="120" id="gift_message" name="gift_message">{$gift.message}</textarea>
+                <textarea class="form-control" rows="2" cols="120" id="gift_message" name="gift_message">{$gift.message}</textarea>
               </div>
             {/if}
 
           </div>
         </div>
-        <button type="submit" class="continue btn btn-primary btn-fullwidth" name="confirmDeliveryOption" value="1">
+        <button type="submit" class="btn btn-active mt-15" name="confirmDeliveryOption" value="1">
           {l s='Continue' d='Shop.Theme.Actions'}
         </button>
       </form>

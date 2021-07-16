@@ -29,7 +29,7 @@
       <p>
         <span class="font-weight-bold">{l s='Create an account' d='Shop.Theme.Checkout'}</span> <span class="font-italic">{l s='(optional)' d='Shop.Theme.Checkout'}</span>
         <br>
-        <span class="text-muted">{l s='And save time on your next order!' d='Shop.Theme.Checkout'}</span>
+        <span>{l s='And save time on your next order!' d='Shop.Theme.Checkout'}</span>
       </p>
       {$smarty.block.parent}
   {else}
@@ -39,7 +39,7 @@
 
 {block "form_buttons"}
     <button
-      class="continue btn btn-primary btn-fullwidth"
+      class="btn btn-active"
       name="continue"
       data-link-action="register-new-customer"
       type="submit"

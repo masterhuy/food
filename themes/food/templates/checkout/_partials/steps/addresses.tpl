@@ -73,12 +73,12 @@
         {/if}
 
         <p class="add-address">
-          <a href="{$new_address_delivery_url}"><i class="ptw-icon {$gdzSetting.more_icon}"></i>{l s='add new address' d='Shop.Theme.Actions'}</a>
+          <a class="btn-link" href="{$new_address_delivery_url}">{l s='Add new address' d='Shop.Theme.Actions'}</a>
         </p>
 
         {if $use_same_address && !$cart.is_virtual}
           <p>
-            <a data-link-action="different-invoice-address" href="{$use_different_address_url}">
+            <a class="btn-link" data-link-action="different-invoice-address" href="{$use_different_address_url}">
               {l s='Billing address differs from shipping address' d='Shop.Theme.Checkout'}
             </a>
           </p>
@@ -125,7 +125,7 @@
 
       {if !$form_has_continue_button}
         <div class="clearfix">
-          <button type="submit" class="btn btn-primary continue btn-fullwidth" name="confirm-addresses" value="1">
+          <button type="submit" class="btn btn-active" name="confirm-addresses" value="1">
               {l s='Continue' d='Shop.Theme.Actions'}
           </button>
           <input type="hidden" id="not-valid-addresses" value="{$not_valid_addresses}">

@@ -24,7 +24,7 @@
  *}
 
 {if $nb_comments != 0 || $post_allowed}
-<div class="product-comments-additional-info">
+<div class="product-comments-additional-info {if $nb_comments == 0}d-none{/if}">
   {if $nb_comments == 0}
     {if $post_allowed}
       <button class="btn btn-active post-product-comment">

@@ -255,6 +255,7 @@
     display: flex;
     margin-top: 30px;
     padding: 15px;
+	border-radius: 10px;
 }
 #js-active-search-filters.hide {
   display:none;

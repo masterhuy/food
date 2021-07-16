@@ -25,17 +25,22 @@
 
 {extends file='page.tpl'}
 {block name="page_content"}
-{capture name=path}{l s='All Deal' mod='gdz_hotdeal'}{/capture}
-<h3>{l s='All Deal Products' d='Shop.Theme'}</h3>
+<h3>{l s='All Deal Product' d='Shop.Theme'}</h3>
 {if isset($products) && $products}
-	<!-- Products list -->
-	<div class="product_list row products">
-	{foreach from=$products item=product name=products}
-			<div class="col-md-3 col-sm-4 col-xs-6">
-				{include file="catalog/_partials/miniatures/product.tpl" product=$product}
-				<div class="countdown" id="countdown-{$product.id_deal nofilter}">{$product.deal_time nofilter}</div>
-			</div>
-	{/foreach}
+<div id="product_list" class="product_list item-gutter-30 products-list-in-column  products-list-3">
+	<div id="js-product-list">
+	  <div class="products row">
+	    {foreach from=$products item=product name=products}
+	      {block name='product_miniature'}
+	        {include file='catalog/_partials/miniatures/product.tpl' product=$product}
+	      {/block}
+	    {/foreach}
+	  </div>
+	  {block name='pagination'}
+	    {include file='_partials/pagination.tpl' pagination=$listing.pagination}
+	  {/block}
 	</div>
+</div>
 {/if}
 {/block}
+

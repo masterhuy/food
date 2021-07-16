@@ -23,24 +23,24 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 {block name='cart_summary_product_line'}
-  <div class="media-left">
-    <a href="{$product.url}" title="{$product.name}">
-      <img class="media-object" src="{$product.cover.small.url}" alt="{$product.name}">
-    </a>
-  </div>
-  <div class="media-body align-self-center">
-    <span class="product-name">{$product.name}</span>
-
-    {hook h='displayProductPriceBlock' product=$product type="unit_price"}
-    {foreach from=$product.attributes key="attribute" item="value"}
-        <div class="product-line-info product-line-info-secondary text-muted">
-            <span class="label">{$attribute}:</span>
-            <span class="value">{$value}</span>
-        </div>
-    {/foreach}
-    <span class="pull-right">
-      {$product.price} <span class="product-quantity text-small">x {$product.quantity}</span>
-    </span>
-    <br/>
-  </div>
+    <div class="media-left">
+        <a href="{$product.url}" title="{$product.name}">
+            <img class="media-object" src="{$product.cover.small.url}" alt="{$product.name}">
+        </a>
+    </div>
+    <div class="media-body align-self-center">
+        <span class="product-link">{$product.name}</span>
+        {hook h='displayProductPriceBlock' product=$product type="unit_price"}
+        {foreach from=$product.attributes key="attribute" item="value"}
+            <div class="product-line-info product-line-info-secondary">
+                <span class="label">{$attribute}:</span>
+                <span class="value">{$value}</span>
+            </div>
+        {/foreach}
+        <span>
+            <span class="price new">{$product.price} </span>
+            <span class="product-quantity text-small">x {$product.quantity}</span>
+        </span>
+        <br/>
+    </div>
 {/block}

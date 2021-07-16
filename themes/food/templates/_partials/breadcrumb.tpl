@@ -35,7 +35,9 @@
                 {elseif $page.page_name == 'module-gdz_pagebuilder-page'}
                     {$gdz_pagebuilder_page.title}
                 {elseif $page.page_name == 'module-gdz_blog-categories'}
-                    {l s="categories" d="Shop.Theme.Catalog"}
+                    {l s="Blog categories list" d="Shop.Theme.Catalog"}
+                {elseif $page.page_name == 'module-gdz_blog-category'}
+                    {l s="Blog list" d="Shop.Theme.Catalog"}
                 {elseif $page.page_name == 'contact'}
                     {l s="Contact" d="Shop.Theme.Catalog"}
                 {else}
@@ -46,9 +48,11 @@
                 <ul itemscope itemtype="http://schema.org/BreadcrumbList" class="{if $gdzSetting.breadcrumb_align}align-{$gdzSetting.breadcrumb_align}{/if}">
                     {foreach from=$breadcrumb.links item=path name=breadcrumb}
                         <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                            <a itemprop="item" href="{$path.url}">
+                            {if not $smarty.foreach.breadcrumb.last}
+                                <a itemprop="item" href="{$path.url}"><span itemprop="name">{$path.title}</span></a>
+                            {else}
                                 <span itemprop="name">{$path.title}</span>
-                            </a>
+                            {/if}
                             <meta itemprop="position" content="{$smarty.foreach.breadcrumb.iteration}">
                         </li>
                     {/foreach}

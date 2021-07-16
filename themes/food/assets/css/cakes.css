@@ -4,6 +4,7 @@ h1, h2, h3, h4, h5, h6 {
 
 a:hover {
   color: #D3183A;
+  opacity: 1;
 }
 
 .btn.btn-active, .btn:hover {
@@ -73,6 +74,10 @@ a:hover {
 }
 
 .price.new {
+  color: #D3183A;
+}
+
+.price.total {
   color: #D3183A;
 }
 
@@ -211,6 +216,36 @@ a:hover {
 
 /*account*/
 .show-pass button:hover {
+  color: #D3183A;
+}
+
+/* Blog */
+.blog-post .post-fulltext ul li::before {
+  background-color: #D3183A;
+}
+
+.blog-post .post-fulltext .border-left::before {
+  background-color: #D3183A;
+}
+
+.widget-categories li a:hover {
+  color: #D3183A;
+}
+
+.blog-widget li a:hover {
+  color: #D3183A;
+}
+
+.widget-newsletter .block_newsletter .content button path {
+  fill: #D3183A;
+}
+
+/* Cart */
+.remove-from-cart:hover {
+  color: #D3183A;
+}
+
+.product-line-info .price {
   color: #D3183A;
 }
 

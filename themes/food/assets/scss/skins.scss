@@ -4,6 +4,7 @@ h1, h2, h3, h4, h5, h6{
 a {
 	&:hover {
 		color: $active;
+        opacity: 1;
 	}
 }
 .btn{
@@ -79,6 +80,9 @@ a {
 }
 
 .price.new{
+    color: $active;
+}
+.price.total{
     color: $active;
 }
 .cart-prices-line .value{
@@ -205,6 +209,33 @@ a {
     &:hover{
         color: $active;
     }
+}
+
+/* Blog */
+.blog-post .post-fulltext ul li::before{
+    background-color: $active;
+}
+.blog-post .post-fulltext .border-left::before{
+    background-color: $active;
+}
+.widget-categories li a:hover{
+    color: $active;
+}
+.blog-widget li a:hover{
+    color: $active;
+}
+.widget-newsletter .block_newsletter .content button{
+    path{
+        fill: $active;
+    }
+}
+
+/* Cart */
+.remove-from-cart:hover{
+    color: $active;
+}
+.product-line-info .price{
+	color: $active;
 }
 
 /* footer */

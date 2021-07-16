@@ -71,7 +71,7 @@ jQuery(function ($) {
 		});
 	}
 
-    //testimonial width thumbnail
+    //testimonial width thumbnails
     if($(".pb-testimonial").hasClass("with-thumbnails")){
         var bigimage = $(".pb-testimonial-carousel");
         var thumbs = $(".testimonial-thumbnail-carousel");
@@ -205,6 +205,98 @@ $(document).on('click', '.dropdown-menu', function (e) {
     e.stopPropagation();
 });
 
+jQuery(document).ready(function () {
+    var menuItem = $('.gdz-megamenu .nav > .menu-item .mega-nav li');
+        menuItem.each(function() {
+        let dataGroup = $(this).attr('data-group');
+        if(dataGroup == '0'){
+            $(this).removeClass('group');
+        }
+    });
+    $(".additional-links .link-comment").click(function() {
+        $('#more_info_block .nav-tabs .reviews-link a').tab('show');
+        $('#more_info_block #accordion .reviews-link a').collapse('show');
+    });
+    $('.block_newsletter .alert').fadeOut(5000);
+    
+    $('#hor-menu .gdz-megamenu').jmsMegaMenu({
+        event: 'hover',
+        duration: 100
+    });
+    $('.vermenu .gdz-megamenu').jmsMegaMenu({
+        event: 'hover',
+        duration: 100
+    });
+    $('.pb-menu .gdz-megamenu').jmsMegaMenu({
+        event: 'hover',
+        duration: 100
+    });
+    $('#off-canvas-menu .gdz-megamenu').jmsMegaMenu({
+        event: 'click',
+        duration: 100
+    });
+    changeShopGrid();
+    footerCollapse();
+    
+    paginationToTop();
+    prestashop.on('updateProductList', function () {
+        paginationToTop();
+    });
+
+    changeIconNewsletter();
+
+    itemShow();
+    prestashop.on("updateProductList",(function(){
+        itemShow();
+    }));
+
+    cloneQuantity();
+    prestashop.on('updatedProduct', function () {
+        cloneQuantity();
+    });
+
+    
+});
+
+jQuery(window).resize(function () {
+    changeShopGrid();
+    footerCollapse();
+});
+
+$(document).on('click', '#footer-main.collapsed .block-title', function (e) {
+    $(this).parent().toggleClass('collapsed');
+    $(this).parent().find('.block-content').toggleClass('collapse');
+});
+
+/* showing number of item in product top */
+function itemShow(){
+    let itemShowContent = $(".pagination-summary span").clone(true);
+    $(".js-item-show").html(itemShowContent);
+}
+
+function cloneQuantity(){
+    let qty = $("#product-details .product-quantities span").clone(true);
+    $(".product-information .available-quantity span").html(qty);
+    $(".product-information .available-quantity span + span").remove();
+}
+
+function changeIconNewsletter(){
+    let btnSubmit = $(".widget-newsletter .block_newsletter button");
+    let icon = $('<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M20 4H4C2.9 4 2.01 4.9 2.01 6L2 18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM4 8L12 13L20 8V18H4V8ZM4 6L12 11L20 6H4Z" fill="#3F2803"/></svg>');
+    btnSubmit.empty();
+    btnSubmit.html(icon);
+}
+
+function paginationToTop(){
+    var $paginationBtn = $('.js-search-link');
+    $paginationBtn.on('click', function (e) {
+        $('html, body').animate({
+            'scrollTop': 0
+        }, 0);
+        e.preventDefault();
+    });
+}
+
 function changeShopGrid() {
     var shop_grid_column = gdzSetting.shop_grid_column;
     if($('#product_list').attr('data-grid')) {
@@ -232,65 +324,4 @@ function footerCollapse() {
         $('#footer-main').removeClass('collapsed');
         $('#footer-main').find('.block-content').removeClass('collapse');
     }
-}
-jQuery(document).ready(function () {
-    var menuItem = $('.gdz-megamenu .nav > .menu-item .mega-nav li');
-        menuItem.each(function() {
-        let dataGroup = $(this).attr('data-group');
-        if(dataGroup == '0'){
-            $(this).removeClass('group');
-        }
-    });
-    $('.block_newsletter .alert').fadeOut(5000);
-    
-    $('#hor-menu .gdz-megamenu').jmsMegaMenu({
-        event: 'hover',
-        duration: 100
-    });
-    $('.vermenu .gdz-megamenu').jmsMegaMenu({
-        event: 'hover',
-        duration: 100
-    });
-    $('.pb-menu .gdz-megamenu').jmsMegaMenu({
-        event: 'hover',
-        duration: 100
-    });
-    $('#off-canvas-menu .gdz-megamenu').jmsMegaMenu({
-        event: 'click',
-        duration: 100
-    });
-    changeShopGrid();
-    footerCollapse();
-
-    itemShow();
-    prestashop.on("updateProductList",(function(){
-        itemShow();
-    }));
-
-    cloneQuantity();
-    prestashop.on('updatedProduct', function () {
-        cloneQuantity();
-    });
-});
-
-jQuery(window).resize(function () {
-    changeShopGrid();
-    footerCollapse();
-});
-
-$(document).on('click', '#footer-main.collapsed .block-title', function (e) {
-    $(this).parent().toggleClass('collapsed');
-    $(this).parent().find('.block-content').toggleClass('collapse');
-});
-
-/* showing number of item in product top */
-function itemShow(){
-    let itemShowContent = $(".pagination-summary span").clone(true);
-    $(".js-item-show").html(itemShowContent);
-}
-
-function cloneQuantity(){
-    let qty = $("#product-details .product-quantities span").clone(true);
-    $(".product-information .available-quantity span").html(qty);
-    $(".product-information .available-quantity span + span").remove();
 }

@@ -44,7 +44,7 @@
             </div>
             {if $order.details.reorder_url}
               <div class="col text-right">
-                <a href="{$order.details.reorder_url}" class="btn btn-primary">{l s='Reorder' d='Shop.Theme.Actions'}</a>
+                <a href="{$order.details.reorder_url}" class="btn btn-active">{l s='Reorder' d='Shop.Theme.Actions'}</a>
               </div>
             {/if}
           </div>

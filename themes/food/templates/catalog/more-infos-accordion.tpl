@@ -55,6 +55,20 @@
                   </div>
               </div>
         </div>
+        <div class="panel panel-default">
+              <div class="panel-heading">
+                  <h4 class="panel-title reviews-link">
+                    <a class="collapsed" data-toggle="collapse" href="#reviews" aria-expanded="false">{l s='Reviews' d='Shop.Theme.Catalog'}</a>
+                  </h4>
+              </div>
+              <div id="reviews" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    {block name='product_footer'}
+                        {hook h='displayFooterProduct' product=$product category=$category}
+                    {/block}
+                  </div>
+              </div>
+        </div>
         {if $product.attachments}
         <div class="panel panel-default">
               <div class="panel-heading">

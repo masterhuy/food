@@ -46,6 +46,7 @@
                         {if $product.quantity < 1}disabled{/if}"
                         data-button-action="add-to-cart"
                         type="submit"
+                        data-dismiss="modal"
                         {if !$product.add_to_cart_url}disabled{/if}
                     >
                         <span class="icon spinner">

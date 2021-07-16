@@ -405,7 +405,12 @@
 /*
 ** Product list override
 */
-
+.thumbnail-container .product-list-reviews > *{
+  display: none;
+}
+.thumbnail-container.has-reviews .product-list-reviews > *{
+  display: block;
+} 
 #products .thumbnail-container.has-reviews:hover .highlighted-informations,
 #products .thumbnail-container.has-reviews:focus .highlighted-informations,
 .featured-products

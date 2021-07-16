@@ -3,6 +3,12 @@ $active: #70C03E;
 @import './skins.scss';
 
 
+.owl-carousel .owl-stage-outer {
+    height: calc(100% + 30px);
+    width: calc(100% + 30px);
+    margin: -15px;
+    padding: 15px;
+}
 #header-top{
     .header-right{
         top: 3px;

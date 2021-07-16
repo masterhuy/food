@@ -35,7 +35,7 @@
             {foreach from=$product.extraContent item=extra key=extraKey}
                 <li class="nav-item"><a data-toggle="tab" href="#extra-{$extraKey}" class="nav-link">{$extra.title}</a></li>
             {/foreach}
-            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#reviews">{l s='Reviews' d='Shop.Theme.Catalog'}</a></li>
+            <li class="nav-item reviews-link"><a class="nav-link" data-toggle="tab" href="#reviews">{l s='Reviews' d='Shop.Theme.Catalog'}</a></li>
         </ul>
         <div class="tab-content">
             <div class="tab-pane" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
@@ -74,7 +74,7 @@
                 </div>
             {/if}
             {foreach from=$product.extraContent item=extra key=extraKey}
-                <div class="tab-panel {$extra.attr.class}" id="extra-{$extraKey}" role="tabpanel" aria-labelledby="extra-{$extraKey}-tab">{$extra.content nofilter}</div>
+                <div class="tab-pane {$extra.attr.class}" id="extra-{$extraKey}" role="tabpanel" aria-labelledby="extra-{$extraKey}-tab">{$extra.content nofilter}</div>
             {/foreach}
         </div>
     {/block}

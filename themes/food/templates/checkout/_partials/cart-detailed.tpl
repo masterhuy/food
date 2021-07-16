@@ -23,32 +23,32 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 {block name='cart_detailed_product'}
-  <div class="cart-overview js-cart" data-refresh-url="{url entity='cart' params=['ajax' => true, 'action' => 'refresh']}">
-    {if $cart.products}
-    <ul class="cart-items">
-       <li class="cart-item-title hidden-sm-down">
-         <div class="row">
-            <div class="col">{l s='Product' d='Shop.Theme.Checkout'}</div>
-            <div class="col">
-                <div class="row">
-                    <div class="col">{l s='Qty' d='Shop.Theme.Checkout'}</div>
-                    <div class="col">{l s='Price' d='Shop.Theme.Checkout'}</div>
-                    <div class="col text-xs-right"><i class="feather icon-trash-2 invisible" aria-hidden="true"></i></div>
-                </div>
-            </div>
-          </div>
-        </li>
-      {foreach from=$cart.products item=product}
-        <li class="cart-item">
-          {block name='cart_detailed_product_line'}
-            {include file='checkout/_partials/cart-detailed-product-line.tpl' product=$product}
-          {/block}
-        </li>
-        {if is_array($product.customizations) && $product.customizations|count >1}<hr>{/if}
-      {/foreach}
-    </ul>
-    {else}
-      <span class="no-items">{l s='There are no more items in your cart' d='Shop.Theme.Checkout'}</span>
-    {/if}
-  </div>
+    <div class="cart-overview js-cart" data-refresh-url="{url entity='cart' params=['ajax' => true, 'action' => 'refresh']}">
+        {if $cart.products}
+            <ul class="cart-items">
+                <li class="cart-item-title hidden-sm-down">
+                    <div class="row">
+                        <div class="col">{l s='Product' d='Shop.Theme.Checkout'}</div>
+                        <div class="col">
+                            <div class="row">
+                                <div class="col">{l s='Qty' d='Shop.Theme.Checkout'}</div>
+                                <div class="col">{l s='Price' d='Shop.Theme.Checkout'}</div>
+                                <div class="col"><i class="feather icon-trash-2 invisible" aria-hidden="true"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                {foreach from=$cart.products item=product}
+                    <li class="cart-item">
+                        {block name='cart_detailed_product_line'}
+                            {include file='checkout/_partials/cart-detailed-product-line.tpl' product=$product}
+                        {/block}
+                    </li>
+                    {if is_array($product.customizations) && $product.customizations|count >1}<hr>{/if}
+                {/foreach}
+            </ul>
+        {else}
+            <span class="no-items">{l s='There are no more items in your cart' d='Shop.Theme.Checkout'}</span>
+        {/if}
+    </div>
 {/block}

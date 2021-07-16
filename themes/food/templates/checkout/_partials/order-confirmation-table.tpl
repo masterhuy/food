@@ -22,25 +22,25 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-<div id="order-items" class="col-md-12">
-  <div class="row">
+<div id="order-items">
+  
     {block name='order_items_table_head'}
-      <h3 class="card-title h3 col-md-6 col-12">{l s='Order items' d='Shop.Theme.Checkout'}</h3>
+      <h4 class="card-title col-md-6 col-12">{l s='Order items' d='Shop.Theme.Checkout'}</h4>
     {/block}
-  </div>
+  
 
-  <div class="order-confirmation-table">
+  <div class="order-confirmation-table col-12">
 
     {block name='order_confirmation_table'}
       {foreach from=$products item=product}
-        <div class="order-line row align-items-center small-padding">
-          <div class="col-sm-2 col-xs-3">
+        <div class="order-line row align-items-center">
+          <div class="col-sm-2 col-3">
             <span class="image">
               <img src="{$product.cover.medium.url}" />
             </span>
           </div>
-          <div class="col-sm-4 col-xs-9 details">
-            {if $add_product_link}<a href="{$product.url}" target="_blank">{/if}
+          <div class="col-sm-4 col-9 details">
+            {if $add_product_link}<a class="product-link" href="{$product.url}" target="_blank">{/if}
               <span>{$product.name}</span>
             {if $add_product_link}</a>{/if}
             {if is_array($product.customizations) && $product.customizations|count}
@@ -60,10 +60,10 @@
                       <div class="modal-body">
                         {foreach from=$customization.fields item="field"}
                           <div class="product-customization-line row">
-                            <div class="col-sm-3 col-xs-4 label">
+                            <div class="col-sm-3 col-4 label">
                               {$field.label}
                             </div>
-                            <div class="col-sm-9 col-xs-8 value">
+                            <div class="col-sm-9 col-8 value">
                               {if $field.type == 'text'}
                                 {if (int)$field.id_module}
                                   {$field.text nofilter}
@@ -84,11 +84,11 @@
             {/if}
             {hook h='displayProductPriceBlock' product=$product type="unit_price"}
           </div>
-          <div class="col-sm-6 col-xs-12 qty">
+          <div class="col-sm-6 col-12 qty">
             <div class="row">
-              <div class="col-5 text-sm-center text-xs-left">{$product.price}</div>
+              <div class="col-5 text-sm-center price new">{$product.price}</div>
               <div class="col-2 text-sm-center">{$product.quantity}</div>
-              <div class="col-5 text-sm-center text-xs-right bold">{$product.total}</div>
+              <div class="col-5 text-sm-center price total">{$product.total}</div>
             </div>
           </div>
         </div>
@@ -123,7 +123,12 @@
         {/if}
         {if $subtotals.tax.label !== null}
           <tr class="sub taxes">
-            <td><span class="label">{l s='%label%:' sprintf=['%label%' => $subtotals.tax.label] d='Shop.Theme.Global'}</span>&nbsp;<span class="value">{$subtotals.tax.value}</span></td>
+            <td>
+              <span>{l s='%label%:' sprintf=['%label%' => $subtotals.tax.label] d='Shop.Theme.Global'}</span>
+            </td>
+            <td>
+              <span>{$subtotals.tax.value}</span>
+            </td>
           </tr>
         {/if}
       </table>

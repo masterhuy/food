@@ -42,6 +42,7 @@ $('body').on('click', '.ajax-add-to-cart', function (event) {
       });
       $(callerElement).removeClass('checking');
       $(callerElement).addClass('checked');
+      $(".quickview-modal").modal('hide');
       window.setTimeout( function() {$(callerElement).removeClass('checked');}, 3000 );
     })
     .fail(function (resp) {

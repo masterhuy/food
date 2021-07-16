@@ -46,9 +46,8 @@
                                 {if $group_attribute.html_color_code}class="color" style="background-color: {$group_attribute.html_color_code}; {if $group_attribute.html_color_code == '#ffffff'}border:1px solid #e5e5e5{/if}" {/if}
                                 {if $group_attribute.texture}class="color texture" style="background-image: url({$group_attribute.texture})" {/if}
                             >
-                            <span class="attribute-name">{$group_attribute.name}</span>
+                                <span class="attribute-name">{$group_attribute.name}</span>
                             </span>
-
                         </li>
                     {/foreach}
                 </ul>

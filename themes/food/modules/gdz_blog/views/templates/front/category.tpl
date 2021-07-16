@@ -23,14 +23,14 @@
 *  International Registered Trademark & Property of PrestaShop SA
 *}
 {if isset($smarty.get.page_layout) && $smarty.get.page_layout !=''}
-     {assign var='page_layout' value=$smarty.get.page_layout}
+    {assign var='page_layout' value=$smarty.get.page_layout}
 {/if}
 {if $page_layout == 'no'}
-{assign var="layout" value="layouts/layout-full-width.tpl"}
+	{assign var="layout" value="layouts/layout-full-width.tpl"}
 {elseif $page_layout == 'right'}
-{assign var="layout" value="layouts/layout-right-column.tpl"}
+	{assign var="layout" value="layouts/layout-right-column.tpl"}
 {else}
-{assign var="layout" value="layouts/layout-left-column.tpl"}
+	{assign var="layout" value="layouts/layout-left-column.tpl"}
 {/if}
 {extends file=$layout}
 {block name='content'}
@@ -59,32 +59,25 @@
 										{if $gdz_blog_setting.GDZBLOG_SHOW_CATEGORY}
 											<li class="category-name">
 												<span>
-													{l s='In' d='Modules.gdz_blog'}
+													{l s='In' d='Modules.JmsBlog'}
+													<a href="{gdz_blog::getPageLink('gdz_blog-category', $catparams)}">
+														{$post.category_name|escape:'html':'UTF-8'}
+													</a>
 												</span>
-												<a href="{gdz_blog::getPageLink('gdz_blog-category', $catparams)}">
-													{$post.category_name|escape:'html':'UTF-8'}
-												</a>
 											</li>
 										{/if}
-										<li class="created">
-											<span class="day">{$post.created|escape:'html':'UTF-8'|date_format:'%e'}</span>
-											<span class="month">{$post.created|escape:'html':'UTF-8'|date_format:'%b'}</span>
+										<li class="post-created">
+											{l s='Posted:' d='Modules.JmsBlog'}
+											<span>{$post.created|escape:'htmlall':'UTF-8'|date_format:"%B %e, %Y"}</span>
 										</li>
 										{if $gdz_blog_setting.GDZBLOG_SHOW_VIEWS}
 											<li>
-												<span>{$post.views|escape:'html':'UTF-8'} {l s='view(s)' d='Modules.gdz_blog'}</span>
+												<span>{$post.views|escape:'html':'UTF-8'} {l s='view(s)' d='Modules.JmsBlog'}</span>
 											</li>
 										{/if}
 										{if $gdz_blog_setting.GDZBLOG_SHOW_COMMENTS}
 											<li>
-												<span>
-													{$post.comment_count|escape:'html':'UTF-8'}
-													{if $post.comment_count > 0}
-														{l s='comments' d='Modules.JmsPagebuilder'}
-													{else}
-														{l s='comment' d='Modules.JmsPagebuilder'}
-													{/if}
-												</span>
+												<span>{$comments|@count}{l s=' comments' d='Modules.JmsBlog'}</span>
 											</li>
 										{/if}
 									</ul>
@@ -93,10 +86,10 @@
 											<a class="blog-list-title" href="{gdz_blog::getPageLink('gdz_blog-post', $params)}" alt="{l s='Blog Images' d='Modules.gdz_blog'}">{$post.title|escape:'htmlall':'UTF-8'}</a>
 										</h4>
 										<div class="post-intro">
-											{$post.introtext|truncate:380:'...' nofilter}
+											{$post.introtext nofilter}
 										</div>
 									</div>
-									<a class="blog-readmore" href="{gdz_blog::getPageLink('gdz_blog-post', $params)}">
+									<a class="btn btn-active blog-readmore" href="{gdz_blog::getPageLink('gdz_blog-post', $params)}">
 										{l s='Read more' d='Modules.gdz_blog'}
 									</a>
 								</div>

@@ -23,7 +23,7 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 <div class="row product-detail default">
-    <div class="pb-left-column col-lg-6 col-md-6 col-sm-6 col-xs-12">
+    <div class="pb-left-column col-lg-6 col-md-6 col-sm-6 col-12">
         <div class="pd-left-content">
             {block name='page_content_container'}
                 <section class="page-content" id="content">
@@ -36,7 +36,7 @@
             {/block}
         </div>
     </div>
-    <div class="pb-right-column col-lg-6 col-md-6 col-sm-6 col-xs-12">
+    <div class="pb-right-column col-lg-6 col-md-6 col-sm-6 col-12">
         {block name='page_header_container'}
             {block name='page_header'}
                 <h1 itemprop="name" class="product-name">{block name='page_title'}{$product.name}{/block}</h1>
@@ -45,9 +45,12 @@
         {block name='product_prices'}
             {include file='catalog/_partials/product-prices.tpl'}
         {/block}
+        <div class="rating">
+            {hook h='displayProductButtons' product=$product}
+        </div>
         <div class="product-information">
             {block name='product_description_short'}
-                <div id="product-description-short-{$product.id}" class="product-desc">{$product.description_short|truncate:400:"..." nofilter}</div>
+                <div id="product-description-short-{$product.id}" class="product-desc">{$product.description_short nofilter}</div>
             {/block}
 
             <div class="available-quantity">
@@ -130,11 +133,11 @@
                             </li>
                             <li>
                                 {if $product.additional_shipping_cost > 0}
-                                    <label>{l s='Shipping tax : '}</label>
+                                    <label>{l s='Shipping tax:' d='Shop.Theme.Catalog'}</label>
                                     <span class="shipping_cost">{$product.additional_shipping_cost}</span>
                                 {else}
-                                    <label>{l s='Shipping tax : '}</label>
-                                    <span class="shipping_cost">{l s=' Free'}</span>
+                                    <label>{l s='Shipping tax:' d='Shop.Theme.Catalog'}</label>
+                                    <span class="shipping_cost">{l s=' Free' d='Shop.Theme.Catalog'}</span>
                                 {/if}
                             </li>
                         </ul>

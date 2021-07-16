@@ -25,37 +25,82 @@
 {extends file='page.tpl'}
 {block name="page_content"}
 {capture name=path}{l s='Archive' mod='gdz_blog'}-{$month nofilter}{/capture}
-<h3 class="title-blog">{l s='Archive' mod='gdz_blog'} : {$month nofilter}</h3>
+<h3 class="title-blog text-center mb-50">{l s='Archive' d='Modules.JmsBlog'} : {$month nofilter}</h3>
 {if isset($posts) AND $posts}		
 	<div class="post-list">
 		{foreach from=$posts item=post}
 			{assign var=params value=['post_id' => $post.post_id, 'category_slug' => $post.category_alias, 'slug' => $post.alias]}			
 			{assign var=catparams value=['category_id' => $post.category_id, 'slug' => $post.category_alias]}
 			<article class="blog-post">
-				<h4 class="post-title"><a href="{gdz_blog::getPageLink('gdz_blog-post', $params) nofilter}">{$post.title|escape:'htmlall':'UTF-8'}</a></h4>
-				<ul class="post-meta">
-					{if $gdz_blog_setting.GDZBLOG_SHOW_CATEGORY}
-					<li class="post-category"><span>{l s='Category' mod='gdz_blog'} :</span> <a href="{gdz_blog::getPageLink('gdz_blog-category', $catparams) nofilter}">{$post.category_name nofilter}</a></li>
-					{/if}					
-					<li class="post-created"><span>{l s='Created' mod='gdz_blog'} :</span> {$post.created nofilter|date_format:"%B %e, %Y"}</li>
-					{if $gdz_blog_setting.GDZBLOG_SHOW_VIEWS}
-					<li class="post-views"><span>{l s='Views' mod='gdz_blog'} :</span> {$post.views nofilter}</li>
+					{assign var=params value=['post_id' => $post.post_id, 'category_slug' => $post.category_alias, 'slug' => $post.alias]}
+					{assign var=catparams value=['category_id' => $post.category_id, 'slug' => $post.category_alias]}
+					<h1 class="title">{$post.title|escape:'html':'UTF-8'}</h1>
+					<ul class="post-meta">
+						{if $gdz_blog_setting.GDZBLOG_SHOW_CATEGORY}
+							<li class="category-name">
+								<span>
+									{l s='In' d='Modules.JmsBlog'}
+									<a href="{gdz_blog::getPageLink('gdz_blog-category', $catparams)}">
+										{$post.category_name|escape:'html':'UTF-8'}
+									</a>
+								</span>
+							</li>
+						{/if}
+						<li class="post-created">
+							{l s='Posted:' d='Modules.JmsBlog'}
+							<span>{$post.created|escape:'htmlall':'UTF-8'|date_format:"%B %e, %Y"}</span>
+						</li>
+						{if $gdz_blog_setting.GDZBLOG_SHOW_VIEWS}
+							<li>
+								<span>{$post.views|escape:'html':'UTF-8'} {l s='view(s)' d='Modules.JmsBlog'}</span>
+							</li>
+						{/if}
+						{if $gdz_blog_setting.GDZBLOG_SHOW_COMMENTS}
+							<li>
+								<span>{$comments|@count}{l s=' comments' d='Modules.JmsBlog'}</span>
+							</li>
+						{/if}
+					</ul>
+					{if $post.link_video && $gdz_blog_setting.GDZBLOG_SHOW_MEDIA}
+						<div class="post-video">
+							{$post.link_video}
+						</div>
+					{elseif $post.image && $gdz_blog_setting.GDZBLOG_SHOW_MEDIA}
+						<div class="post-thumb">
+							<img src="{$image_baseurl|escape:'html':'UTF-8'}{$post.image|escape:'html':'UTF-8'}" alt="{l s='Image Blog' d='Modules.JmsBlog'}" />
+						</div>
 					{/if}
-					{if $gdz_blog_setting.GDZBLOG_SHOW_COMMENTS}
-					<li class="post-comments"><span>{l s='Comments' mod='gdz_blog'} :</span> {$post.comment_count nofilter}</li>
-					{/if}	
-				</ul>									
-				{if $post.link_video && $gdz_blog_setting.GDZBLOG_SHOW_MEDIA}
-					<div class="post-thumb">
-					{$post.link_video nofilter}
+					<div class="post-fulltext">
+						{$post.fulltext nofilter}
 					</div>
-				{elseif $post.image && $gdz_blog_setting.GDZBLOG_SHOW_MEDIA}
-					<div class="post-thumb">
-						<a href="#"><img src="{$image_baseurl nofilter}{$post.image nofilter}" alt="{$post.title|escape:'htmlall':'UTF-8'}" class="img-responsive" /></a>			 		
-					</div>
-				{/if}				
-				<div class="blog-intro">{$post.introtext nofilter}</div>				
-				<a class="btn btn-active blog-readmore" href="#">{l s='Read more' mod='gdz_blog'} ...</a>
+					{if $gdz_blog_setting.GDZBLOG_SHOW_SOCIAL_SHARING}
+						<div class="social-sharing">
+							{literal}
+								<script type="text/javascript">var switchTo5x=true;</script>
+								<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+								<script type="text/javascript">stLight.options({publisher: "a6f949b3-864b-44c5-b0ec-4140186ad958", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+							{/literal}
+							<span class='st_sharethis_large' displayText='ShareThis'></span>
+							{if $gdz_blog_setting.GDZBLOG_SHOW_FACEBOOK}
+								<span class='st_facebook_large' displayText='Facebook'></span>
+							{/if}
+							{if $gdz_blog_setting.GDZBLOG_SHOW_TWITTER}
+								<span class='st_twitter_large' displayText='Tweet'></span>
+							{/if}
+							{if $gdz_blog_setting.GDZBLOG_SHOW_GOOGLEPLUS}
+								<span class='st_googleplus_large' displayText='Google +'></span>
+							{/if}
+							{if $gdz_blog_setting.GDZBLOG_SHOW_LINKEDIN}
+								<span class='st_linkedin_large' displayText='LinkedIn'></span>
+							{/if}
+							{if $gdz_blog_setting.GDZBLOG_SHOW_PINTEREST}
+								<span class='st_pinterest_large' displayText='Pinterest'></span>
+							{/if}
+							{if $gdz_blog_setting.GDZBLOG_SHOW_EMAIL}
+								<span class='st_email_large' displayText='Email'></span>
+							{/if}
+						</div>
+					{/if}
 			</article>			
 		{/foreach}
 	</div>

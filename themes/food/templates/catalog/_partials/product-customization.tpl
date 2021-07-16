@@ -45,7 +45,7 @@
                 <span class="custom-file">
                   <span class="js-file-name">{l s='No selected file' d='Shop.Forms.Help'}</span>
                   <input class="file-input js-file-input" {if $field.required} required {/if} type="file" name="{$field.input_name}">
-                  <button class="btn btn-primary">{l s='Choose file' d='Shop.Theme.Actions'}</button>
+                  <button class="btn btn-active">{l s='Choose file' d='Shop.Theme.Actions'}</button>
                 </span>
                 <small class="pull-xs-right">{l s='.png .jpg .gif' d='Shop.Forms.Help'}</small>
               {/if}
@@ -53,7 +53,7 @@
           {/foreach}
         </ul>
         <div class="clearfix">
-          <button class="btn btn-primary pull-xs-right button-small" type="submit" name="submitCustomizedData">{l s='Save Customization' d='Shop.Theme.Actions'}</button>
+          <button class="btn btn-active pull-xs-right button-small" type="submit" name="submitCustomizedData">{l s='Save Customization' d='Shop.Theme.Actions'}</button>
         </div>
       </form>
     </div>

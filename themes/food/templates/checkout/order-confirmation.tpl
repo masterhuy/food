@@ -60,7 +60,7 @@
                 {if !$order.details.is_virtual}
                   <li>
                     {l s='Shipping method: %method%' d='Shop.Theme.Checkout' sprintf=['%method%' => $order.carrier.name]}
-                    <em class="text-muted">{$order.carrier.delay}</em>
+                    <em>{$order.carrier.delay}</em>
                   </li>
                 {/if}
               </ul>

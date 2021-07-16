@@ -1,6 +1,9 @@
 .bg-dark{
     color: rgba(255, 255, 255, 0.7);
     background-color: #18191A!important;
+    .breadcrumb{
+        background-image: url(../img/breabcrumb-bg-dark.jpg);
+    }
     a{
         color: #fff;
         &:hover{
@@ -16,7 +19,52 @@
             color: #fff;
         }
     }
+    input, textarea, select{
+        border-color: #2f2f2f;
+        background-color: #2f2f2f;
+    }
+    input::placeholder, textarea::placeholder {
+        color: rgba(255, 255, 255, 0.7);
+    }
+    .form-control{
+        color: rgba(255, 255, 255, 0.7);
+        &:focus{
+            background-color: #353535;
+        }
+    }
+    .form-control:disabled, 
+    .form-control[readonly] {
+        background-color: #353535;
+    }
+    .table thead th {
+        border-bottom-color: #353535;
+    }
+    .table td, .table th{
+        border-top-color: #353535;
+    }
+    .table tbody + tbody{
+        border-top-color: #353535;
+    }
+    .table-bordered td, .table-bordered th {
+        border-color: #353535;
+    }
     #header-top{
+        &.sticky{
+            .header-right{
+                .btn-group{
+                    > a{
+                        &:hover{
+                            path{
+                                fill: $active;
+                            }
+                        }
+                        path{
+                            fill: #3F2803;
+                        }
+                    }
+                }
+            }
+        }
         .header-right{
             .btn-group{
                 &.user-info > a:hover{
@@ -33,6 +81,12 @@
                     }
                 }
             }
+        }
+    }
+    .header-6 #header-top.sticky .header-right .btn-group.user-info > a{
+        color: #3F2803;
+        &:hover{
+            color: $active;
         }
     }
     .header-7{
@@ -52,6 +106,11 @@
     #hor-menu .nav > li > a{
         color: #fff;
     }
+    .blockcart{
+        .product-link{
+            color: #3F2803;
+        }
+    }
     .gdz-slide-content .btn {
         &:hover{
             color: #fff;
@@ -68,9 +127,6 @@
                 color: rgba(255, 255, 255, 0.7);
             }
         }
-        &:hover{
-            border-color: $active;
-        }
         .price.new{
             color: #fff;
         }
@@ -81,7 +137,6 @@
             background-color: $active;
         }
     }
-
     .addon-tab .nav-tabs .nav-link{
         color: rgba(255, 255, 255, 0.5);
         background-color: #2f3032;
@@ -95,8 +150,297 @@
     .owl-dots button.active span::before{
         background-color: transparent;
     }
+    .modal-dialog {
+        background-color: #222;
+    }
+    .modal{
+        .modal-content{
+            background-color: transparent;
+        }
+        .close{
+            path{
+                fill: #fff;
+            }
+        }
+    }
+
+
+    /* product list */
+    .products-list .product-miniature .product-info .product-buttons .btn-icon span {
+        color: rgba(255, 255, 255, 0.7);
+        path{
+            fill: #fff;
+        }
+    }
+    #category-sub-menu .navbar-toggler rect{
+        fill: transparent;
+    }
+    #category-sub-menu .navbar-toggler path{
+        fill: #fff;
+    }
+    .products-sort-order .dropdown-menu {
+        background: #18191A;
+    }
+    .inlude_sort_by .select-title i{
+        background-color: #383838;
+    }
+    .inlude_sort_by .select-title i rect{
+        fill: transparent;
+    }
+    .inlude_sort_by .select-title i path{
+        fill: #fff;
+    }
+    .view-mode .switch-view rect{
+        fill: #383838;
+    }
+    .view-mode .switch-view.active rect{
+        fill: $active;
+    }
+    .js-search-link, .category-sub-link{
+        opacity: 0.7;
+        &:hover{
+            opacity: 1;
+        }
+    }
+    &#category .facet-label .checkmark {
+        border-color: rgba(255,255,255,0.7);
+    }
+    #js-active-search-filters {
+        background-color: #212126;
+    }
+    #js-active-search-filters > ul li{
+        background-color: transparent;
+    }
+    #search_filters .facet,
+    #search_filters .filter-block,
+    .filters-panel .col-4 .js-item-show span,
+    .inlude_sort_by .sort-by {
+        color: rgba(255, 255, 255, 0.7);
+    }
+    .filters-panel .col-4 .js-item-show b{
+        color: #fff;
+    }
+    #search_filters .filter-block path{
+        fill: #fff;
+    }
+    #search_filters .facet.Weight ul li a{
+        border-color: #383838;
+    }
+    #search_filters .facet.Color .facet-label.active .color, 
+    #search_filters .facet.Color .facet-label:hover .color {
+        border-color: #383838;
+    }
+    &#category .facet-label input:checked ~ .checkmark {
+        border-color: #fff;
+    }
+    &#category .facet-label .checkmark::after {
+        color: #fff;
+    }
+    .productbox-flex{
+        .price.new{
+            color: $active;
+        }
+    }
+    .pagination ul{
+        border-top-color: #404040;
+    }
+    .pagination li a{
+        border-color: #424242;
+        path{
+            fill: #fff;
+            fill-opacity: 1;
+        }
+    }
+    .pagination li.current a{
+        color: #fff;
+        opacity: 1;
+        background-color: $active;
+        border-color: $active;
+    }
+
+    /* product details */
+    .images-container .slick-arrow, #product .product-cover .expander > span, 
+    #product-modal .modal-body .slick-arrow {
+        color: #fff;
+        background: #383838;
+    }
+    .product-images .thumb-container > .thumb {
+        background-color: #212126;
+        border-radius: 5px;
+    }
+    .product-cover img{
+        background-color: #212126;
+        border-radius: 10px;
+    }
+    .zoomWindowContainer > div{
+        background-color: #212126;
+    }
+    &#product .product-name{
+        color: #fff;
+    }
+    .product-quantity .qty .input-group {
+        background: #2D2D34;
+    }
+    .product-quantity input#quantity_wanted{
+        color: $active;
+    }
+    .bootstrap-touchspin .input-group-btn-vertical > .btn:hover, 
+    .bootstrap-touchspin .input-group-btn-vertical > .btn{
+        background-color: transparent;
+    }
+    .bootstrap-touchspin .input-group-btn-vertical .btn-touchspin i::before {
+        color: rgba(255, 255, 255, 0.3);
+    }
+    .product-variants-item .control-label {
+        color: rgba(255, 255, 255, 0.7);
+    }
+    .product-variants-item ul li .radio-label {
+        background-color: transparent;
+        border-color: #383838;
+    }
+    .product-variants-item ul li:hover .radio-label, 
+    .product-variants-item input:checked ~ .radio-label {
+        border-color: $active;
+    }
+    .product-variants-item .input-color:checked ~ .color, 
+    .product-variants-item .input-color:hover ~ .color {
+        border-color: #383838;
+    }
+    .product-actions .addToWishlist {
+        color: rgba(255,255,255,0.7);
+        path{
+            fill: #fff;
+        }
+    }
+    .blockreassurance_product {
+        border-top-color:#353535;
+        path{
+            fill: rgba(255,255,255,0.7) !important;
+        }
+    }
+    .blockreassurance_product .block-title{
+        color: rgba(255,255,255,0.7) !important;
+        
+    }
+    .other-info {
+        color: rgba(255,255,255,0.7);
+        border-top-color:#353535;
+    }
+    .block-social {
+        border-top-color:#353535;
+    }
+    .block-social .social-title {
+        color: rgba(255,255,255,0.7);
+    }
+    #more_info_block li a,
+    .product-description p, 
+    .product-description ul {
+        color: rgba(255,255,255,0.7);
+        border: 2px solid transparent;
+    }
+    #more_info_block li a.active, 
+    #more_info_block li a:hover {
+        color: $active;
+        background-color: transparent;
+        border-color: $active;
+    }
+    #more_info_block .panel.panel-default:not(:last-child) {
+        border-bottom-color: #353535;
+    }
+    #more_info_block .tab-pane {
+        color: rgba(255,255,255,0.7);
+    }
+    .product-comment-list-item .comment-infos {
+        background: #212126;
+    }
+    .product-comment-list-item .comment-content p {
+        color: rgba(255,255,255,0.7);
+    }
+    .product-comment-modal .modal-dialog h3 {
+        color: #fff;
+    }
+    .product-comment-modal .description_short {
+        color: rgba(255,255,255,0.7);
+    }
+
+    /* Cart */
+    .cart-items li.cart-item-title {
+        border-top-color: #353535;
+    }
+    .cart-items li {
+        border-bottom-color: #353535;
+    }
+    .remove-from-cart{
+        opacity: 0.7;
+    }
+    .cart-item .bootstrap-touchspin {
+        background: #2D2D34;
+    }
+    .cart-item .product-image img{
+        background: #2D2D34;
+    }
+    .js-cart-line-product-quantity.form-control{
+        background-color: transparent;
+        color: $active;
+    }
+    .cart-grid-right .right-box .cart-summary {
+        background: transparent;
+    }
+    .right-box {
+        border-color: #353535;
+    }
+    .cart-summary-line {
+        border-bottom-color: #353535;
+    }
+
+    /* Checkout */
+    .card{
+        background-color: transparent;
+    }
+    &#checkout #checkout-personal-information-step, 
+    &#checkout #checkout-addresses-step, 
+    &#checkout #checkout-delivery-step, 
+    &#checkout #checkout-payment-step {
+        border-color: #353535;
+    }
+    &#checkout section.checkout-step.-current .content .address-footer {
+        border-bottom-color: #353535;
+        border-top-color: #353535;
+    }
+    .js-alert-payment-conditions a{
+        color: #3F2803;
+        text-decoration: underline;
+    }
+
+    /* Account */
+    #my-account .links .link-item {
+        border: 1px solid #353535;
+    }
+    .show-pass button {
+        color: #fff;
+    }
+    .psgdprinfo17 {
+        background: #353535;
+    }
+    .wishlist-container {
+        border-color: #353535;
+    }
+    .wlp_bought_list .wishlist-box {
+        border-color: #353535;
+    }
+
+    /* Blog */
+    .blog-widget li a,
+    .blog-widget .post-created,
+    .post-meta {
+        color: rgba(255,255,255,0.7);
+    }
+
+    
+
+    /* Footer */
     #footer{
-        background-color: #18191A;
+        background-color: #212126;
     }
     .footer-5 .line {
         background-color: rgba(255,255,255,0.15);

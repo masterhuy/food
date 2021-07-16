@@ -127,11 +127,11 @@
 
   <div id="payment-confirmation">
     <div class="ps-shown-by-js">
-      <button type="submit" {if !$selected_payment_option} disabled {/if} class="btn btn-primary center-block btn-fullwidth">
+      <button type="submit" {if !$selected_payment_option} disabled {/if} class="btn btn-active center-block btn-fullwidth">
         {l s='Order with an obligation to pay' d='Shop.Theme.Checkout'}
       </button>
       {if $show_final_summary}
-        <article class="alert alert-danger mt-2 js-alert-payment-conditions" role="alert" data-alert="danger">
+        <article class="alert alert-danger mt-20 js-alert-payment-conditions" role="alert" data-alert="danger">
           {l
             s='Please make sure you\'ve chosen a [1]payment method[/1] and accepted the [2]terms and conditions[/2].'
             sprintf=[
