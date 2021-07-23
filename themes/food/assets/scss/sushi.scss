@@ -300,7 +300,7 @@ body{
         align-items: center;
     }
     h5{
-        margin-right: 55px;
+        margin-right: 49px;
         letter-spacing: 0.02em;
     }
     .block_newsletter{
@@ -347,6 +347,93 @@ body{
     .instagram{
         .block-content{
             margin-top: 19px;
+        }
+    }
+}
+@media (max-width: 1366px){
+    .service-box .pb-service-title {
+        font-size: 20px;
+    }
+    .newsletter .block_newsletter input{
+        width: 100%;
+    }
+}
+@media (max-width: 1199px){
+    .page-index #header{
+        position: static;
+        background-color: #fff;
+    }
+    #mobile-header .btn-group .dropdown-menu ul li a {
+        color: #3F2803;
+    }
+    .gdz-slider-wrapper .nav-control > a.prev {
+        margin-right: 15px;
+    }
+    .gdz-slider-wrapper .nav-control{
+        bottom: 15px;
+    }
+    .service-box .pb-service-box .pb-service-icon img{
+        max-width: 35px;
+    }
+    .service-box .pb-service-box .pb-service-icon {
+        width: 80px;
+        height: 80px;
+        top: -40px;
+    }
+    .service-box .pb-service-box{
+        padding-top: 65px;
+    }
+    .service-box .pb-service-title {
+        font-size: 18px;
+    }
+    .service-box .pb-service-description p {
+        font-size: 15px;
+    }
+    .gdz-row.about .pb-text-content {
+        padding-right: 0;
+    }
+    .gdz-row.about .pb-image img {
+        margin-left: 0;
+        width: 100%;
+    }
+    .gdz-row.banner .pb-banner-subtitle span span {
+        font-size: 20px;
+    }
+    .gdz-row.banner .btn{
+        margin-top: 0;
+    }
+    .testimonial h5{
+        margin-top: 0;
+    }
+    .testimonial .pb-image img {
+        margin-right: 0;
+        width: 100%;
+    }
+    .newsletter .layout-column{
+        flex-direction: column;
+    }
+    .newsletter h5{
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .newsletter .block_newsletter {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .newsletter .block_newsletter button {
+        margin-left: 10px;
+    }
+}
+@media (max-width: 575px){
+    .service-box{
+        margin-top: 30px;
+        .layout-column + .layout-column{
+            margin-top: 60px;
+        }
+    }
+    .banner{
+        .layout-column + .layout-column{
+            margin-top: 15px;
         }
     }
 }

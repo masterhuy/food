@@ -25,7 +25,7 @@
 <div id="footer-main" class="footer-main">
     <div class="container">
         <div class="row">
-            <div class="col-3 block">
+            <div class="col-12 col-sm-6 col-xl-3 block">
                 <h3 class="h3 block-title">
                     {l s='Get The App' d='Shop.jmstheme'}
                     <i class="feather icon-plus closing"></i>
@@ -37,7 +37,7 @@
                     <p class="mt-10"><img src="{$urls.theme_assets}img/food-market-1/appstore.jpg"/></p>
                 </div>
             </div>
-            <div class="col-2 wrapper block">
+            <div class="col-12 col-sm-6 col-xl-2 wrapper block">
                 <h3 class="h3 block-title">
                     {l s='Information' d='Shop.jmstheme'}
                     <i class="feather icon-plus closing"></i>
@@ -78,7 +78,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-2 wrapper block">
+            <div class="col-12 col-sm-6 col-xl-2 wrapper block">
                 <h3 class="h3 block-title">
                     {l s='User Area' d='Shop.jmstheme'}
                     <i class="feather icon-plus closing"></i>
@@ -119,7 +119,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-2 wrapper block">
+            <div class="col-12 col-sm-6 col-xl-2 wrapper block">
                 <h3 class="h3 block-title">
                     {l s='Guide & Help' d='Shop.jmstheme'}
                     <i class="feather icon-plus closing"></i>
@@ -160,7 +160,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-3 block">
+            <div class="col-12 col-sm-12 col-xl-3 block">
                 <h3 class="h3 block-title">
                     {l s='Contact Info' d='Shop.jmstheme'}
                     <i class="feather icon-plus closing"></i>

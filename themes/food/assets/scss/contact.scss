@@ -104,21 +104,30 @@
 	}
 }
 #contact-form{
+    .form-group{
+        > label{
+            display: none;
+        }
+    }
+}
+.contact-form{
     h3{
         font-size: 30px;
         font-weight: 600;
         text-transform: initial !important;
         margin-bottom: 34px;
     }
-    .form-group{
+    
+    .group-span-filestyle{
+        position: absolute;
+        right: 0;
+        height: 100%;
         > label{
-            display: none;
+            display: flex;
+            align-items: center;
+            margin-left: 10px;
+            border-radius: 10px;
         }
-    }
-    .group-span-filestyle > label{
-        display: flex;
-        align-items: center;
-        margin-left: 10px;
     }
     .input-group-btn .btn .buttonText{
         font-size: 16px;

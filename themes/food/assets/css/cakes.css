@@ -65,6 +65,10 @@ a:hover {
   fill: #D3183A;
 }
 
+#off-canvas-menu > .btn-group li.current a {
+  color: #D3183A;
+}
+
 #hor-menu .nav > li > a span::after {
   background-color: #D3183A;
 }
@@ -83,6 +87,10 @@ a:hover {
 
 .cart-prices-line .value {
   color: #D3183A;
+}
+
+#cart_block .remove-from-cart:hover path {
+  fill: #D3183A;
 }
 
 #blockcart-modal .value {
@@ -314,6 +322,14 @@ a:hover {
 .slider-cakes .fs-pager-wrapper a.active {
   margin: 4px 0;
 }
+.slider-cakes .btn {
+  font-family: "Poppins";
+  color: #D3183A;
+  border: none;
+}
+.slider-cakes .btn:hover {
+  color: #fff;
+}
 
 .pb-service-box .pb-service-icon {
   display: -webkit-inline-box;
@@ -363,7 +379,7 @@ a:hover {
   font-weight: 300;
 }
 .banner-2 .pb-banner-text .pb-banner-title {
-  font-weight: 700;
+  font-weight: 600;
 }
 .banner-2 .pb-banner-text .pb-banner-button {
   margin-top: 65px;
@@ -401,7 +417,7 @@ a:hover {
   font-size: 22px;
   color: rgba(70, 70, 71, 0.5);
   border-color: #fff;
-  padding: 9px 33px 5px;
+  padding: 7px 33px;
 }
 
 .category-tab {
@@ -426,7 +442,7 @@ a:hover {
   border-radius: 0 0 0 100px;
 }
 .about-delivery .pb-accordion h5 {
-  font-size: 26px;
+  font-size: 24px;
   font-weight: 600;
 }
 .about-delivery .pb-accordion h5::after {
@@ -504,4 +520,61 @@ a:hover {
 }
 .testimonial-center .owl-carousel .owl-nav button.owl-next {
   right: -37px;
+}
+
+@media (max-width: 1366px) {
+  .banner-1 .pb-banner-text .pb-banner-button, .banner-2 .pb-banner-text .pb-banner-button, .banner-3 .pb-banner-text .pb-banner-button {
+    margin-top: 0;
+  }
+}
+@media (max-width: 1199px) {
+  .pb-service-box .pb-service-description p {
+    font-size: 15px;
+    padding: 0;
+  }
+
+  .pb-service-box .pb-service-title {
+    font-size: 20px;
+  }
+
+  .addon-tab .nav-tabs .nav-link {
+    font-size: 15px;
+  }
+
+  .about-delivery .pb-accordion h5 {
+    font-size: 18px;
+  }
+
+  .about-delivery .card-body {
+    font-size: 15px;
+  }
+}
+@media (max-width: 991px) {
+  .about-delivery .col-accordion .addon-box {
+    margin-left: 0;
+  }
+}
+@media (max-width: 767px) {
+  .pb-service-box .pb-service-icon {
+    width: 100px;
+    height: 100px;
+  }
+
+  .pb-service-box .pb-service-icon img {
+    max-width: 35px;
+  }
+
+  .about-delivery .col-accordion .addon-box {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .testimonial-center .pb-testimonial-box .pb-testimonial-comment {
+    max-width: 100%;
+  }
+}
+@media (max-width: 575px) {
+  .banner .layout-column {
+    margin-bottom: 15px;
+  }
 }

@@ -58,7 +58,7 @@
                 <div class="row">
                 {/if}
                     {block name="left_column"}
-                        <div id="left-column" class="left-column col-lg-3 col-md-4 col-12">
+                        <div id="left-column" class="left-column col-lg-3 col-12">
                             {if $page.page_name == 'product'}
                                 {hook h='displayLeftColumnProduct'}
                             {else}
@@ -75,7 +75,7 @@
                     {/block}
 
                     {block name="right_column"}
-                        <div id="right-column" class="right-column col-lg-3 col-md-4 col-12">
+                        <div id="right-column" class="right-column col-lg-3 col-12">
                             {if $page.page_name == 'product'}
                                 {hook h='displayRightColumnProduct'}
                             {else}
@@ -92,9 +92,10 @@
 
 
     		</div>
-        {block name="footer"}
-            {include file="_partials/footer.tpl"}
-        {/block}
+            {block name="footer"}
+                {include file="_partials/footer.tpl"}
+            {/block}
+            <div class="bg-overlay"></div>
         </div>
 
 

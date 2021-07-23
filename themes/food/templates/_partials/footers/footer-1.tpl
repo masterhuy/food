@@ -28,7 +28,7 @@
 <div id="footer-main" class="footer-main">
     <div class="container">
         <div class="row">
-            <div class="col-4">
+            <div class="col-12 col-lg-4">
                 {include file='_partials/headers/logo.tpl'}
                 <div class="contact">
                     <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -54,6 +54,14 @@ $active: #D3183A;
             }
         }
     }
+    .btn{
+        font-family: 'Poppins';
+        color: $active;
+        border: none;
+        &:hover{
+            color: #fff;
+        }
+    }
 }
 
 .pb-service-box{
@@ -104,7 +112,7 @@ $active: #D3183A;
             font-weight: 300;
         }
         .pb-banner-title{
-            font-weight: 700;
+            font-weight: 600;
         }
         .pb-banner-button{
             margin-top: 65px;
@@ -145,7 +153,7 @@ $active: #D3183A;
         font-size: 22px;
         color: rgba(70, 70, 71, 0.5);
         border-color: #fff;
-        padding: 9px 33px 5px;
+        padding: 7px 33px;
     }
 }
 .category-tab{
@@ -172,7 +180,7 @@ $active: #D3183A;
         }
     }
     .pb-accordion h5{
-        font-size: 26px;
+        font-size: 24px;
         font-weight: 600;
         &::after{
             top: calc(50% - 3px);
@@ -250,6 +258,59 @@ $active: #D3183A;
         }
         &.owl-next{
             right: -37px;
+        }
+    }
+}
+@media (max-width: 1366px){
+    .banner-1, .banner-2, .banner-3{
+        .pb-banner-text .pb-banner-button{
+            margin-top: 0;
+        }
+    }
+}
+@media (max-width: 1199px){
+    .pb-service-box .pb-service-description p {
+        font-size: 15px;
+        padding: 0;
+    }
+    .pb-service-box .pb-service-title {
+        font-size: 20px;
+    }
+    .addon-tab .nav-tabs .nav-link{
+        font-size: 15px;
+    }
+    .about-delivery .pb-accordion h5 {
+        font-size: 18px;
+    }
+    .about-delivery .card-body {
+        font-size: 15px;
+    }
+}
+@media (max-width: 991px){
+    .about-delivery .col-accordion .addon-box {
+        margin-left: 0;
+    }
+}
+@media (max-width: 767px){
+    .pb-service-box .pb-service-icon {
+        width: 100px;
+        height: 100px;
+    }
+    .pb-service-box .pb-service-icon img{
+        max-width: 35px;
+    }
+    .about-delivery .col-accordion .addon-box {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .testimonial-center .pb-testimonial-box .pb-testimonial-comment {
+        max-width: 100%;
+    }
+}
+@media (max-width: 575px){
+    .banner{
+        .layout-column{
+            margin-bottom: 15px;
         }
     }
 }

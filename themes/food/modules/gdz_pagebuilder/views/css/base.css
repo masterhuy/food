@@ -580,9 +580,3 @@
   position: absolute;
   bottom: 20px;
 }
-@media (max-width:991px) {
-    #wrapper .container .row {
-      margin-left: 0px;
-      margin-right: 0px;
-    }
-}

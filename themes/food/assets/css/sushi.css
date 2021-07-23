@@ -65,6 +65,10 @@ a:hover {
   fill: #EB3335;
 }
 
+#off-canvas-menu > .btn-group li.current a {
+  color: #EB3335;
+}
+
 #hor-menu .nav > li > a span::after {
   background-color: #EB3335;
 }
@@ -83,6 +87,10 @@ a:hover {
 
 .cart-prices-line .value {
   color: #EB3335;
+}
+
+#cart_block .remove-from-cart:hover path {
+  fill: #EB3335;
 }
 
 #blockcart-modal .value {
@@ -271,10 +279,21 @@ a:hover {
   /* Checkout */
   /* Account */
   /* Blog */
+  /* Contact */
+  /* Other pages */
   /* Footer */
 }
 .bg-dark .breadcrumb {
   background-image: url(../img/breabcrumb-bg-dark.jpg);
+}
+.bg-dark .breadcrumb-wrapper .breadcrumb li {
+  color: rgba(255, 255, 255, 0.7);
+}
+.bg-dark .breadcrumb-wrapper .breadcrumb li a {
+  color: rgba(255, 255, 255, 0.7);
+}
+.bg-dark .breadcrumb-wrapper .breadcrumb li a:hover {
+  color: #EB3335;
 }
 .bg-dark a {
   color: #fff;
@@ -332,6 +351,9 @@ a:hover {
 .bg-dark .table-bordered td, .bg-dark .table-bordered th {
   border-color: #353535;
 }
+.bg-dark #off-canvas-menu a {
+  color: #3F2803;
+}
 .bg-dark #header-top.sticky .header-right .btn-group > a:hover path {
   fill: #EB3335;
 }
@@ -353,6 +375,10 @@ a:hover {
 .bg-dark .header-6 #header-top.sticky .header-right .btn-group.user-info > a:hover {
   color: #EB3335;
 }
+.bg-dark .header-6 .search-form .search-input:focus {
+  color: #3F2803;
+  background-color: transparent;
+}
 .bg-dark .header-7 .hotline {
   border-color: #fff;
   color: #fff;
@@ -365,6 +391,12 @@ a:hover {
 }
 .bg-dark #hor-menu .nav > li > a {
   color: #fff;
+}
+.bg-dark .search-result-area .product-link {
+  color: #3F2803;
+}
+.bg-dark #blockcart-modal .label, .bg-dark #blockcart-modal .product-link {
+  color: #3F2803;
 }
 .bg-dark .blockcart .product-link {
   color: #3F2803;
@@ -523,6 +555,9 @@ a:hover {
 .bg-dark#product .product-name {
   color: #fff;
 }
+.bg-dark .product-detail .old.price {
+  color: #fff;
+}
 .bg-dark .product-quantity .qty .input-group {
   background: #2D2D34;
 }
@@ -648,8 +683,8 @@ a:hover {
   color: #3F2803;
   text-decoration: underline;
 }
-.bg-dark #my-account .links .link-item {
-  border: 1px solid #353535;
+.bg-dark#my-account .links .link-item {
+  border-color: #353535;
 }
 .bg-dark .show-pass button {
   color: #fff;
@@ -663,9 +698,49 @@ a:hover {
 .bg-dark .wlp_bought_list .wishlist-box {
   border-color: #353535;
 }
+.bg-dark #form-wishlist-add {
+  border-color: #353535;
+}
 .bg-dark .blog-widget li a,
 .bg-dark .blog-widget .post-created,
-.bg-dark .post-meta {
+.bg-dark .post-meta,
+.bg-dark .widget-comment p,
+.bg-dark .widget-newsletter .desc {
+  color: rgba(255, 255, 255, 0.7);
+}
+.bg-dark .widget-recent .item-post {
+  border-bottom-color: #353535;
+}
+.bg-dark .widget-newsletter .block_newsletter .content .input-wrapper input {
+  background-color: #2f2f2f;
+  color: rgba(255, 255, 255, 0.7);
+}
+.bg-dark .cat-post-list .post-intro {
+  color: rgba(255, 255, 255, 0.7);
+}
+.bg-dark .blog-post .post-fulltext {
+  color: rgba(255, 255, 255, 0.7);
+}
+.bg-dark .blog-post .post-fulltext .border-left {
+  color: #fff;
+}
+.bg-dark #contact-wrapper {
+  color: rgba(255, 255, 255, 0.7);
+}
+.bg-dark #contact-info .title {
+  border-bottom-color: #353535;
+}
+.bg-dark #contact-wrapper select, .bg-dark #contact-wrapper input, .bg-dark #contact-wrapper textarea {
+  background: #2f2f2f;
+  border-color: #2f2f2f;
+}
+.bg-dark #contact-form .group-span-filestyle > label {
+  color: #fff;
+}
+.bg-dark .store-item {
+  border-bottom-color: #353535;
+}
+.bg-dark #login-wrapper {
   color: rgba(255, 255, 255, 0.7);
 }
 .bg-dark #footer {
@@ -676,6 +751,9 @@ a:hover {
 }
 .bg-dark .footer-5 #footer-main .block-content li a {
   color: rgba(255, 255, 255, 0.8);
+}
+.bg-dark .footer-5 #footer-main .block-content li a:hover {
+  color: #EB3335;
 }
 .bg-dark .footer-5 .instagram .row > div a {
   border: none;
@@ -965,7 +1043,7 @@ body #header .header-7 .sticky .hotline svg path {
           align-items: center;
 }
 .newsletter h5 {
-  margin-right: 55px;
+  margin-right: 49px;
   letter-spacing: 0.02em;
 }
 .newsletter .block_newsletter {
@@ -1024,4 +1102,113 @@ body #header .header-7 .sticky .hotline svg path {
 }
 .footer-5 .instagram .block-content {
   margin-top: 19px;
+}
+
+@media (max-width: 1366px) {
+  .service-box .pb-service-title {
+    font-size: 20px;
+  }
+
+  .newsletter .block_newsletter input {
+    width: 100%;
+  }
+}
+@media (max-width: 1199px) {
+  .page-index #header {
+    position: static;
+    background-color: #fff;
+  }
+
+  #mobile-header .btn-group .dropdown-menu ul li a {
+    color: #3F2803;
+  }
+
+  .gdz-slider-wrapper .nav-control > a.prev {
+    margin-right: 15px;
+  }
+
+  .gdz-slider-wrapper .nav-control {
+    bottom: 15px;
+  }
+
+  .service-box .pb-service-box .pb-service-icon img {
+    max-width: 35px;
+  }
+
+  .service-box .pb-service-box .pb-service-icon {
+    width: 80px;
+    height: 80px;
+    top: -40px;
+  }
+
+  .service-box .pb-service-box {
+    padding-top: 65px;
+  }
+
+  .service-box .pb-service-title {
+    font-size: 18px;
+  }
+
+  .service-box .pb-service-description p {
+    font-size: 15px;
+  }
+
+  .gdz-row.about .pb-text-content {
+    padding-right: 0;
+  }
+
+  .gdz-row.about .pb-image img {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .gdz-row.banner .pb-banner-subtitle span span {
+    font-size: 20px;
+  }
+
+  .gdz-row.banner .btn {
+    margin-top: 0;
+  }
+
+  .testimonial h5 {
+    margin-top: 0;
+  }
+
+  .testimonial .pb-image img {
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .newsletter .layout-column {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .newsletter h5 {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .newsletter .block_newsletter {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .newsletter .block_newsletter button {
+    margin-left: 10px;
+  }
+}
+@media (max-width: 575px) {
+  .service-box {
+    margin-top: 30px;
+  }
+  .service-box .layout-column + .layout-column {
+    margin-top: 60px;
+  }
+
+  .banner .layout-column + .layout-column {
+    margin-top: 15px;
+  }
 }

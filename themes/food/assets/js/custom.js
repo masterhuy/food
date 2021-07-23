@@ -246,8 +246,12 @@ jQuery(document).ready(function () {
     changeIconNewsletter();
 
     itemShow();
+    openFilterSidebar();
+    closeFilterSidebar();
     prestashop.on("updateProductList",(function(){
         itemShow();
+        openFilterSidebar();
+        closeFilterSidebar();
     }));
 
     cloneQuantity();
@@ -296,6 +300,22 @@ function paginationToTop(){
         e.preventDefault();
     });
 }
+
+function openFilterSidebar(){
+	$('body').on('click', '#search_filter_toggler', function () {
+		$("body").addClass("open-filter overflow-hidden");
+	});
+}
+
+function closeFilterSidebar(){
+	$('body').on('click', '.js-close-filter', function () {
+		$("body").removeClass("open-filter overflow-hidden");
+	});
+	$(".main-site > .bg-overlay").click(function(){
+		$("body").removeClass("open-filter overflow-hidden");
+	});
+}
+
 
 function changeShopGrid() {
     var shop_grid_column = gdzSetting.shop_grid_column;

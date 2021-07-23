@@ -124,10 +124,12 @@
 .product-comment-modal .modal-dialog {
   width: calc(100% - 30px);
   max-width: 774px;
+  margin: 15px auto;
 }
 
 .product-comment-modal .modal-dialog h3 {
   color: inherit;
+  font-size: 22px;
 }
 .product-comment-modal .description_short{
   color: rgba(63, 40, 3, 0.7);
@@ -663,4 +665,9 @@
 
 #product-comments-list-pagination ul li.active span {
   cursor: not-allowed;
+}
+@media (max-width: 575px){
+  .product-comment-modal .modal-body{
+    padding: 15px;
+  }
 }

@@ -123,16 +123,22 @@
   width: 100%;
 }
 
-#contact-form h3 {
+#contact-form .form-group > label {
+  display: none;
+}
+
+.contact-form h3 {
   font-size: 30px;
   font-weight: 600;
   text-transform: initial !important;
   margin-bottom: 34px;
 }
-#contact-form .form-group > label {
-  display: none;
+.contact-form .group-span-filestyle {
+  position: absolute;
+  right: 0;
+  height: 100%;
 }
-#contact-form .group-span-filestyle > label {
+.contact-form .group-span-filestyle > label {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -140,14 +146,15 @@
       -ms-flex-align: center;
           align-items: center;
   margin-left: 10px;
+  border-radius: 10px;
 }
-#contact-form .input-group-btn .btn .buttonText {
+.contact-form .input-group-btn .btn .buttonText {
   font-size: 16px;
 }
-#contact-form .form-footer {
+.contact-form .form-footer {
   margin-top: 50px;
 }
-#contact-form .form-footer .btn-submit {
+.contact-form .form-footer .btn-submit {
   letter-spacing: -0.02em;
   font-size: 20px;
   height: auto;

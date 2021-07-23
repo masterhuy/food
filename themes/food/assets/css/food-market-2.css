@@ -65,6 +65,10 @@ a:hover {
   fill: #70C03E;
 }
 
+#off-canvas-menu > .btn-group li.current a {
+  color: #70C03E;
+}
+
 #hor-menu .nav > li > a span::after {
   background-color: #70C03E;
 }
@@ -83,6 +87,10 @@ a:hover {
 
 .cart-prices-line .value {
   color: #70C03E;
+}
+
+#cart_block .remove-from-cart:hover path {
+  fill: #70C03E;
 }
 
 #blockcart-modal .value {
@@ -285,10 +293,7 @@ a:hover {
   display: none;
 }
 
-.slider-foodmarket .gdz-slider-wrapper .btn {
-  padding: 0 33px;
-}
-.slider-foodmarket .fs-pager-wrapper {
+.fs-pager-wrapper {
   top: 42%;
   bottom: auto;
   display: -webkit-box;
@@ -305,11 +310,15 @@ a:hover {
   -webkit-transform: none;
           transform: none;
 }
-.slider-foodmarket .fs-pager-wrapper a {
+.fs-pager-wrapper a {
   height: 20px;
 }
-.slider-foodmarket .fs-pager-wrapper a.active {
+.fs-pager-wrapper a.active {
   margin: 4px 0;
+}
+
+.gdz-slider-wrapper .btn {
+  padding: 0 33px;
 }
 
 .banner-vector {
@@ -350,7 +359,7 @@ a:hover {
   margin-right: 12px;
 }
 .category-tab .heading h3 {
-  font-size: 32px;
+  font-size: 30px;
   font-weight: 600;
   color: inherit;
   margin-bottom: 0;
@@ -479,7 +488,7 @@ a:hover {
   padding-top: 5px;
 }
 .banner-process .pb-service-title {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 600;
   color: #3F2803;
   margin-bottom: 11px;
@@ -507,4 +516,81 @@ a:hover {
   border-color: #70C03E;
   background-color: #70C03E;
   color: #fff;
+}
+
+@media (max-width: 1366px) {
+  .banner-vector {
+    margin-top: -200px;
+  }
+  .banner-vector::before {
+    display: none;
+  }
+
+  .category-tab .heading h3 {
+    font-size: 22px;
+  }
+
+  .category-tab .addon-tab .nav-tabs.tab-right {
+    padding-right: 140px;
+  }
+
+  .productbox-2 .product-buttons .ajax-add-to-cart {
+    padding: 0 12px;
+  }
+}
+@media (max-width: 1199px) {
+  .banner-vector {
+    margin-top: -100px;
+  }
+}
+@media (max-width: 991px) {
+  .page-index #header {
+    position: static;
+  }
+
+  .banner-process .layout-column {
+    margin-bottom: 30px;
+  }
+
+  .banner-process .pb-service-box {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+@media (max-width: 767px) {
+  .banner-process .pb-service-title {
+    font-size: 18px;
+  }
+
+  .banner-vector {
+    margin-top: 0;
+  }
+
+  .category-tab .pb-categorytab .owl-nav {
+    position: static;
+  }
+
+  .category-tab .addon-tab .nav-tabs.tab-right {
+    padding-right: 0;
+  }
+}
+@media (max-width: 767px) and (min-width: 576px) {
+  .addon-tab .nav-tabs.tab-right .nav-item {
+    display: inline-block;
+    width: auto;
+    margin-left: 10px;
+  }
+}
+@media (max-width: 575px) {
+  .banner-vector .layout-column + .layout-column, .category-tab .layout-column + .layout-column {
+    margin-top: 15px;
+  }
+
+  .category-tab .addon-tab .nav-tabs.tab-right .nav-item {
+    margin-left: 0;
+  }
+
+  .category-tab .addon-tab .nav-tabs .nav-item + .nav-item::before {
+    display: none;
+  }
 }

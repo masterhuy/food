@@ -65,6 +65,10 @@ a:hover {
   fill: #70C03E;
 }
 
+#off-canvas-menu > .btn-group li.current a {
+  color: #70C03E;
+}
+
 #hor-menu .nav > li > a span::after {
   background-color: #70C03E;
 }
@@ -83,6 +87,10 @@ a:hover {
 
 .cart-prices-line .value {
   color: #70C03E;
+}
+
+#cart_block .remove-from-cart:hover path {
+  fill: #70C03E;
 }
 
 #blockcart-modal .value {
@@ -289,22 +297,35 @@ a:hover {
 .organic-banner .btn:hover::after {
   background-color: #70C03E;
 }
+.organic-banner .pb-banner-title {
+  letter-spacing: -0.01em;
+}
 .organic-banner .pb-banner-title span span {
   font-size: 50px;
   font-family: "Alako-Bold";
+}
+.organic-banner .pb-banner-desc {
+  letter-spacing: -0.01em;
 }
 
 .banner-fullwidth {
   position: relative;
   z-index: 1;
 }
+.banner-fullwidth .title {
+  line-height: 1.3;
+}
 .banner-fullwidth .btn-xl {
   text-transform: initial;
   height: 54px;
-  line-height: 54px;
-  padding: 0 30px;
+  line-height: 49px;
+  padding: 0 27px;
   font-weight: 600;
   border-color: #fff;
+  color: #70C03E;
+}
+.banner-fullwidth .btn-xl:hover {
+  color: #fff;
 }
 .banner-fullwidth .column {
   max-width: 270px;
@@ -315,15 +336,20 @@ a:hover {
 }
 .banner-fullwidth .column h3 {
   color: #fff;
-  font-size: 27px;
-  font-weight: 700;
-  margin-bottom: 5px;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-bottom: 7px;
 }
 
 .testimonial {
   position: relative;
   -webkit-box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.1);
+}
+.testimonial .pb-testimonial-comment {
+  margin-top: 21px;
+  margin-bottom: 9px;
 }
 .testimonial .layout-column {
   position: static;
@@ -347,6 +373,23 @@ a:hover {
   right: 63px;
 }
 
+@media (min-width: 1200px) {
+  .newsletter .col-lg-5 {
+    -ms-flex: 0 0 auto;
+    -webkit-box-flex: 0;
+            flex: 0 0 auto;
+    width: auto;
+    max-width: 100%;
+  }
+  .newsletter .col-lg-7 {
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -ms-flex-positive: 1;
+    -webkit-box-flex: 1;
+            flex-grow: 1;
+    max-width: 100%;
+  }
+}
 .newsletter {
   max-width: 1290px;
   margin-left: auto;
@@ -356,24 +399,9 @@ a:hover {
 .newsletter .container {
   padding: 0 75px;
 }
-.newsletter .col-lg-5 {
-  -ms-flex: 0 0 auto;
-  -webkit-box-flex: 0;
-          flex: 0 0 auto;
-  width: auto;
-  max-width: 100%;
-}
-.newsletter .col-lg-7 {
-  -ms-flex-preferred-size: 0;
-  flex-basis: 0;
-  -ms-flex-positive: 1;
-  -webkit-box-flex: 1;
-          flex-grow: 1;
-  max-width: 100%;
-}
 .newsletter .pb-heading {
-  font-weight: 600;
   padding-top: 9px;
+  letter-spacing: 0;
 }
 .newsletter .block_newsletter .content {
   display: -webkit-box;
@@ -383,8 +411,11 @@ a:hover {
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
+.newsletter .block_newsletter .content .input-wrapper {
+  width: 100%;
+}
 .newsletter .block_newsletter .content input {
-  width: 495px;
+  width: 100%;
   background-color: transparent;
   border: 2px solid #fff;
   color: #fff;
@@ -410,4 +441,70 @@ a:hover {
 }
 .newsletter .block_newsletter .content button:hover {
   color: #fff;
+}
+
+@media (max-width: 1366px) {
+  .newsletter {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+@media (max-width: 1199px) {
+  .testimonial .leaf {
+    display: none;
+  }
+}
+@media (max-width: 991px) {
+  .newsletter .pb-heading {
+    text-align: center !important;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .fraction-slider .prev {
+    left: 15px;
+  }
+
+  .fraction-slider .next {
+    right: 15px;
+  }
+
+  .title h3 {
+    font-size: 20px;
+  }
+
+  .banner-fullwidth .block-col {
+    display: none;
+  }
+
+  .organic-banner .pb-banner-title span span {
+    font-size: 30px;
+  }
+
+  .newsletter .container {
+    padding: 0 15px;
+  }
+
+  .newsletter .block_newsletter .content button {
+    margin-left: 0;
+    margin-top: 15px;
+  }
+
+  .newsletter .block_newsletter .content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+@media (max-width: 575px) {
+  .organic-banner .layout-column {
+    margin-bottom: 15px;
+  }
 }

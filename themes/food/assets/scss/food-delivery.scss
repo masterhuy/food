@@ -73,6 +73,7 @@ $active: #B8D021;
     }
 }
 .banner{
+    margin-top: -145px;
     position: relative;
     z-index: 999;
 }
@@ -193,5 +194,102 @@ $active: #B8D021;
         li + li{
             margin-left: 15px;
         }
+    }
+}
+@media (max-width: 1366px){
+    .newsletter .block_newsletter input{
+        width: 100%;
+    }
+}
+@media (max-width: 1199px){
+    .page-index #header{
+        position: static;
+        background-color: #fff;
+    }
+    #mobile-header .btn-group .dropdown-menu ul li a {
+        color: #3F2803;
+    }
+    .banner{
+        margin-top: 50px;
+    }
+    .fs-pager-wrapper {
+        top: calc(50% - 0px);
+    }
+    .newsletter .layout-column{
+        flex-direction: column;
+    }
+    .newsletter h5.pb-heading{
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .newsletter .block_newsletter {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .newsletter .block_newsletter button {
+        margin-left: 10px;
+    }
+}
+@media (max-width: 991px){
+    .banner-fullwidth h5 span {
+        font-size: 20px;
+        margin-left: 0;
+    }
+    .banner-fullwidth h5 {
+        margin-bottom: 10px;
+    }
+    .service-box .pb-service-title {
+        font-size: 18px;
+    }
+    .service-box .pb-service-description p {
+        font-size: 15px;
+    }
+    .service-box .pb-service-box {
+        padding: 20px 0;
+    }
+    .testimonial {
+       &::before, &::after{
+           display: none;
+       }
+    }
+}
+@media (max-width: 767px){
+    .banner{
+        margin-top: 15px;
+    }
+    .addon-tab .nav.nav-tabs .nav-item {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .addon-tab .nav.nav-tabs {
+        margin-bottom: 20px;
+    }
+    .banner-fullwidth .container-fluid {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .testimonial .pb-image img {
+        margin-left: 0;
+        margin-top: 40px;
+    }
+    .newsletter .block_newsletter button {
+        font-size: 15px;
+    }
+}
+@media (max-width: 575px){
+    .banner, .service-box{
+        .layout-column + .layout-column{
+            margin-top: 15px;
+        }
+    }
+    .newsletter .block_newsletter .content{
+        flex-direction: column;
+    }
+    .newsletter .block_newsletter input{
+        margin-right: 0;
+    }
+    .newsletter .block_newsletter button {
+        margin-left: 0;
+        margin-top: 15px;
     }
 }

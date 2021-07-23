@@ -24,7 +24,7 @@
  *}
 <div class="same-category">
     <h2>{l s='Related Products' d='Shop.Theme.Catalog'}</h2>
-    <div class="products owl-carousel customs-carousel-product" data-md="4" data-sm="3" data-xs="2" data-margin="30" data-nav="true" data-dots="false"> 
+    <div class="products owl-carousel customs-carousel-product" data-md="4" data-sm="3" data-xs="1" data-margin="30" data-nav="true" data-dots="false"> 
         {foreach from=$products item="product"}
             <div class="item">
                 {include file="catalog/_partials/miniatures/product.tpl" product=$product}

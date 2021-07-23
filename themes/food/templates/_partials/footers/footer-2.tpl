@@ -25,7 +25,7 @@
 <div id="footer-main" class="footer-main">
     <div class="container">
         <div class="row">
-            <div class="col-4 block">
+            <div class="col-12 col-sm-6 col-lg-4 block">
                 <h3 class="h3 block-title">
                     {l s='Get The App' d='Shop.jmstheme'}
                     <i class="feather icon-plus closing"></i>
@@ -37,7 +37,7 @@
                     <p class="mt-10"><img src="{$urls.theme_assets}img/food-market-1/appstore.jpg"/></p>
                 </div>
             </div>
-            <div class="col-2 wrapper block">
+            <div class="col-12 col-sm-6 col-lg-2 wrapper block">
                 <h3 class="h3 block-title">
                     {l s='Information' d='Shop.jmstheme'}
                     <i class="feather icon-plus closing"></i>
@@ -78,7 +78,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-2 wrapper block">
+            <div class="col-12 col-sm-6 col-lg-2 wrapper block">
                 <h3 class="h3 block-title">
                     {l s='Guide & Help' d='Shop.jmstheme'}
                     <i class="feather icon-plus closing"></i>
@@ -119,24 +119,26 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-4 block">
+            <div class="col-12 col-sm-6 col-lg-4 block">
                 <h3 class="h3 block-title">
                     {l s='Contact Info' d='Shop.jmstheme'}
                     <i class="feather icon-plus closing"></i>
                     <i class="feather icon-minus opening"></i>
                 </h3>
-                <div class="contact block-content">
-                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M6.25 20.8332C6.25 10.4791 14.6458 2.08325 25 2.08325C35.3542 2.08325 43.75 10.4791 43.75 20.8332V41.6666C43.75 45.1249 40.9583 47.9166 37.5 47.9166H25V43.7499H39.5833V41.6666H31.25V24.9999H39.5833V20.8332C39.5833 12.7708 33.0625 6.24992 25 6.24992C16.9375 6.24992 10.4167 12.7708 10.4167 20.8332V24.9999H18.75V41.6666H12.5C9.04167 41.6666 6.25 38.8749 6.25 35.4166V20.8332ZM14.5833 29.1666V37.4999H12.5C11.3542 37.4999 10.4167 36.5624 10.4167 35.4166V29.1666H14.5833ZM39.5833 29.1666V37.4999H35.4167V29.1666H39.5833Z" fill="#F1402A"/>
-                    </svg>
-                    <div class="info">
-                        <div class="text">{l s='Got Questions?' d='Shop.jmstheme'}</div>
-                        <div class="phone-number">{l s='(01) 028-6677-1223 / 1224' d='Shop.jmstheme'}</div>
+                <div class="block-content">
+                    <div class="contact">
+                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.25 20.8332C6.25 10.4791 14.6458 2.08325 25 2.08325C35.3542 2.08325 43.75 10.4791 43.75 20.8332V41.6666C43.75 45.1249 40.9583 47.9166 37.5 47.9166H25V43.7499H39.5833V41.6666H31.25V24.9999H39.5833V20.8332C39.5833 12.7708 33.0625 6.24992 25 6.24992C16.9375 6.24992 10.4167 12.7708 10.4167 20.8332V24.9999H18.75V41.6666H12.5C9.04167 41.6666 6.25 38.8749 6.25 35.4166V20.8332ZM14.5833 29.1666V37.4999H12.5C11.3542 37.4999 10.4167 36.5624 10.4167 35.4166V29.1666H14.5833ZM39.5833 29.1666V37.4999H35.4167V29.1666H39.5833Z" fill="#F1402A"/>
+                        </svg>
+                        <div class="info">
+                            <div class="text">{l s='Got Questions?' d='Shop.jmstheme'}</div>
+                            <div class="phone-number">{l s='(01) 028-6677-1223 / 1224' d='Shop.jmstheme'}</div>
+                        </div>
                     </div>
+                    <p>{l s='Store: 237 Madison Ave, New York, USA' d='Shop.jmstheme'}</p>
+                    <p>{l s='Email: Koganicfood@demo.com' d='Shop.jmstheme'}</p>
+                    {include file='_partials/socials.tpl'} 
                 </div>
-                <p>{l s='Store: 237 Madison Ave, New York, USA' d='Shop.jmstheme'}</p>
-                <p>{l s='Email: Koganicfood@demo.com' d='Shop.jmstheme'}</p>
-                {include file='_partials/socials.tpl'} 
             </div>
         </div>
     </div>

@@ -28,7 +28,7 @@
 {/if}
 {if $banner}
 <div class="pb-banner-img">
-		<img src="{$banner|escape:'html':'UTF-8'}" alt="{$alt_text|escape:'htmlall':'UTF-8'}" class="img-responsive" />
+	<img src="{$banner|escape:'html':'UTF-8'}" alt="{$alt_text|escape:'htmlall':'UTF-8'}" class="img-responsive" />
 </div>
 <div class="pb-banner-text pb-banner-{$position|escape:'htmlall':'UTF-8'}">
 	{if $subtitle}<span class="pb-banner-subtitle"><span>{$subtitle nofilter}</span></span>{/if}

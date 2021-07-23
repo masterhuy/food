@@ -30,7 +30,12 @@
 <div id="js-product-list-top" class="filters-panel">
 	<div class="row align-items-center">
 		<div class="col-4 col-md-6 col-sm-5 text-left">
-			<div class="js-item-show"></div>
+			<div class="js-item-show d-none d-lg-inline"></div>
+			{if !empty($listing.rendered_facets)}
+				<button id="search_filter_toggler" class="btn btn-active d-lg-none mr-20">
+					{l s='Filter' d='Shop.Theme.Actions'}
+				</button>
+			{/if}
 			{if $gdzSetting.shop_switchlist == 1}
 				<div class="view-mode">
 					<a class="switch-view view-grid grid-2 {if $shop_grid_column == 2}active{/if}" href="#">
@@ -81,6 +86,7 @@
 					</a>
 				</div>
 			{/if}
+			
 		</div>
 		<div class="col-8 col-md-6 col-sm-7 text-right">
 			<div class="sort-by">

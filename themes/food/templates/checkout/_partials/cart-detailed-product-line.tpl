@@ -34,7 +34,7 @@
                 {/if}
             </div>
             <!--  product left body: description -->
-            <div class="col-auto">
+            <div class="col">
                 <div class="product-line-info">
                     <a class="product-link" href="{$product.url}" data-id_customization="{$product.id_customization|intval}">{$product.name}</a>
                 </div>
@@ -112,7 +112,7 @@
     <!--  product left body: description -->
     <div class="product-line-grid-right col-12 col-sm-6 col-md-6 product-line-actions">
         <div class="row align-items-center justify-content-end">
-            <div class="col col-auto col-md qty">
+            <div class="col col-md qty">
                 {if isset($product.is_gift) && $product.is_gift}
                 <span class="gift-quantity">{$product.quantity}</span>
                 {else}

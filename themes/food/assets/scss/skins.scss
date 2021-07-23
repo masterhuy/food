@@ -69,6 +69,9 @@ a {
         fill: $active;
     }
 }
+#off-canvas-menu > .btn-group li.current a {
+    color: $active;
+}
 
 #hor-menu .nav > li > a span{
     &::after{
@@ -87,6 +90,9 @@ a {
 }
 .cart-prices-line .value{
     color: $active;
+}
+#cart_block .remove-from-cart:hover path{
+    fill: $active;
 }
 #blockcart-modal .value{
     color: $active;

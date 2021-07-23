@@ -52,10 +52,10 @@
       {block name='content'}
         <section id="content">
           <div class="row">
-            <div class="col-md-8 left">
+            <div class="col-12 col-lg-8 left">
               {render file='checkout/checkout-process.tpl' ui=$checkout_process}
             </div>
-            <div class="col-md-4 right cart-grid-right">
+            <div class="col-12 col-lg-4 right cart-grid-right">
       				<div class="right-box">
       					{include file='checkout/_partials/cart-summary.tpl' cart = $cart}
       					{hook h='displayReassurance'}

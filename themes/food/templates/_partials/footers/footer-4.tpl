@@ -25,7 +25,7 @@
 <div id="footer-main" class="footer-main">
     <div class="container">
         <div class="row">
-            <div class="col-6 contact">
+            <div class="col-12 col-md-6 contact">
                 <h3>Contact with Us In Any time</h3>
                 <p class="hotline">{l s='Hotline: (01) 028-6677-1223 / 1224' d='Shop.jmstheme'}</p>
                 <p>{l s='Store: 237 Madison Ave, New York City, United Stated' d='Shop.jmstheme'}</p>
@@ -43,7 +43,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-6">
+            <div class="col-12 col-md-6">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7946.623555960864!2d-122.42918367213517!3d37.775516207291936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1svi!2s!4v1623644029168!5m2!1svi!2s" width="630" height="280" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>

@@ -23,7 +23,7 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 <div class="row product-detail default">
-    <div class="pb-left-column col-lg-6 col-md-6 col-sm-6 col-12">
+    <div class="pb-left-column col-xl-6 col-lg-7 col-sm-12 col-12">
         <div class="pd-left-content">
             {block name='page_content_container'}
                 <section class="page-content" id="content">
@@ -36,7 +36,7 @@
             {/block}
         </div>
     </div>
-    <div class="pb-right-column col-lg-6 col-md-6 col-sm-6 col-12">
+    <div class="pb-right-column col-xl-6 col-lg-5 col-sm-12 col-12">
         {block name='page_header_container'}
             {block name='page_header'}
                 <h1 itemprop="name" class="product-name">{block name='page_title'}{$product.name}{/block}</h1>
@@ -58,7 +58,6 @@
                 {l s='available in stock' d='Shop.Theme.Catalog'}
             </div>
             
-
             {if isset($product.specific_prices.to) && $product.specific_prices.to > 0}
                 <div class="specific_prices">
                     <div class="countdown-box">
@@ -85,7 +84,7 @@
                                     <h3 class="h4">{l s='This pack contains' d='Shop.Theme.Catalog'}</h3>
                                     <article>
                                         <div class="card">
-                                            <div class="pack-product-container">
+                                            <div class="pack-product-container table-responsive">
                                                 <table class="table">
                                                     <thead>
                                                         <tr>
@@ -128,7 +127,7 @@
                            <li class="product-category">
                                 <label>{l s='Category:' d='Shop.Theme.Catalog'}</label>
                                 <a class="editable" href="{url entity='category' id=$product.id_category_default}">
-                                    {$product.category|escape:'html':'UTF-8'}
+                                    {$product.category_name|escape:'html':'UTF-8'}
                                 </a
                             </li>
                             <li>

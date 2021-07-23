@@ -52,13 +52,13 @@
                 {/if}
                 {if $cart.subtotals.shipping.value}
                     <div class="row align-items-center">
-                        <span class="col-12 col-md-6 label">{l s='Shipping:' d='Shop.Theme.Checkout'}</span>
-                        <span class="col-12 col-md-6 shipping value">{$cart.subtotals.shipping.value} {hook h='displayCheckoutSubtotalDetails' subtotal=$cart.subtotals.shipping}</span>
+                        <span class="col-6 label">{l s='Shipping:' d='Shop.Theme.Checkout'}</span>
+                        <span class="col-6 shipping value">{$cart.subtotals.shipping.value} {hook h='displayCheckoutSubtotalDetails' subtotal=$cart.subtotals.shipping}</span>
                     </div>
                 {/if}
                 <div class="total-price price row align-items-center">
-                    <span class="col-12 col-md-6 label">{l s='Total:' d='Shop.Theme.Checkout'}</span>
-                    <span class="col-12 col-md-6 value">{$cart.totals.total.value} {$cart.labels.tax_short}</span>
+                    <span class="col-6 label">{l s='Total:' d='Shop.Theme.Checkout'}</span>
+                    <span class="col-6 value">{$cart.totals.total.value} {$cart.labels.tax_short}</span>
                 </div>
                 <div class="group-btn">
                     <a class="btn btn-default" data-dismiss="modal">

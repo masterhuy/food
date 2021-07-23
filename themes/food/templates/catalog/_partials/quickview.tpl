@@ -36,12 +36,12 @@
             </div>
             <div class="modal-body" id="main">
                 <div class="row">
-                    <div class="col-md-6 col-12 col-left">
+                    <div class="col-sm-6 col-12 col-left">
                         {block name='product_cover_thumbnails'}
                             {include file='catalog/_partials/product-cover-thumbnails-quickview.tpl'}
                         {/block}
                     </div>
-                    <div class="col-md-6 col-12 col-right">
+                    <div class="col-sm-6 col-12 col-right">
                         {block name='page_header_container'}
                             {block name='page_header'}
                                 <h2 itemprop="name" class="product-name">{block name='page_title'}{$product.name}{/block}</h2>
@@ -96,15 +96,15 @@
                             <li class="product-category">
                                     <label>{l s='Category:' d='Shop.Theme.Catalog'}</label>
                                     <a class="editable" href="{url entity='category' id=$product.id_category_default}">
-                                        {$product.category|escape:'html':'UTF-8'}
+                                        {$product.category_name|escape:'html':'UTF-8'}
                                     </a
                                 </li>
                                 <li>
                                     {if $product.additional_shipping_cost > 0}
-                                        <label>{l s='Shipping tax : '}</label>
+                                        <label>{l s='Shipping tax :' d='Shop.Theme.Catalog'}</label>
                                         <span class="shipping_cost">{$product.additional_shipping_cost}</span>
                                     {else}
-                                        <label>{l s='Shipping tax : '}</label>
+                                        <label>{l s='Shipping tax :' d='Shop.Theme.Catalog'}</label>
                                         <span class="shipping_cost">{l s=' Free' d='Shop.Theme.Catalog'}</span>
                                     {/if}
                                 </li>

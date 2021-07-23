@@ -65,6 +65,10 @@ a:hover {
   fill: #FF3514;
 }
 
+#off-canvas-menu > .btn-group li.current a {
+  color: #FF3514;
+}
+
 #hor-menu .nav > li > a span::after {
   background-color: #FF3514;
 }
@@ -83,6 +87,10 @@ a:hover {
 
 .cart-prices-line .value {
   color: #FF3514;
+}
+
+#cart_block .remove-from-cart:hover path {
+  fill: #FF3514;
 }
 
 #blockcart-modal .value {
@@ -411,7 +419,7 @@ body, a {
   width: auto !important;
 }
 .delivry .pb-service-title {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 500;
   color: inherit;
   margin-bottom: 11px;
@@ -479,11 +487,19 @@ body, a {
 .col-contact-form .contact-form {
   margin-top: 4px;
 }
+.col-contact-form .contact-form > h3 {
+  display: none;
+}
 .col-contact-form .contact-form .form-group {
   margin-bottom: 30px;
 }
+.col-contact-form .contact-form .form-group.col {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+}
 .col-contact-form .contact-form label {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 500;
   letter-spacing: 0.03em;
   line-height: 29px;
@@ -495,7 +511,7 @@ body, a {
   border: 2px solid #F4F4F4;
   border-radius: 10px;
   color: #62718D;
-  font-size: 17px;
+  font-size: 16px;
   padding: 7px 16px;
 }
 .col-contact-form .contact-form .form-control:focus {
@@ -522,8 +538,73 @@ body, a {
 .col-contact-form .contact-form .btn-submit {
   font-size: 20px;
   letter-spacing: -0.02em;
-  padding: 8px 40px 5px;
+  padding: 6px 40px;
   height: 50px;
   -webkit-box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 1366px) {
+  .service-box::before {
+    display: none;
+  }
+}
+@media (max-width: 1199px) {
+  .service-box {
+    margin-top: 50px;
+  }
+
+  .service-box .pb-service-title {
+    font-size: 18px;
+  }
+
+  .service-box .pb-service-description p {
+    font-size: 15px;
+  }
+
+  .delivry .pb-service-box .pb-service-icon {
+    margin-bottom: 15px;
+  }
+
+  .delivry .pb-service-box {
+    margin-bottom: 30px;
+  }
+
+  .testimonial::before, .testimonial::after {
+    opacity: 0;
+  }
+
+  .col-contact-form .contact-form label {
+    font-size: 18px;
+  }
+
+  .col-contact-form .contact-form .form-control,
+.col-contact-form .contact-form .btn-submit {
+    font-size: 15px;
+  }
+
+  .contact-form .input-group-btn .btn .buttonText {
+    font-size: 15px;
+  }
+}
+@media (max-width: 767px) {
+  .page-index #header {
+    position: static;
+  }
+
+  .col-contact-form {
+    margin-top: 30px;
+  }
+}
+@media (max-width: 575px) {
+  .service-box .layout-column {
+    margin-bottom: 15px;
+  }
+
+  .testimonial .container-fluid {
+    padding: 0 15px;
+  }
+  .testimonial .layout-column + .layout-column {
+    margin-top: 30px;
+  }
 }

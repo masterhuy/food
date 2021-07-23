@@ -6,7 +6,7 @@
   padding:0px;
 }
 .gdz-megamenu li {
-  padding:0px 19px;
+  padding:0px 18.5px;
   margin: 0px;
 }
 .gdz-megamenu a {
@@ -139,13 +139,7 @@
   margin-top: 0px;
 }
 #off-canvas-menu .nav > li > a {
-    text-transform: capitalize;
-    color: #fff;
-    font-size: 17px;
+    text-transform: initial;
+    font-size: 14px;
 }
-#mobile-menu-close h3 {
-    color: #fff;
-}
-#mobile-menu-close i {
-  color: #fff;
-}
+

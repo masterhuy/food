@@ -33,13 +33,17 @@
       <div class="modal-header">
         <h2>{l s='Write your review' d='Modules.Productcomments.Shop'}</h2>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g id="icon/navigation/close_24px">
+              <path id="icon/navigation/close_24px_2" d="M23.75 8.0125L21.9875 6.25L15 13.2375L8.0125 6.25L6.25 8.0125L13.2375 15L6.25 21.9875L8.0125 23.75L15 16.7625L21.9875 23.75L23.75 21.9875L16.7625 15L23.75 8.0125Z" fill="black" fill-opacity="0.54"/>
+              </g>
+          </svg>
         </button>
       </div>
       <div class="modal-body">
         <form id="post-product-comment-form" action="{$post_comment_url nofilter}" method="POST">
           <div class="row">
-            <div class="col-md-4 col-sm-2">
+            <div class="col-md-4 col-sm-6 col-12">
               {if isset($product) && $product}
                 {block name='product_flags'}
                   <ul class="product-flags">
@@ -60,13 +64,13 @@
                 {/block}
               {/if}
             </div>
-            <div class="col-md-5 col-sm-4">
+            <div class="col-md-5 col-sm-6 col-12">
               <h3>{$product.name}</h3>
               {block name='product_description_short'}
                 <div class="description_short" itemprop="description">{$product.description_short nofilter}</div>
               {/block}
             </div>
-            <div class="col-md-3 col-sm-6">
+            <div class="col-md-3 col-sm-12 col-12">
               {if $criterions|@count > 0}
                 <ul id="criterions_list">
                   {foreach from=$criterions item='criterion'}

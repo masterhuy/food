@@ -30,23 +30,34 @@ $active: #70C03E;
         }
     }
     .pb-banner-title{
+        letter-spacing: -0.01em;
         span span{
             font-size: 50px;
             font-family: "Alako-Bold";
         }
+    }
+    .pb-banner-desc{
+        letter-spacing: -0.01em;
     }
 }
 
 .banner-fullwidth{
     position: relative;
     z-index: 1;
+    .title{
+        line-height: 1.3;
+    }
     .btn-xl{
         text-transform: initial;
         height: 54px;
-        line-height: 54px;
-        padding: 0 30px;
+        line-height: 49px;
+        padding: 0 27px;
         font-weight: 600;
         border-color: #fff;
+        color: $active;
+        &:hover{
+            color: #fff;
+        }
     }
     .column{
         max-width: 270px;
@@ -56,9 +67,10 @@ $active: #70C03E;
         }
         h3{
             color: #fff;
-            font-size: 27px;
-            font-weight: 700;
-            margin-bottom: 5px;
+            font-size: 24px;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            margin-bottom: 7px;
         }
     }
 }
@@ -66,6 +78,10 @@ $active: #70C03E;
 .testimonial{
     position: relative;
     box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.1);
+    .pb-testimonial-comment{
+        margin-top: 21px;
+        margin-bottom: 9px;
+    }
     .layout-column{
         position: static;
     }
@@ -88,6 +104,23 @@ $active: #70C03E;
         right: 63px;
     }
 }
+@media (min-width: 1200px){
+    .newsletter{
+        .col-lg-5{
+            -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+            width: auto;
+            max-width: 100%;
+        }
+        .col-lg-7{
+            -ms-flex-preferred-size: 0;
+            flex-basis: 0;
+            -ms-flex-positive: 1;
+            flex-grow: 1;
+            max-width: 100%;
+        }
+    }
+}
 .newsletter{
     max-width: 1290px;
     margin-left: auto;
@@ -96,29 +129,19 @@ $active: #70C03E;
     .container{
         padding: 0 75px;
     }
-    .col-lg-5{
-        -ms-flex: 0 0 auto;
-        flex: 0 0 auto;
-        width: auto;
-        max-width: 100%;
-    }
-    .col-lg-7{
-        -ms-flex-preferred-size: 0;
-        flex-basis: 0;
-        -ms-flex-positive: 1;
-        flex-grow: 1;
-        max-width: 100%;
-    }
     .pb-heading{
-        font-weight: 600;
         padding-top: 9px;
+        letter-spacing: 0;
     }
     .block_newsletter{
         .content{
             display: flex;
 		    justify-content: flex-end;
+            .input-wrapper{
+                width: 100%;
+            }
             input{
-                width: 495px;
+                width: 100%;
                 background-color: transparent;
                 border: 2px solid #fff;
                 color: #fff;
@@ -133,6 +156,61 @@ $active: #70C03E;
                     color: #fff;
                 }
             }
+        }
+    }
+}
+@media (max-width: 1366px){
+    .newsletter {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+}
+@media (max-width: 1199px){
+    .testimonial .leaf{
+        display: none;
+    }
+}
+@media (max-width: 991px){
+    .newsletter .pb-heading{
+        text-align: center !important;
+        margin-bottom: 20px;
+    }
+}
+@media (max-width: 767px){
+    .fraction-slider .prev{
+        left: 15px;
+    }
+    .fraction-slider .next {
+        right: 15px;
+    }
+    .title h3 {
+        font-size: 20px;
+    }
+    .banner-fullwidth{
+        .block-col{
+            display: none;
+        }
+    }
+    .organic-banner .pb-banner-title span span {
+        font-size: 30px;
+    }
+    .newsletter .container {
+        padding: 0 15px;
+    }
+    .newsletter .block_newsletter .content button {
+        margin-left: 0;
+        margin-top: 15px;
+    }
+    .newsletter .block_newsletter .content{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media (max-width: 575px){
+    .organic-banner{
+        .layout-column{
+            margin-bottom: 15px;
         }
     }
 }

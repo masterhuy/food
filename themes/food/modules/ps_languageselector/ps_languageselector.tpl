@@ -24,12 +24,12 @@
 *}
 <!-- Block languages module -->
 {if count($languages) > 1}
-	<div class="btn-group compact-hidden languages-info type-3">
+	<div class="btn-group compact-hidden languages-info">
 		<ul class="languages-list">
 			{foreach from=$languages key=k item=language name="languages"}
 				<li {if $language.id_lang == $current_language.id_lang} class="current" {/if}>
 					<a href="{url entity='language' id=$language.id_lang}" class="collapse-item">
-							{$language.name_simple}
+						{$language.name_simple}
 					</a>
 				</li>
 			{/foreach}

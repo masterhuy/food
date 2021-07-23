@@ -151,7 +151,7 @@ body, a{
         }
     }
     .pb-service-title{
-        font-size: 22px;
+        font-size: 20px;
         font-weight: 500;
         color: inherit;
         margin-bottom: 11px;
@@ -224,11 +224,17 @@ body, a{
 .col-contact-form{
     .contact-form{
         margin-top: 4px;
+        > h3{
+            display: none;
+        }
         .form-group{
             margin-bottom: 30px;
+            &.col{
+                flex: 0 0 100%;
+            }
         }
         label{
-            font-size: 24px;
+            font-size: 22px;
             font-weight: 500;
             letter-spacing: 0.03em;
             line-height: 29px;
@@ -240,7 +246,7 @@ body, a{
             border: 2px solid #F4F4F4;
             border-radius: 10px;
             color: #62718D;
-            font-size: 17px;
+            font-size: 16px;
             padding: 7px 16px;
             &:focus{
                 border-color: inherit;
@@ -255,9 +261,72 @@ body, a{
         .btn-submit{
             font-size: 20px;
             letter-spacing: -0.02em;
-            padding: 8px 40px 5px;
+            padding: 6px 40px;
             height: 50px;
             box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+        }
+    }
+}
+
+@media (max-width: 1366px){
+    .service-box{
+        &::before{
+            display: none;
+        }
+    }
+}
+@media (max-width: 1199px){
+    .service-box{
+        margin-top: 50px;
+    }
+    .service-box .pb-service-title {
+        font-size: 18px;
+    }
+    .service-box .pb-service-description p {
+        font-size: 15px;
+    }
+    .delivry .pb-service-box .pb-service-icon {
+        margin-bottom: 15px;
+    }
+    .delivry .pb-service-box {
+        margin-bottom: 30px;
+    }
+    .testimonial {
+        &::before, &::after{
+            opacity: 0;
+        }
+    }
+    .col-contact-form .contact-form label {
+        font-size: 18px;
+    }
+    .col-contact-form .contact-form .form-control,
+    .col-contact-form .contact-form .btn-submit {
+        font-size: 15px;
+    }
+    .contact-form .input-group-btn .btn .buttonText {
+        font-size: 15px;
+    }
+}
+@media (max-width: 767px){
+    .page-index #header{
+        position: static;
+    }
+    .col-contact-form{
+        margin-top: 30px;
+    }
+}
+@media (max-width: 575px){
+    .service-box{
+        .layout-column{
+            margin-bottom: 15px;
+        }
+    }
+    .testimonial{
+        .container-fluid{
+            padding: 0 15px;
+        }
+        .layout-column + .layout-column{
+            margin-top: 30px;
         }
     }
 }

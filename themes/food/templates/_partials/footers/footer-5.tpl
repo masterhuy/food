@@ -25,7 +25,7 @@
 <div id="footer-main" class="footer-main">
     <div class="container">
         <div class="row">
-            <div class="col-3 wrapper block">
+            <div class="col-12 col-md-3 wrapper block">
                 <h3 class="h3 block-title">
                     {l s='Useful Links' d='Shop.jmstheme'}
                     <i class="feather icon-plus closing"></i>
@@ -61,7 +61,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-3 wrapper block">
+            <div class="col-12 col-md-3 wrapper block">
                 <h3 class="h3 block-title">
                     {l s='Information' d='Shop.jmstheme'}
                     <i class="feather icon-plus closing"></i>
@@ -97,7 +97,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-6 wrapper block instagram">
+            <div class="col-12 col-md-6 wrapper block instagram">
                 <h3 class="h3 block-title">
                     {l s='Instagram Gallery' d='Shop.jmstheme'}
                     <i class="feather icon-plus closing"></i>

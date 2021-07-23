@@ -58,15 +58,15 @@
                 </div>
                 
                 {if $contact.orders}
-                <label>
-                    <span>{l s='Order reference' d='Modules.Contactform.Shop'}</span>
-                    <select name="id_order">
+                <div class="form-group">
+                    <label>{l s='Order reference' d='Modules.Contactform.Shop'}</label>
+                    <select class="form-control" name="id_order">
                         <option value="">{l s='Select reference' d='Modules.Contactform.Shop'}</option>
                         {foreach from=$contact.orders item=order}
                             <option value="{$order.id_order|escape:'htmlall':'UTF-8'}">{$order.reference|escape:'htmlall':'UTF-8'}</option>
                         {/foreach}
                     </select>
-                </label>
+                </div>
                 {/if}
 
                 <div class="form-group">

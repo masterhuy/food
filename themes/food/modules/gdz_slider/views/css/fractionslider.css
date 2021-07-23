@@ -49,6 +49,9 @@
 	width:53px; 
 	height:53px;
 	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	z-index:9999;
 }
 
@@ -66,4 +69,10 @@
 	position:absolute;
 	left:10px; bottom:10px;
 	z-index:999;
+}
+@media (max-width: 991px){
+	.fraction-slider .prev, .fraction-slider .next {
+		width: 30px;
+		height: 30px;
+	}
 }
