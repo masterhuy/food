@@ -35,32 +35,37 @@
                 <div class="row">
                     {if $gdzSetting.search}
                         {if $gdzSetting.search_box_type != 'dropdown'}
-                        {widget_block name="gdz_ajaxsearch"}
-                            {include 'module:gdz_ajaxsearch/views/templates/hook/gdz_ajaxsearch-button.tpl'}
-                        {/widget_block}
+                            {if $gdzSetting.search_box_type == 'dropdown'}
+                                {widget_block name="gdz_ajaxsearch"}
+                                    {include 'module:gdz_ajaxsearch/views/templates/hook/gdz_ajaxsearch-dropdown.tpl'}
+                                {/widget_block}
+                            {elseif $gdzSetting.search_box_type == 'fullwidth'}
+                                {widget_block name="gdz_ajaxsearch"}
+                                    {include 'module:gdz_ajaxsearch/views/templates/hook/gdz_ajaxsearch-fullwidth.tpl'}
+                                {/widget_block}
+                            {else}
+                                {widget_block name="gdz_ajaxsearch"}
+                                    {include 'module:gdz_ajaxsearch/views/templates/hook/gdz_ajaxsearch-fullscreen.tpl'}
+                                {/widget_block}
+                            {/if}
                         {else}
-                        {widget_block name="gdz_ajaxsearch"}
-                            {include 'module:gdz_ajaxsearch/views/templates/hook/gdz_ajaxsearch-dropdown.tpl'}
-                        {/widget_block}
+                            {widget_block name="gdz_ajaxsearch"}
+                                {include 'module:gdz_ajaxsearch/views/templates/hook/gdz_ajaxsearch-dropdown.tpl'}
+                            {/widget_block}
                         {/if}
                     {/if}
                     {if ($gdzSetting.customersignin == 1)}
-                    {widget_block name="ps_customersignin"}
-                        {include 'module:ps_customersignin/ps_customersignin-dropdown-2.tpl'}
-                    {/widget_block}
+                        {widget_block name="ps_customersignin"}
+                            {include 'module:ps_customersignin/ps_customersignin-dropdown-2.tpl'}
+                        {/widget_block}
                     {/if}
                     {if ($gdzSetting.cart == 1)}
-                    {widget_block name="ps_shoppingcart"}
-                        {include 'module:ps_shoppingcart/ps_shoppingcart.tpl'}
-                    {/widget_block}
+                        {widget_block name="ps_shoppingcart"}
+                            {include 'module:ps_shoppingcart/ps_shoppingcart.tpl'}
+                        {/widget_block}
                     {/if}
                 </div>
              </div>
         </div>
     </div>
 </div>
-{if $gdzSetting.search && $gdzSetting.search_box_type != 'dropdown'}
-    {widget_block name="gdz_ajaxsearch"}
-        {include 'module:gdz_ajaxsearch/views/templates/hook/gdz_ajaxsearch-fullscreen.tpl'}
-    {/widget_block}
-{/if}

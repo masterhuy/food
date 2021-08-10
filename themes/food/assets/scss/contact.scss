@@ -117,7 +117,11 @@
         text-transform: initial !important;
         margin-bottom: 34px;
     }
-    
+    select{
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background: #fff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAQAAAD9CzEMAAAAPklEQVR4Ae3TwREAEBQD0V/6do4SXPZg7EsBhsQ8IEmSMOsiuEfg3gL3oXC7wK0bd1G4o8X9F4yIkyQfSrIByQBjp7QuND8AAAAASUVORK5CYII=) no-repeat scroll right 8px center/25px 25px !important;
+    }
     .group-span-filestyle{
         position: absolute;
         right: 0;
@@ -138,7 +142,7 @@
             letter-spacing: -0.02em;
             font-size: 20px;
             height: auto;
-            padding: 8px 31px 3px;
+            padding: 6px 31px 5px;
             text-transform: initial;
         }
     }
@@ -146,5 +150,50 @@
 .contact-layout-1{
     #contact-form {
         margin-top: 86px;
+    }
+}
+@media (max-width: 1366px){
+    #contact-info h3 {
+        font-size: 22px;
+        line-height: 30px;
+    }
+    #contact-info .phone{
+        font-size: 22px;
+    }
+    #contact-info .email {
+        padding: 7px 20px;
+        font-size: 15px;
+    }
+    .contact-form h3{
+        font-size: 22px;
+    }
+    .contact-form .form-footer .btn-submit{
+        font-size: 15px;
+    }
+    #contact-wrapper .newsletter-box .title{
+        font-size: 22px;
+    }
+    #contact-wrapper .newsletter-box .block_newsletter .content input{
+        height: 40px;
+    }
+}
+@media (max-width: 1199px){
+    #contact-wrapper .newsletter-box .block_newsletter .content input{
+        width: 100%;
+    }
+}
+@media (max-width: 767px){
+    #contact-wrapper .newsletter-box,
+    #contact-wrapper .newsletter-box .block_newsletter .content{
+        flex-direction: column;
+        text-align: center;
+    }
+    #contact-wrapper .newsletter-box .title {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    #contact-wrapper .newsletter-box .block_newsletter .content button {
+        margin-left: 0;
+        margin-top: 15px;
     }
 }

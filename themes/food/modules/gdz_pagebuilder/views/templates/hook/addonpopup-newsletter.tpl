@@ -42,7 +42,7 @@
 		{include file='../../../../../templates/_partials/socials.tpl'} 
 		<div class="dontshow">
 			<input type="checkbox" name="dontshowagain" value="1" id="dontshowagain" />
-			<label>{l s='Dont show this popup again' mod='gdz_pagebuilder'}</label>
+			<label>{l s='Dont show this popup again' d='Shop.Theme.Actions'}</label>
 		</div>
 		<a class="popup-close">
 			<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -90,6 +90,9 @@
 .widget-categories li ul {
 	margin-left:10px;
 }
+#module-gdz_blog-post .breadcrumb h3{
+  display: none;
+}
 .post-view .fa-eye {
     margin-right: 5px;
 }
@@ -101,7 +104,7 @@
 }
 .post-image,
 .post-thumb {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 .blog-readmore {
   text-transform: initial;
@@ -126,4 +129,12 @@
 }
 .cat-intro{
   margin-bottom: 10px;
+}
+@media (max-width: 1366px){
+  h4.category-title {
+    font-size: 18px;
+  }
+}
+@media (max-width: 991px){
+  
 }

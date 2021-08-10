@@ -167,7 +167,7 @@
                     </ul>
                 </div>
                 {if isset($gdzSetting.footer_copyright_content) && $gdzSetting.footer_copyright_content}
-                    <div class="layout-column col-4">
+                    <div class="layout-column col-4 text-center">
                         {$gdzSetting.footer_copyright_content nofilter}
                     </div>
                 {/if}

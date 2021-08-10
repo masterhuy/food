@@ -38,8 +38,25 @@
 .card.cart-summary .checkout a:focus{
 	color: #fff;
 }
+.cart-box .product-price.h5.has-discount{
+	display: block;
+}
 .cart-box .js-cart-line-product-quantity{
 	border: none;
+}
+.product-discount .regular-price{
+	text-decoration: line-through;
+    font-weight: 400;
+    font-size: 16px;
+}
+.product-line-grid .discount.discount-percentage {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 3px 10px 3px;
+    background: #F1402A;
+    color: #fff;
+    line-height: 1;
+    border-radius: 50px;
 }
 .text-xs-center{
 	text-align:center;
@@ -187,16 +204,14 @@ body#checkout #cart-summary-product-list .media-left img {
 	font-size: 14px;
 }
 .block-promo {
-	font-size: 16px;
 	padding: 0;
-	letter-spacing: 0.1px;
-	line-height: 50px;
 }
 #promo-code button {
 	width: 100%;
 }
 .promo-input{
 	height: 40px;
+	margin-bottom: 10px;
 }
 .cart-summary-line {
 	padding: 5px 0;
@@ -261,6 +276,11 @@ body#checkout #cart-summary-product-list .media-left img {
 	border: 1px solid #ebebeb;
     padding: 20px;
     border-radius: 10px;
+}
+@media (max-width: 1366px){
+	.cart-block h1 {
+		font-size: 28px;
+	}
 }
 @media (max-width: 991px){
 	.cart-grid-right{

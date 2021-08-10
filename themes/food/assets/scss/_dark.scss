@@ -195,6 +195,12 @@
             }
         }
     }
+    .pb-testimonial.with-thumbnails .pb-testimonial-box .pb-testimonial-comment{
+        color: rgba(255, 255, 255, 0.7);
+    }
+    .pb-testimonial-author .author-info .name{
+        color: #fff;
+    }
 
 
     /* product list */
@@ -524,6 +530,7 @@
     }
     .footer-5 #footer-main .block-content li a {
         color: rgba(255, 255, 255, 0.8);
+        font-weight: 400;
         &:hover{
             color: $active;
         }

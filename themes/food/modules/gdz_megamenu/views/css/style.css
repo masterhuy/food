@@ -40,8 +40,8 @@
     position: absolute;
     visibility: hidden;
     z-index: 9999;
-    transition: all 400ms ease 0s;
-    -webkit-transition: all 400ms ease 0s;
+    transition: all 200ms ease 0s;
+    -webkit-transition: all 200ms ease 0s;
 }
 
 .gdz-megamenu .open > .dropdown-menu {
@@ -89,7 +89,6 @@
 }
 .gdz-megamenu .menu-align-center > .dropdown-menu {
     left: 50%;
-    right: 0;
     margin: auto;
     transform: translateX(-50%);
     padding: 30px 0 22px;
@@ -142,4 +141,21 @@
     text-transform: initial;
     font-size: 14px;
 }
-
+#off-canvas-menu .open > .dropdown-menu{
+    padding: 10px 0;
+}
+#off-canvas-menu .dropdown-menu{
+    padding: 10px 0;
+    transition: none;
+}
+#off-canvas-menu .nav > li.mega > a::before {
+    content: "\f107";
+    font-family: 'Fontawesome';
+    position: absolute;
+    right: 25px;
+    display: block;
+    font-size: 20px;
+}
+#off-canvas-menu .nav > li.mega.open > a::before {
+    content: "\f106";
+}

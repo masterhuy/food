@@ -1,0 +1,62 @@
+.follow-us .addon-box {
+    padding-left: 110px;
+    padding-right: 0;
+}
+.follow-us .desc {
+    padding-left: 75px;
+    padding-right: 0;
+}
+.follow-us #social-links li {
+    margin-left: 7px;
+    margin-right: 0;
+}
+#addon-l8atwyqe0 .pb-heading {
+    text-align: right !important;
+}
+#addon-thlx65dx8 .pb-text-content {
+    text-align: right !important;
+}
+#addon-oltkxeyjc .pb-text-content {
+    text-align: right !important;
+}
+#addon-jk7j0b1f2 .pb-text-content {
+    text-align: right !important;
+}
+.our-process .addon-box {
+    padding-right: 110px;
+    padding-left: 0;
+}
+.our-process .pb-service-content {
+    text-align: right;
+}
+.our-process .pb-service-icon {
+    margin-right: 0;
+    margin-left: 21px;
+}
+#addon-t3sqi9i4y .pb-heading {
+    text-align: right !important;
+}
+#addon-f4xs34wng .pb-heading {
+    text-align: right !important;
+}
+#addon-fgdtkjc0y .pb-heading {
+    text-align: right !important;
+}
+.best-sellers .owl-dots {
+    right: auto;
+    left: -4px;
+}
+@media (max-width: 1199px){
+    .follow-us .desc {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .follow-us .addon-box {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .our-process .addon-box {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}

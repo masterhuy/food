@@ -62,6 +62,11 @@ $active: #B8D021;
         }
     }
 }
+.productbox-2{
+    &:hover{
+        border: 1px solid $active;
+    }
+}
 .product-miniature .price.new{
     font-weight: 600;
 }
@@ -76,6 +81,10 @@ $active: #B8D021;
     margin-top: -145px;
     position: relative;
     z-index: 999;
+    .pb-banner-title{
+        font-weight: 500;
+        letter-spacing: 0;
+    }
 }
 .owl-dots button span{
     background-color: #fff;
@@ -86,30 +95,33 @@ $active: #B8D021;
         padding-right: 126px;
     }
     h5{
-        font-weight: 600;
+        font-weight: 500;
         margin-bottom: -4px;
         span{
-            font-size: 44px;
+            font-size: 40px;
             font-weight: 300;
             margin-left: -11px;
+            letter-spacing: 0.2px;
         }
     }
     h6{
-        font-weight: 600;
+        font-weight: 500;
         letter-spacing: -0.01em;
         margin-bottom: 5px;
     }
+    .pb-text-content{
+        font-weight: 300;
+    }
 }
 .service-box{
-    .layout-column:nth-child(2){
-        .pb-service-box{
-            background-color: #212126;
-        }
-    }
     .pb-service-box{
         border: 3px solid #212126;
         border-radius: 20px;
         padding: 40px 20px 20px;
+        transition: .2s all;
+        &:hover{
+            background-color: #212126;
+        }
         .pb-service-icon{
             margin-bottom: 49px;
             img{
@@ -118,16 +130,17 @@ $active: #B8D021;
         }
     }
     .pb-service-title{
-        font-size: 27px;
+        font-size: 25px;
         color: #fff;
         margin-bottom: 17px;
+        font-weight: 500;
     }
     .pb-service-description{
         padding: 0 20px;
         p{
-            font-size: 18px;
+            font-size: 16px;
+            font-weight: 300;
             color: rgba(255, 255, 255, 0.7);
-            font-style: italic;
         }
     }
 }
@@ -154,7 +167,6 @@ $active: #B8D021;
         }
     }
 }
-
 .newsletter{
     .layout-column{
         display: flex;

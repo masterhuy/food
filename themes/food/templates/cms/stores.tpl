@@ -40,7 +40,7 @@
                     <img src="{$store.image.bySize.stores_default.url}" alt="{$store.image.legend}" title="{$store.image.legend}">
                   </div>
                   <div class="col-auto store-description">
-                    <h3 class="h3 card-title">{$store.name}</h3>
+                    <h5 class="card-title">{$store.name}</h5>
                     <address>{$store.address.formatted nofilter}</address>
                     {if $store.note || $store.phone || $store.fax || $store.email}
                       <a data-toggle="collapse" href="#about-{$store.id}" aria-expanded="false" aria-controls="about-{$store.id}"><strong>{l s='About and Contact' d='Shop.Theme.Catalog'}</strong></a>

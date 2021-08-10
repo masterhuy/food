@@ -1,3 +1,6 @@
+#product .breadcrumb h3{
+    display: none;
+}
 #product .product-name {
     font-size:34px;
     font-weight: 600;
@@ -970,7 +973,44 @@
 #thumbnails ul li {
     margin-bottom: 10px;
 }
+.product-detail.default .pb-left-column{
+    will-change: min-height;
+}
+
+.product-detail.default .pb-left-column .pd-left-content{
+    transform: translate(0, 0); /* For browsers don't support translate3d. */
+    transform: translate3d(0, 0, 0);
+    will-change: position, transform;
+}
+@media (min-width: 992px){
+    .product-detail{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .product-detail .pb-left-column{
+        padding-left: 0;
+    }
+    .product-detail .pb-right-column{
+        padding-right: 0;
+    }
+    .product-detail.thumbs-gallery .pb-right-column{
+        padding-left: 0;
+    }
+    .product-detail.thumbs-gallery .pb-right-column .pd-right-content{
+        padding-left: 15px;
+    }
+}
+@media (max-width: 1366px){
+    .product-layout-3columns.product-detail .content_price .price.new {
+        font-size: 25px;
+    }
+}
 @media (max-width: 991px){
+    .product-detail .pb-left-column .pd-left-content,
+    .product-detail.thumbs-gallery .pb-right-column .pd-right-content{
+        position: static !important;
+        transform: none !important;
+    }
     .pb-right-column{
         margin-top: 50px;
     }
@@ -995,8 +1035,28 @@
     .vertical-thumbs .thumb-container {
         margin-bottom: 15px;
     }
+    #more_info_block li a{
+        font-size: 15px;
+    }
+    #more_info_block .panel-heading a {
+        font-size: 15px;
+        padding: 5px 0;
+    }
+    #more_info_block .panel.panel-default:not(:last-child){
+        margin-bottom: 10px;
+    }
+    #footer-main .block .block-title i {
+        font-size: 16px;
+    }
 }
 @media (max-width: 575px){
+    .product-quantity .product-btn.cart-button {
+        height: 40px;
+        font-size: 15px;
+    }
+    .product-variants-item ul li .radio-label{
+        font-size: 15px;
+    }
     #more_info_block > ul > li {
         display: block;
         text-align: center;
@@ -1004,5 +1064,9 @@
     }
     .product-quantity .product-btn.cart-button{
         padding: 0 15px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 140px;
     }
 }

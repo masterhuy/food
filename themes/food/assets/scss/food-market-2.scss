@@ -8,7 +8,6 @@ $active: #70C03E;
     }
 }
 
-
 .page-index{
     background: url("../img/food-market-2/food-market-2-bg.jpg") no-repeat center;
     background-size: cover;
@@ -75,13 +74,29 @@ $active: #70C03E;
     padding: 17px 0 11px;
     position: relative;
     z-index: 1000;
+    .pb-banner{
+        > a{
+            overflow: hidden;
+            border-radius: 10px;
+        }
+    }
     .heading{
         margin-bottom: 41px;
+        position: relative;
+        &::after{
+            content: "";
+            position: absolute;
+            bottom: -15px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: #f1f1f1;
+        }
         img{
             margin-right: 12px;
         }
         h3{
-            font-size: 30px;
+            font-size: 28px;
             font-weight: 600;
             color: inherit;
             margin-bottom: 0;
@@ -89,6 +104,17 @@ $active: #70C03E;
     }
     .addon-tab .nav-tabs{
         padding-top: 6px;
+        position: relative;
+        &::after{
+            content: "";
+            position: absolute;
+            bottom: -24px;
+            left: 0;
+            right: 30px;
+            width: auto;
+            height: 1px;
+            background-color: #f1f1f1;
+        }
         &.tab-right{
             padding-right: 167px;
             .nav-item{
@@ -113,7 +139,7 @@ $active: #70C03E;
         }
         .nav-link{
             color: rgba(63, 40, 3, 0.5);
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 500;
             padding: 0;
             border: 0;
@@ -251,11 +277,14 @@ $active: #70C03E;
             display: none;
         }
     }
+    .category-tab .pb-categorytab .owl-nav {
+        right: -3px;
+    }
     .category-tab .heading h3 {
-        font-size: 22px;
+        font-size: 20px;
     }
     .category-tab .addon-tab .nav-tabs.tab-right {
-        padding-right: 140px;
+        padding-right: 110px;
     }
     .productbox-2 .product-buttons .ajax-add-to-cart {
         padding: 0 12px;

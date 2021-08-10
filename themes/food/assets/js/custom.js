@@ -56,7 +56,7 @@ jQuery(function ($) {
 		testimonialCarousel.owlCarousel({
 			center: true,
             rtl:rtl,
-            loop:true,
+            loop:false,
             margin: 75,
             nav: true,
             dots:false,
@@ -71,15 +71,17 @@ jQuery(function ($) {
 		});
 	}
 
-    //testimonial width thumbnails
+    //testimonial with thumbnails
     if($(".pb-testimonial").hasClass("with-thumbnails")){
         var bigimage = $(".pb-testimonial-carousel");
         var thumbs = $(".testimonial-thumbnail-carousel");
         var syncedSecondary = true;
+        var rtl = false;
+	    if ($("body").hasClass("rtl") || $("body").hasClass("lang-rtl")) rtl = true;
         bigimage.addClass('owl-carousel');
-        bigimage
-        .owlCarousel({
+        bigimage.owlCarousel({
         items: 1,
+        rtl: rtl,
         slideSpeed: 2000,
         nav: true,
         autoplay: false,
@@ -90,8 +92,7 @@ jQuery(function ($) {
         })
         .on("changed.owl.carousel", syncPosition);
         thumbs.addClass('owl-carousel');
-        thumbs
-        .on("initialized.owl.carousel", function() {
+        thumbs.on("initialized.owl.carousel", function() {
         thumbs
             .find(".owl-item")
             .eq(0)
@@ -99,6 +100,7 @@ jQuery(function ($) {
         })
         .owlCarousel({
         items: 3,
+        rtl: rtl,
         margin: 25,
         dots: false,
         nav: false,
@@ -257,15 +259,42 @@ jQuery(document).ready(function () {
     cloneQuantity();
     prestashop.on('updatedProduct', function () {
         cloneQuantity();
+        stickyLeftColumn();
     });
-
-    
+    stickyLeftColumn(); 
+    stickyRightColumn();
 });
 
 jQuery(window).resize(function () {
     changeShopGrid();
     footerCollapse();
+    stickyLeftColumn();
+    stickyRightColumn();
 });
+
+function stickyRightColumn(){ //thumbs gallery
+    if($('.product-detail.thumbs-gallery .pb-left-column').length && $(window).width() > 992){
+        var rightColumn = new StickySidebar('.product-detail.thumbs-gallery .pb-right-column', {
+            containerSelector: '.product-detail.thumbs-gallery',
+            innerWrapperSelector: '.product-detail.thumbs-gallery .pb-right-column .pd-right-content',
+            resizeSensor: true,
+            topSpacing: 100,
+            bottomSpacing: 100
+        });
+    }
+}
+
+function stickyLeftColumn(){
+    if($('.product-detail .pb-right-column').length && $(window).width() > 992){
+        var leftColumn = new StickySidebar('.product-detail .pb-left-column', {
+            containerSelector: '.product-detail',
+            innerWrapperSelector: '.product-detail .pb-left-column .pd-left-content',
+            resizeSensor: true,
+            topSpacing: 100,
+            bottomSpacing: 100
+        });
+    }
+}
 
 $(document).on('click', '#footer-main.collapsed .block-title', function (e) {
     $(this).parent().toggleClass('collapsed');

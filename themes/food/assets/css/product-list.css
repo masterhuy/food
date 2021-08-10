@@ -599,9 +599,6 @@
 	.filters-panel .col-4 .js-item-show {
 		margin-right: 0;
 	}
-	#footer {
-		margin-top: 50px;
-	}
 }
 @media (max-width: 575px){
 	.col-product {

@@ -32,6 +32,7 @@
 }
 
 #my-account .links .link-item {
+  text-align: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;

@@ -37,7 +37,7 @@
         {if !$notifications || $notifications.nw_error}
             <section class="form-fields">
                 <div class="row">
-                    <div class="form-group col">
+                    <div class="form-group col-12 col-lg-4">
                         <label>{l s='Subject Heading' d='Modules.Contactform.Shop'}</label>
                         <select name="id_contact" class="form-control">
                             {foreach from=$contact.contacts item=contact_elt}
@@ -45,13 +45,13 @@
                             {/foreach}
                         </select>
                     </div>
-                    <div class="form-group col">
+                    <div class="form-group col-12 col-lg-4">
                         <label>{l s='Email address' d='Modules.Contactform.Shop'}</label>
                         <input type="email" class="form-control" name="from" placeholder="{l s='Your email address...' d='Modules.Contactform.Shop'}" value="{$contact.email|escape:'htmlall':'UTF-8'}" />
                     </div>
 
                     {if $contact.allow_file_upload}
-                        <div class="form-group col">
+                        <div class="form-group col-12 col-lg-4">
                             <input type="file" name="fileUpload" class="filestyle" data-buttonText="{l s='Choose file' d='Shop.Theme.Actions'}">
                         </div>
                     {/if}

@@ -23,7 +23,7 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 <div id="header-top" class="header-top{if $gdzSetting.header_sticky == 1} header-sticky{/if}{if ($gdzSetting.header_sticky == 1) && ($gdzSetting.header_sticky_effect != '')} {$gdzSetting.header_sticky_effect}{/if}">
-    <div class="container-fluid {$gdzSetting.header_sticky_effect}">
+    <div class="container-fluid">
         <div class="row align-items-center">
             <div class="layout-column col-3 header-left">
                 {include file='_partials/headers/logo.tpl'}
@@ -36,13 +36,17 @@
             <div class="layout-column col-3 header-right">
                 <div class="row justify-content-end">
                     {if $gdzSetting.search}
-                        {if $gdzSetting.search_box_type != 'dropdown'}
+                        {if $gdzSetting.search_box_type == 'dropdown'}
                             {widget_block name="gdz_ajaxsearch"}
-                                {include 'module:gdz_ajaxsearch/views/templates/hook/gdz_ajaxsearch-button.tpl'}
+                                {include 'module:gdz_ajaxsearch/views/templates/hook/gdz_ajaxsearch-dropdown.tpl'}
+                            {/widget_block}
+                        {elseif $gdzSetting.search_box_type == 'fullwidth'}
+                            {widget_block name="gdz_ajaxsearch"}
+                                {include 'module:gdz_ajaxsearch/views/templates/hook/gdz_ajaxsearch-fullwidth.tpl'}
                             {/widget_block}
                         {else}
                             {widget_block name="gdz_ajaxsearch"}
-                                {include 'module:gdz_ajaxsearch/views/templates/hook/gdz_ajaxsearch-dropdown.tpl'}
+                                {include 'module:gdz_ajaxsearch/views/templates/hook/gdz_ajaxsearch-fullscreen.tpl'}
                             {/widget_block}
                         {/if}
                     {/if}

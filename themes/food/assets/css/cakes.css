@@ -65,6 +65,11 @@ a:hover {
   fill: #D3183A;
 }
 
+#ver-menu .gdz-megamenu .nav > li a:hover,
+#ver-menu .gdz-megamenu .nav > li.open a:hover {
+  color: #D3183A;
+}
+
 #off-canvas-menu > .btn-group li.current a {
   color: #D3183A;
 }
@@ -100,6 +105,10 @@ a:hover {
 #blockcart-modal .btn-default {
   border-color: #D3183A;
   color: #D3183A;
+}
+
+.productbox-1 .product-buttons .btn-icon:hover {
+  background-color: #D3183A;
 }
 
 .productbox-2 .product-buttons .ajax-add-to-cart {
@@ -296,6 +305,10 @@ a:hover {
   background-color: #fff;
 }
 
+.product-miniature .content_price .old.price + .price.new {
+  color: #D3183A;
+}
+
 .slider-cakes .gdz-slide-content {
   font-family: "Alako-Bold";
 }
@@ -354,11 +367,11 @@ a:hover {
 .pb-service-box .pb-service-title {
   color: inherit;
   font-weight: 600;
-  font-size: 30px;
+  font-size: 28px;
   margin-bottom: 23px;
 }
 .pb-service-box .pb-service-description p {
-  font-size: 17px;
+  font-size: 15px;
   line-height: 27px;
   color: rgba(63, 40, 3, 0.7);
   padding: 0 20px;
@@ -414,7 +427,8 @@ a:hover {
   margin-right: 7px;
 }
 .addon-tab .nav-tabs .nav-link {
-  font-size: 22px;
+  font-size: 20px;
+  font-weight: 600;
   color: rgba(70, 70, 71, 0.5);
   border-color: #fff;
   padding: 7px 33px;
@@ -465,7 +479,7 @@ a:hover {
 .about-delivery .card-body {
   padding: 3px 0 5px 0;
   color: rgba(63, 40, 3, 0.7);
-  font-size: 17px;
+  font-size: 15px;
   line-height: 27px;
   padding-right: 50px;
 }
@@ -495,8 +509,10 @@ a:hover {
   height: 80px;
 }
 .testimonial-center .pb-testimonial-box .pb-testimonial-comment {
-  max-width: 84%;
+  max-width: 87%;
   margin-top: 0;
+  font-size: 17px;
+  color: inherit;
 }
 .testimonial-center .pb-testimonial .quote {
   margin-bottom: 14px;
@@ -523,8 +539,17 @@ a:hover {
 }
 
 @media (max-width: 1366px) {
+  .addon-tab .nav-tabs .nav-link {
+    font-size: 18px;
+    padding: 7px 25px;
+  }
+
   .banner-1 .pb-banner-text .pb-banner-button, .banner-2 .pb-banner-text .pb-banner-button, .banner-3 .pb-banner-text .pb-banner-button {
     margin-top: 0;
+  }
+
+  .pb-testimonial .pb-testimonial-comment {
+    font-size: 16px;
   }
 }
 @media (max-width: 1199px) {

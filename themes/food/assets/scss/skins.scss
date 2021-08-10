@@ -69,6 +69,12 @@ a {
         fill: $active;
     }
 }
+#ver-menu .gdz-megamenu .nav > li a,
+#ver-menu .gdz-megamenu .nav > li.open a{
+    &:hover{
+        color: $active;
+    }
+}
 #off-canvas-menu > .btn-group li.current a {
     color: $active;
 }
@@ -100,6 +106,10 @@ a {
 #blockcart-modal .btn-default{
     border-color: $active;
     color: $active;
+}
+.productbox-1 .product-buttons .btn-icon:hover{
+    background-color: $active;
+
 }
 .productbox-2 .product-buttons .ajax-add-to-cart{
     color: $active;

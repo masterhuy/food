@@ -1,0 +1,33 @@
+.gdz-slider-wrapper .nav-control{
+    flex-direction: row-reverse;
+}
+.testimonial .pb-image img {
+    margin-left: -159px;
+    margin-right: 0;
+}
+#addon-z3r4k55i4 .pb-heading {
+    text-align: right !important;
+}
+.testimonial .pb-testimonial .text-left .pb-testimonial-box .pb-testimonial-comment {
+    text-align: right;
+}
+.testimonial .pb-testimonial .text-left .pb-testimonial-box .pb-testimonial-comment .quote {
+    left: -78px;
+    right: auto;
+}
+.newsletter h5 {
+    margin-left: 49px;
+    margin-right: auto;
+}
+.newsletter .block_newsletter input {
+    margin-left: 15px;
+    margin-right: 0;
+}
+.newsletter .block_newsletter {
+    margin-left: 82px;
+    margin-right: 0;
+}
+.newsletter #social-links li + li {
+    margin-right: 15px;
+    margin-left: 0;
+}

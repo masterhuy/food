@@ -55,7 +55,7 @@
                     <div class="container">
                 {/if}
                 {if $layout != 'layouts/layout-full-width.tpl'}
-                <div class="row">
+                <div class="row {if $page.page_name == 'contact'}ml-0 mr-0{/if}">
                 {/if}
                     {block name="left_column"}
                         <div id="left-column" class="left-column col-lg-3 col-12">

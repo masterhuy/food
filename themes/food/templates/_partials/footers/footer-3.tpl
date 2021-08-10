@@ -192,7 +192,7 @@
                 {include file='_partials/headers/logo.tpl'}
             </div>
             <div class="row align-items-center">
-                <div class="layout-column col-4">
+                <div class="col-12 col-lg-4">
                     <ul>
                         <li>
                             <a href="#">{l s='About Us' d='Shop.jmstheme'}</a>
@@ -206,12 +206,12 @@
                     </ul>
                 </div>
                 {if isset($gdzSetting.footer_copyright_content) && $gdzSetting.footer_copyright_content}
-                    <div class="layout-column col-4">
+                    <div class="col-12 col-lg-4 text-center">
                         {$gdzSetting.footer_copyright_content nofilter}
                     </div>
                 {/if}
                 {if isset($gdzSetting.footer_payment_image) && $gdzSetting.footer_payment_image}
-                    <div class="layout-column col-4 text-xl-right">
+                    <div class="col-12 col-lg-4 text-center text-xl-right">
                         <img class="payments" src="{$gdzSetting.footer_payment_image}" class="img-fluid" alt="{l s='Payments' d='Shop.jmstheme'}"/>
                     </div>
                 {/if}

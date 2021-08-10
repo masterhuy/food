@@ -65,6 +65,11 @@ a:hover {
   fill: #FF3514;
 }
 
+#ver-menu .gdz-megamenu .nav > li a:hover,
+#ver-menu .gdz-megamenu .nav > li.open a:hover {
+  color: #FF3514;
+}
+
 #off-canvas-menu > .btn-group li.current a {
   color: #FF3514;
 }
@@ -100,6 +105,10 @@ a:hover {
 #blockcart-modal .btn-default {
   border-color: #FF3514;
   color: #FF3514;
+}
+
+.productbox-1 .product-buttons .btn-icon:hover {
+  background-color: #FF3514;
 }
 
 .productbox-2 .product-buttons .ajax-add-to-cart {
@@ -283,14 +292,14 @@ body, a {
   z-index: 1000;
 }
 .page-index #header .header-5 #header-top.sticky .header-right .btn-group.user-info > a {
-  color: inherit;
+  color: #3F2803;
 }
 .page-index #header .header-5 #header-top.sticky .header-right .btn-group.user-info > a:hover {
   color: #FF3514;
   border-color: #FF3514;
 }
 .page-index #header .header-5 #header-top.sticky .header-right .btn-group > a {
-  border-color: inherit;
+  border-color: #d5d5d5;
 }
 .page-index #header .header-5 #header-top.sticky .header-right .btn-group > a:hover path {
   fill: #FF3514;
@@ -316,6 +325,17 @@ body, a {
 }
 .page-index #header .header-5 #header-top .header-right .btn-group > a path {
   fill: #fff;
+}
+
+#hor-menu .nav > li > a {
+  color: inherit;
+}
+
+.gdz-megamenu .nav > .menu-item .mega-nav li > a {
+  color: #06163A;
+}
+.gdz-megamenu .nav > .menu-item .mega-nav li > a:hover {
+  color: #FF3514;
 }
 
 .gdz-slide-content .btn {
@@ -374,13 +394,13 @@ body, a {
   width: auto !important;
 }
 .service-box .pb-service-title {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
   color: inherit;
   margin-bottom: 10px;
 }
 .service-box .pb-service-description p {
-  font-size: 18px;
+  font-size: 16px;
   color: #62718D;
 }
 
@@ -396,6 +416,10 @@ body, a {
   z-index: 1;
 }
 
+.addon-tab .nav-tabs .nav-link {
+  color: #62718D;
+}
+
 .category-tab-right .title h3 {
   color: inherit;
   font-weight: 600;
@@ -409,7 +433,7 @@ body, a {
   -webkit-box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.08);
           box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.08);
   border-radius: 20px;
-  padding: 39px 25px 11px;
+  padding: 39px 25px 25px;
 }
 .delivry .pb-service-box .pb-service-icon {
   margin-bottom: 31px;
@@ -493,17 +517,23 @@ body, a {
 .col-contact-form .contact-form .form-group {
   margin-bottom: 30px;
 }
-.col-contact-form .contact-form .form-group.col {
+.col-contact-form .contact-form .form-group.col-12 {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 100%;
           flex: 0 0 100%;
+  max-width: 100%;
 }
 .col-contact-form .contact-form label {
   font-size: 22px;
   font-weight: 500;
-  letter-spacing: 0.03em;
   line-height: 29px;
   margin-bottom: 12px;
+}
+.col-contact-form .contact-form .input-group-btn .btn:hover .buttonText {
+  color: #fff;
+}
+.col-contact-form .contact-form .input-group-btn .btn .buttonText {
+  color: #06163A;
 }
 .col-contact-form .contact-form .form-control {
   height: 52px;

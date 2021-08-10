@@ -193,7 +193,7 @@ header .row .col-auto {
   top: 0px;
   right: 0px;
   left: 0px;
-  z-index: 999;
+  z-index: 1001;
   box-shadow: 0 0 10px rgba(0,0,0,0.25);
   padding:0px!important;
   height: 70px;
@@ -782,7 +782,6 @@ header .row .col-auto {
 /***** SHOP PAGE *****/
 .old.price {
   text-decoration: line-through;
-  opacity: 0.7;
 }
 .quickview-modal .modal-dialog {
     max-width: 1200px;
@@ -898,17 +897,14 @@ header .row .col-auto {
 .show-menu{
   overflow: hidden;
 }
-.show-menu .main-site {
-  transform: translate3d(270px,0,0);
-  overflow: visible;
-}
-.show-menu .bg-overlay {
+.show-menu #mobile-header .bg-overlay {
     display: block;
     opacity: 1;
 }
 .show-menu .mobile-menu-wrap {
-	left: -270px;
+	left: 0;
   display: block;
+  z-index: 9999;
 
 }
 .show-menu .mobile-menu-wrap + .bg-overlay{

@@ -49,7 +49,7 @@
             </div>
         </div>
     {/if}
-    {if $contact_infos.email}
+    {if $contact_infos.email && $display_email}
         <div class="block">
             <div class="data email">
                 <a href="mailto:{$contact_infos.email}">{$contact_infos.email}</a>

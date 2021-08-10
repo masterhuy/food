@@ -1,0 +1,25 @@
+#addon-mckb1nm9w .pb-heading {
+    text-align: right !important;
+}
+.newsletter .block_newsletter {
+    margin-left: 82px;
+    margin-right: 0;
+}
+.newsletter h5 {
+    margin-left: 25px;
+    margin-right: 0;
+}
+.newsletter #social-links li + li {
+    margin-right: 15px;
+    margin-left: 0;
+}
+.newsletter .block_newsletter input {
+    margin-left: 15px;
+    margin-right: 0;
+}
+@media (max-width: 1199px){
+    .newsletter .block_newsletter {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}

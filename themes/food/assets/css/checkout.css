@@ -36,6 +36,9 @@
 	padding-top:10px;
 	margin-right:30px !important;
 }
+.cart-summary-products{
+	text-align: left;
+}
 #checkout .show-pass > button {
     line-height: 1;
     height: 100%;
@@ -249,7 +252,7 @@ body#checkout section.checkout-step.-reachable.-complete .content {
   margin-right: 5px;
 }
 body#checkout section.checkout-step.-current .content .address {
-	font-size: 16px;
+	font-size: 15px;
 	font-weight: 400;
 	padding: 0 20px;
 }
@@ -316,8 +319,8 @@ body#checkout section.checkout-step.-current .content .form-control-select {
 	border: none;
 }
 #order-summary-content h4{
-	font-size: 18px;
-	font-weight: 600;
+	font-size: 16px;
+	font-weight: 500;
 	color: inherit;
 }
 #order-summary-content > .row{

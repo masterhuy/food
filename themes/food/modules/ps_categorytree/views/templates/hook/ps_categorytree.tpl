@@ -89,7 +89,7 @@
 	{if $page.page_name != 'index'}
 		<div class="title-block">
 			<h3 class="d-flex cursor-pointer" data-toggle="collapse" data-target="#category-sub-menu">
-                {l s='Categories' d='Shop.Theme.CategoryTree'}
+                {l s='Categories' d='Shop.Theme.Category_tree'}
             </h3>
 		</div>
 	{/if}

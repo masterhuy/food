@@ -1,11 +1,15 @@
 function triggerCarousel(carousel) {
     var c_lazyload = false;
+    var rtl = false;
+	if ($("body").hasClass("rtl") || $("body").hasClass("lang-rtl")) rtl = true;	
     // console.log(typeof gdzSetting);
     if(typeof gdzSetting !== 'undefined') {
         var c_lazyload = gdzSetting.carousel_lazyload;
     }
+    
     carousel.owlCarousel({
         loop:false,
+        rtl:rtl,
         margin:carousel.data("margin"),
         nav:carousel.data("nav"),
         dots:carousel.data("dots"),

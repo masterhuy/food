@@ -22,9 +22,7 @@
 *  @version  Release: $Revision$
 *  @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
 *  International Registered Trademark & Property of PrestaShop SA
-
 *}
-
 <div class="btn-group gdz_ajax_search col-auto" id="gdz_ajax_search">
 	<a href="#" id="btn-search" class="btn-search btn-search-full" data-toggle="dropdown" data-display="static">
 		<i class="feather icon-search"></i>

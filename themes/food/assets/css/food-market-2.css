@@ -65,6 +65,11 @@ a:hover {
   fill: #70C03E;
 }
 
+#ver-menu .gdz-megamenu .nav > li a:hover,
+#ver-menu .gdz-megamenu .nav > li.open a:hover {
+  color: #70C03E;
+}
+
 #off-canvas-menu > .btn-group li.current a {
   color: #70C03E;
 }
@@ -100,6 +105,10 @@ a:hover {
 #blockcart-modal .btn-default {
   border-color: #70C03E;
   color: #70C03E;
+}
+
+.productbox-1 .product-buttons .btn-icon:hover {
+  background-color: #70C03E;
 }
 
 .productbox-2 .product-buttons .ajax-add-to-cart {
@@ -352,20 +361,45 @@ a:hover {
   position: relative;
   z-index: 1000;
 }
+.category-tab .pb-banner > a {
+  overflow: hidden;
+  border-radius: 10px;
+}
 .category-tab .heading {
   margin-bottom: 41px;
+  position: relative;
+}
+.category-tab .heading::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #f1f1f1;
 }
 .category-tab .heading img {
   margin-right: 12px;
 }
 .category-tab .heading h3 {
-  font-size: 30px;
+  font-size: 28px;
   font-weight: 600;
   color: inherit;
   margin-bottom: 0;
 }
 .category-tab .addon-tab .nav-tabs {
   padding-top: 6px;
+  position: relative;
+}
+.category-tab .addon-tab .nav-tabs::after {
+  content: "";
+  position: absolute;
+  bottom: -24px;
+  left: 0;
+  right: 30px;
+  width: auto;
+  height: 1px;
+  background-color: #f1f1f1;
 }
 .category-tab .addon-tab .nav-tabs.tab-right {
   padding-right: 167px;
@@ -390,7 +424,7 @@ a:hover {
 }
 .category-tab .addon-tab .nav-tabs .nav-link {
   color: rgba(63, 40, 3, 0.5);
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 500;
   padding: 0;
   border: 0;
@@ -526,12 +560,16 @@ a:hover {
     display: none;
   }
 
+  .category-tab .pb-categorytab .owl-nav {
+    right: -3px;
+  }
+
   .category-tab .heading h3 {
-    font-size: 22px;
+    font-size: 20px;
   }
 
   .category-tab .addon-tab .nav-tabs.tab-right {
-    padding-right: 140px;
+    padding-right: 110px;
   }
 
   .productbox-2 .product-buttons .ajax-add-to-cart {

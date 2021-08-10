@@ -1,0 +1,7 @@
+.banner-fullwidth .block-col .d-flex{
+    justify-content: flex-end;
+}
+.newsletter .block_newsletter .content button {
+    margin-right: 25px;
+    margin-left: 0;
+}

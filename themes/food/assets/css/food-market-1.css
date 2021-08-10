@@ -65,6 +65,11 @@ a:hover {
   fill: #70C03E;
 }
 
+#ver-menu .gdz-megamenu .nav > li a:hover,
+#ver-menu .gdz-megamenu .nav > li.open a:hover {
+  color: #70C03E;
+}
+
 #off-canvas-menu > .btn-group li.current a {
   color: #70C03E;
 }
@@ -100,6 +105,10 @@ a:hover {
 #blockcart-modal .btn-default {
   border-color: #70C03E;
   color: #70C03E;
+}
+
+.productbox-1 .product-buttons .btn-icon:hover {
+  background-color: #70C03E;
 }
 
 .productbox-2 .product-buttons .ajax-add-to-cart {
@@ -270,10 +279,6 @@ a:hover {
   color: #70C03E;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 600;
-}
-
 .page-index {
   background-color: #f4f4f4;
 }
@@ -286,6 +291,10 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 1001;
 }
 
+.productbox-2 {
+  -webkit-box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
+}
 .productbox-2 .category-name {
   display: none;
 }
@@ -374,7 +383,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .category-banner .pb-banner .pb-banner-title {
   color: inherit;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 500;
   line-height: 50px;
   margin-bottom: 10px;
@@ -386,8 +395,13 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 20px;
 }
 
+.addon-tab .nav-tabs .nav-link {
+  color: rgba(63, 40, 3, 0.7);
+}
+
 .categorytabs {
   position: relative;
+  z-index: 1000;
 }
 .categorytabs::before {
   content: url("../img/food-market-1/image-1.png");
@@ -439,6 +453,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .follow-us .pb-heading {
   margin-bottom: 21px;
+  font-weight: 500;
 }
 .follow-us .desc {
   padding-right: 75px;
@@ -490,6 +505,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .our-process .pb-heading {
   margin-bottom: 33px;
+  font-weight: 500;
 }
 .our-process .pb-service-box {
   display: -webkit-box;
@@ -521,6 +537,7 @@ h1, h2, h3, h4, h5, h6 {
   color: rgba(63, 40, 3, 0.7);
   margin-bottom: 0;
   line-height: 28px;
+  padding-right: 30px;
 }
 
 .best-sellers .owl-dots {

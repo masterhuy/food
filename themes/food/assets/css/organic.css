@@ -65,6 +65,11 @@ a:hover {
   fill: #70C03E;
 }
 
+#ver-menu .gdz-megamenu .nav > li a:hover,
+#ver-menu .gdz-megamenu .nav > li.open a:hover {
+  color: #70C03E;
+}
+
 #off-canvas-menu > .btn-group li.current a {
   color: #70C03E;
 }
@@ -100,6 +105,10 @@ a:hover {
 #blockcart-modal .btn-default {
   border-color: #70C03E;
   color: #70C03E;
+}
+
+.productbox-1 .product-buttons .btn-icon:hover {
+  background-color: #70C03E;
 }
 
 .productbox-2 .product-buttons .ajax-add-to-cart {
@@ -268,6 +277,10 @@ a:hover {
 
 .footer-5 #footer-main .block-content li a:hover {
   color: #70C03E;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: -0.02em;
 }
 
 .owl-carousel .owl-stage-outer {
@@ -445,13 +458,21 @@ a:hover {
 
 @media (max-width: 1366px) {
   .newsletter {
-    margin-left: 15px;
-    margin-right: 15px;
+    max-width: 1110px;
+  }
+
+  .newsletter .pb-heading {
+    padding-top: 0;
   }
 }
 @media (max-width: 1199px) {
   .testimonial .leaf {
     display: none;
+  }
+
+  .newsletter {
+    margin-left: 15px;
+    margin-right: 15px;
   }
 }
 @media (max-width: 991px) {
@@ -475,6 +496,11 @@ a:hover {
 
   .banner-fullwidth .block-col {
     display: none;
+  }
+
+  .banner-fullwidth .btn-xl {
+    height: 40px;
+    line-height: 36px;
   }
 
   .organic-banner .pb-banner-title span span {
